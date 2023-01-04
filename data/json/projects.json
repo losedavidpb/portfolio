@@ -1,0 +1,30 @@
+{
+    "projects": [
+        {
+            "name": "Configuración DotFiles para Sistemas GNU/Linux",
+            "date": "oct. 2020 - actualidad",
+            "description": "En este proyecto se incluye un repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. En el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.",
+            "urls": [
+                {
+                    "name": "Enlace",
+                    "value": "https://github.com/losedavidpb/bash-dotfiles"
+                }
+            ]
+        },
+        {
+            "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
+            "date": "jun. 2022 - dic. 2022",
+            "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. <p>Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace. </p>",
+            "urls": [
+                {
+                    "name": "Código fuente",
+                    "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+                },
+                {
+                    "name": "Manual de usuario",
+                    "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+                }
+            ]
+        }
+    ]
+}

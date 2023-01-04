@@ -1,0 +1,13 @@
+{
+    "jobs": [
+        {
+            "job": "Desarrollador web",
+            "company": "INERZA S.A.",
+            "type": "Contrato de prácticas",
+            "date": "sept. 2021 - dic. 2021 (4 meses)",
+            "location": "Las Palmas de Gran Canaria, Canarias, España",
+            "description": "Realización de pruebas, implantación y soporte de aplicaciones web informáticas destinadas a la Consejería de Educación, Universidades, Cultura y Deportes del Gobierno de Canarias.",
+            "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum"
+        }
+    ]
+}
