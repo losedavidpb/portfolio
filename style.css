@@ -6,11 +6,10 @@
  ***************************************************************/
 
 body, html {
-    color: white;
-    width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
+    max-width: fit-content;
+    height: fit-content;
 }
 
 #social-medias a {
@@ -26,10 +25,14 @@ body, html {
     -o-background-size: cover;
     -webkit-background-size: cover;
     -ms-content-zooming: none;
-    position: absolute;
+    position: fixed;
     overflow: scroll;
     width: 100%;
     height: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
 }
 
 #background-color {
