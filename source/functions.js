@@ -2,94 +2,97 @@
  * Functions for losedavidpb.github.io
  *
  * @author losedavidpb <losedavidpb@gmail.com>
- * @release 1.0.0
+ *
  ***************************************************************/
 
-import jobs_json from './data/json/jobs.json' assert { type: 'json' }
-import studies_json from './data/json/studies.json' assert { type: 'json' }
-import courses_json from './data/json/courses.json' assert { type: 'json' }
-import projects_json from './data/json/projects.json' assert { type: 'json' }
+/**
+ * Prepare all data extracted from JSON files
+ *
+ * @param {string} jobs_json
+ * @param {string} studies_json
+ * @param {string} courses_json
+ * @param {string} projects_json
+ * @param {string} lang
+ */
+export function prepare_json(jobs_json, studies_json, courses_json, projects_json, lang = 'en') {
+    if (jobs_json.jobs) {
+        let jobs = jobs_json.jobs;
 
-// --- JSON loading ...
-// -------------------------
+        jobs.forEach(job => {
+            include_job(job, lang);
+        })
+    }
 
-if (jobs_json.jobs) {
-    let jobs = jobs_json.jobs;
+    if (studies_json.studies) {
+        let studies = studies_json.studies;
 
-    jobs.forEach(job => {
-        include_job(job);
-    })
+        studies.forEach(study => {
+            include_study(study, lang);
+        });
+    }
+
+    if (courses_json.courses) {
+        let courses = courses_json.courses;
+
+        courses.forEach(course => {
+            include_course(course, lang);
+        });
+    }
+
+    if (projects_json.projects) {
+        let projects = projects_json.projects;
+
+        projects.forEach(project => {
+            include_project(project, lang);
+        });
+    }
 }
 
-if (studies_json.studies) {
-    let studies = studies_json.studies;
-
-    studies.forEach(study => {
-        include_study(study);
-    });
-}
-
-if (courses_json.courses) {
-    let courses = courses_json.courses;
-
-    courses.forEach(course => {
-        include_course(course);
-    });
-}
-
-if (projects_json.projects) {
-    let projects = projects_json.projects;
-
-    projects.forEach(project => {
-        include_project(project);
-    });
-}
-
-// --- Language Charts ...
-// -------------------------
-
-// Global settings for each chart
-
-if ($('#language-chart-1') && $('#language-chart-2')) {
-    const options = {
-        indexAxis: 'y',
-        scales: {
-            x: {
-                stacked: true,
-                ticks: { display: false },
-                grid: { display: false },
-                border: { display: false }
-            },
-            y: {
-                stacked: true,
-                grid: { display: false },
-                border: { display: false },
-                ticks: {
-                    color: '#1d1814',
-                    font: {
-                        size: 15,
-                        weight: 'bold',
+/**
+ * Prepare all programming charts
+ */
+export function prepare_programming_charts() {
+    if ($('#language-chart-1') && $('#language-chart-2')) {
+        const options = {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    stacked: true,
+                    ticks: { display: false },
+                    grid: { display: false },
+                    border: { display: false }
+                },
+                y: {
+                    stacked: true,
+                    grid: { display: false },
+                    border: { display: false },
+                    ticks: {
+                        color: '#1d1814',
+                        font: {
+                            size: 15,
+                            weight: 'bold',
+                        }
                     }
                 }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false }
             }
-        },
-        plugins: {
-            legend: { display: false },
-            tooltip: { enabled: false }
-        }
-    };
+        };
 
-    create_programming_langs_chart(
-        '#language-chart-1', options,
-        ["Java", "Python", "C#", "Unity"],
-        [95, 95, 80, 60], ['#e76f00', '#3571a3', '#9a4993', '#110b09']
-    );
+        create_programming_langs_chart(
+            '#language-chart-1', options,
+            ["Java", "Python", "C#", "Unity"],
+            [95, 95, 80, 60], ['#e76f00', '#3571a3', '#9a4993', '#110b09']
+        );
 
-    create_programming_langs_chart(
-        '#language-chart-2', options,
-        ["PHP", "PL/SQL", "JavaScript", "ASP .NET MVC"],
-        [100, 80, 75, 70], ['#617cbe', '#e00022', '#f8dc3e', '#48b2e6']
-    );
+        create_programming_langs_chart(
+            '#language-chart-2', options,
+            ["PHP", "PL/SQL", "JavaScript", "ASP .NET MVC"],
+            [100, 80, 75, 70], ['#617cbe', '#e00022', '#f8dc3e', '#48b2e6']
+        );
+    }
 }
 
 /**
@@ -134,15 +137,18 @@ function create_programming_langs_chart(id_chart, options, labels, data, backgro
  * Include a new job at the current job list
  *
  * @param {object} job
+ * @param {string} lang
  */
-function include_job(job) {
+function include_job(job, lang = 'en') {
+    let skill_name = lang == 'es' ? 'Aptitudes' : 'Skills';
+
     let html_content = '<li class="mb-3 pb-3"> \
         <h4>' + job.job + '</h4> \
         <div class="fs-5"><span><i>' + job.company + ' - ' + job.type + '</i></span><br> \
         <span class="text-muted">' + job.date + '</span><br> \
         <p class="text-muted">' + job.location + '</p> \
         <p>' + job.description + '</p> \
-        <span><span class="fw-bold">Aptitudes</span> ' + job.skills + '</span></div> \
+        <span><span class="fw-bold">' + skill_name + ': </span> ' + job.skills + '</span></div> \
     </li>';
 
     $("#job-list").append(html_content);
@@ -152,8 +158,9 @@ function include_job(job) {
  * Include a new study at the current study list
  *
  * @param {object} study
+ * @param {string} lang
  */
-function include_study(study) {
+function include_study(study, lang = 'en') {
     let html_content = '<li class="mb-3 pb-3"> \
         <h4>' + study.title + '</h4> \
         <div class="fs-5"><span><i>' + study.institution + '</i></span><br> \
@@ -180,8 +187,9 @@ function include_study(study) {
  * Include a new course at the current course list.
  *
  * @param {object} course
+ * @param {string} lang
  */
-function include_course(course) {
+function include_course(course, lang = 'en') {
     let html_content = '\
         <li class="mb-4"> \
             <h4>' + course.title + '</h4> \
@@ -196,11 +204,15 @@ function include_course(course) {
  * Include a new project at the current project list
  *
  * @param {object} project
+ * @param {string} lang
  */
-function include_project(project) {
+function include_project(project, lang = 'en') {
+    let skill_name = lang == 'es' ? 'Aptitudes' : 'Skills';
+
     let html_content = '<li class="mb-5"> \
         <h4>' + project.name + '</h4> \
         <span class="text-muted fs-5">' + project.date + '</span><br> \
+        <br><span class="fs-5"><span class="fw-bold">' + skill_name + ': </span>' + project.skills + '</span><br> \
         <div class="fs-5"><p class="pt-3 mb-2 pe-4">' + project.description + '</p></div>';
 
     project.urls.forEach(url => {

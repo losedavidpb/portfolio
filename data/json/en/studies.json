@@ -1,0 +1,24 @@
+{
+    "studies": [
+        {
+            "title": "Computer Engineering Degree",
+            "institution": "University of Las Palmas of Gran Canaria",
+            "date": "2018 - 2022",
+            "extra": [
+                {
+                    "name": "Specialty",
+                    "value": "Computation"
+                },
+                {
+                    "name": "Average grade",
+                    "value": "8,08"
+                }
+            ]
+        },
+        {
+            "title": "Science and Technology Bachelor's Degree",
+            "institution": "IES Siete Palmas",
+            "date": "2016 - 2018"
+        }
+    ]
+}

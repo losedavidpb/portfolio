@@ -1,0 +1,13 @@
+{
+    "jobs": [
+        {
+            "job": "Web Developer",
+            "company": "INERZA S.A.",
+            "type": "Internship contract",
+            "date": "sept. 2021 - dec. 2021 (4 months)",
+            "location": "Las Palmas of Gran Canaria, Canary Islands, Spain",
+            "description": "Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.",
+            "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum"
+        }
+    ]
+}

@@ -2,20 +2,19 @@
  * Stylesheet for losedavidpb.github.io
  *
  * @author losedavidpb <losedavidpb@gmail.com>
- * @release 1.0.0
+ *
  ***************************************************************/
 
+/** General settings **/
+
 body, html {
-    margin: 0;
-    padding: 0;
     max-width: fit-content;
     height: fit-content;
+    margin: 0;
+    padding: 0;
 }
 
-#social-medias a {
-    font-size: 2em;
-    text-decoration: none;
-}
+/** Background **/
 
 .background {
     background-size: cover;
@@ -40,17 +39,50 @@ body, html {
 }
 
 #background-image {
-    background-image: url('data/image/wallpaper.jpg');
+    background-image: url('../data/image/wallpaper.jpg');
 }
 
 #background-gif {
-    background-image: url('data/gif/wallpaper.gif');
+    background-image: url('../data/gif/wallpaper.gif');
+}
+
+/** Charts **/
+
+.lang-chart {
+    width: 400px;
+    height: 300px;
+    max-height: 300px;
+    max-width: 100%;
+    position: relative;
+}
+
+/** Navigation **/
+
+#social-medias a {
+    font-size: 2em;
+    text-decoration: none;
 }
 
 #profile-image {
     width: 200px;
     height: 200px;
 }
+
+#navbar-vertical {
+    background-color: white;
+    float: right;
+    position: absolute;
+    right: 20%;
+}
+
+/** Language Selector **/
+
+#language-div {
+    width: fit-content;
+    top: 20px;
+}
+
+/** Bootstrap **/
 
 .btn:focus, .btn:active {
     outline: none !important;

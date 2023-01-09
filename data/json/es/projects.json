@@ -1,20 +1,38 @@
 {
     "projects": [
         {
+            "name": "Portfolio Personal",
+            "date": "dic. 2020 - actualidad",
+            "description": "Este es mi portfolio personal y en él muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.",
+            "skills": "HTML, CSS, JavaScript, Bootstrap",
+            "urls": [
+                {
+                    "name": "Página web",
+                    "value": "https://losedavidpb.github.io/"
+                },
+                {
+                    "name": "Código fuente",
+                    "value": "https://github.com/losedavidpb/losedavidpb.github.io"
+                }
+            ]
+        },
+        {
             "name": "Configuración DotFiles para Sistemas GNU/Linux",
             "date": "oct. 2020 - actualidad",
             "description": "En este proyecto se incluye un repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. En el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.",
+            "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
             "urls": [
                 {
-                    "name": "Enlace",
+                    "name": "Código fuente",
                     "value": "https://github.com/losedavidpb/bash-dotfiles"
                 }
             ]
         },
         {
             "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
-            "date": "jun. 2022 - dic. 2022",
+            "date": "jun. 2022 - dic. 2022 (8 meses)",
             "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. <p>Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace. </p>",
+            "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
             "urls": [
                 {
                     "name": "Código fuente",
