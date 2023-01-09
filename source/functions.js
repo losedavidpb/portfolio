@@ -217,7 +217,7 @@ function include_project(project, lang = 'en') {
 
     project.urls.forEach(url => {
         html_content += '<span class="fs-5"><span class="fw-bold">' + url.name + ': </span>';
-        html_content += '<a class="link-primary">' + url.value + '</a></span><br>';
+        html_content += '<a class="link-primary" href="' + url.value + '" target="_blank">' + url.value + '</a></span><br>';
     });
 
     html_content += '</li>';
