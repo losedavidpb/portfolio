@@ -4,7 +4,7 @@
             "name": "Portfolio Personal",
             "date": "dic. 2020 - actualidad",
             "description": "Este es mi portfolio personal y en él muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.",
-            "skills": "HTML, CSS, JavaScript, Bootstrap",
+            "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
             "urls": [
                 {
                     "name": "Página web",

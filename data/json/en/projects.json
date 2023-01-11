@@ -4,7 +4,7 @@
             "name": "Personal Portfolio",
             "date": "dec. 2020 - now",
             "description": "This portfolio shows my professional trajectory in the Computer Engineer field. <br>The development of this website has been manually codified using Bootstrap and other useful tools.",
-            "skills": "HTML, CSS, JavaScript, Bootstrap",
+            "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
             "urls": [
                 {
                     "name": "Webpage",
