@@ -81,15 +81,24 @@
         box-shadow: none;
     }
 
-    /** Charts **/
+    /* Horizontal lines */
 
-    .lang-chart {
-        width: 400px;
-        height: 300px;
-        max-height: 300px;
-        max-width: 100%;
-        position: relative;
-        object-fit: cover;
+    .hr-5 {
+        border-top: 1px solid gray;
+    }
+
+    .hr-8 {
+        border-top: 1px solid gray;
+    }
+
+    /** Skill images **/
+
+    .lang-image {
+        max-height: 100px;
+        max-width: 150px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 0;
     }
 }
 
@@ -107,6 +116,14 @@
         margin-right: 30px;
         top: 10px;
     }
+
+    .hr-5 {
+        width: 300px;
+    }
+
+    .hr-8 {
+        width: 600px;
+    }
 }
 
 /** Large screens **/
@@ -119,11 +136,27 @@
         margin-right: 100px;
         top: 20px;
     }
+
+    .hr-5 {
+        width: 400px;
+    }
+
+    .hr-8 {
+        width: 700px;
+    }
 }
 
 /** Extra large screens **/
 @media screen and (min-width: 1600px) {
     #language-div {
         position: sticky;
+    }
+
+    .hr-5 {
+        width: 500px;
+    }
+
+    .hr-8 {
+        width: 800px;
     }
 }

@@ -12,9 +12,10 @@
  * @param {string} studies_json
  * @param {string} courses_json
  * @param {string} projects_json
+ * @param {string} skills_json
  * @param {string} lang
  */
-export function prepare_json(jobs_json, studies_json, courses_json, projects_json, lang = 'en') {
+export function prepare_json(jobs_json, studies_json, skills_json, courses_json, projects_json, lang = 'en') {
     if (jobs_json.jobs) {
         let jobs = jobs_json.jobs;
 
@@ -28,6 +29,14 @@ export function prepare_json(jobs_json, studies_json, courses_json, projects_jso
 
         studies.forEach(study => {
             include_study(study, lang);
+        });
+    }
+
+    if (skills_json.skills) {
+        let skills = skills_json.skills;
+
+        skills.forEach(skill => {
+            include_skill(skill, lang);
         });
     }
 
@@ -46,91 +55,6 @@ export function prepare_json(jobs_json, studies_json, courses_json, projects_jso
             include_project(project, lang);
         });
     }
-}
-
-/**
- * Prepare all programming charts
- */
-export function prepare_programming_charts() {
-    if ($('#language-chart-1') && $('#language-chart-2')) {
-        const options = {
-            indexAxis: 'y',
-            scales: {
-                x: {
-                    stacked: true,
-                    ticks: { display: false },
-                    grid: { display: false },
-                    border: { display: false }
-                },
-                y: {
-                    stacked: true,
-                    grid: { display: false },
-                    border: { display: false },
-                    ticks: {
-                        color: '#1d1814',
-                        font: {
-                            size: 15,
-                            weight: 'bold',
-                        }
-                    }
-                }
-            },
-            plugins: {
-                legend: { display: false },
-                tooltip: { enabled: false }
-            }
-        };
-
-        create_programming_langs_chart(
-            '#language-chart-1', options,
-            ["Java", "Python", "C#", "Unity"],
-            [95, 95, 80, 60], ['#e76f00', '#3571a3', '#9a4993', '#110b09']
-        );
-
-        create_programming_langs_chart(
-            '#language-chart-2', options,
-            ["PHP", "PL/SQL", "JavaScript", "ASP .NET MVC"],
-            [100, 80, 75, 70], ['#617cbe', '#e00022', '#f8dc3e', '#48b2e6']
-        );
-    }
-}
-
-/**
- * Create a new bar chart for programming languages.
- *
- * @param {string} id_chart
- * @param {object} options
- * @param {Array} labels
- * @param {Array} data
- * @param {Array} background_color
- */
-function create_programming_langs_chart(id_chart, options, labels, data, background_color) {
-    let data_2 = data.map((x) => 100 - x);
-    let background_color_2 = background_color.map((x) => '#e0e0e0');
-
-    new Chart($(id_chart).get(0).getContext('2d'), {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [
-                {
-                    categoryPercentage: 1.0,
-                    barPercentage: 0.5,
-                    data: data,
-                    backgroundColor: background_color,
-                    borderRadius: 4,
-                },
-                {
-                    categoryPercentage: 1.0,
-                    barPercentage: 0.5,
-                    data: data_2,
-                    backgroundColor: background_color_2,
-                    borderRadius: 4,
-                }
-            ]
-        },
-        options: options
-    });
 }
 
 /**
@@ -184,6 +108,31 @@ function include_study(study, lang = 'en') {
 }
 
 /**
+ * Include a new skill at the current skill list.
+ *
+ * @param {object} skill
+ * @param {string} lang
+ */
+function include_skill(skill, lang = 'en') {
+    let html_content = '<li class="py-4"> \
+        <h4>' + skill.title + '</h4> \
+        <div class="row justify-content-md mt-5 ps-5">';
+
+    skill.values.forEach(value => {
+        html_content += '<div class="col-md-auto"> \
+            <a href="' + value.href + '" target="_blank"> \
+                <img src="' + value.src + '" class="lang-image img-fluid" alt="' + value.alt + '" \
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="' + value.tooltip + '" /> \
+            </a> \
+        </div>';
+    });
+
+    html_content += '</div></li>';
+
+    $('#skill-list').append(html_content);
+}
+
+/**
  * Include a new course at the current course list.
  *
  * @param {object} course
@@ -216,11 +165,29 @@ function include_project(project, lang = 'en') {
         <div class="fs-5"><p class="pt-3 mb-2 pe-4">' + project.description + '</p></div>';
 
     project.urls.forEach(url => {
-        html_content += '<span class="fs-5"><span class="fw-bold">' + url.name + ': </span>';
-        html_content += '<a class="link-primary" href="' + url.value + '" target="_blank">' + url.value + '</a></span><br>';
+        html_content += '<a class="btn btn-primary me-3" href="' + url.value + '" \
+            target="_blank" role="button"> \
+            <span class="fw-bold">' + url.name + ' <i class="bi bi-box-arrow-up-right"></i></span> \
+        </a>';
     });
 
     html_content += '</li>';
 
     $("#project-list").append(html_content);
+}
+
+/**
+ * Display temporal message on the screen
+ *
+ * @param {string} lang
+ */
+function include_temp_message(lang = 'en') {
+    let message = lang == 'es' ? '¡En progreso! 😅' : 'Sorry, still in progress! 😅';
+
+    $('body').append('<div class="background" id="background-color"> \
+        <div class="d-inline-block"> \
+            <img src="../../data/gif/loading.gif" /> \
+            <span class="fs-1" style="color: white;">' + message + '</span> \
+        </div> \
+    </div>');
 }

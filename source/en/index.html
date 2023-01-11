@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=devide-width, initial-scale=1" />
     <title>David Parreño - Computer Engineering</title>
     <meta name="keywords" content="portfolio,developer,code,game,games,videogame,videogames,unity,c#,java,javascript,js,php,python" />
-    <meta name="description" content="Personal Portfolio of David Parreño Barbuzano, computer engineering graduated from the University of Las Palmas of Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development." />
-    <meta name="author" content="David Parreño Barbuzano" />
+    <meta name="description" content="Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas of Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development." />
+    <meta name="author" content="David Parreño" />
     <link rel="icon" type="image/x-icon" href="../../data/image/favicon.ico">
 
     <!-- https://developers.google.com/speed/libraries -->
@@ -32,9 +32,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
-
-    <!-- https://www.jsdelivr.com/package/npm -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.1.1/dist/chart.umd.min.js"></script>
 
     <script type="module" src="../functions.js"></script>
     <script type="module" src="main.js"></script>
@@ -191,31 +188,20 @@
                 </div>
             </section>
             <section class="section border border-dark border-1 rounded bg-white mt-4 px-2 py-5" id="jobs-studies">
-                <div class="row">
-                    <div class="col col-6" id="job-panel">
-                        <section class="px-5">
-                            <h2 class="pb-4">Work experience ⛏️</h2>
-                            <ul class="mt-4" id="job-list"></ul>
-                        </section>
-                    </div>
-                    <div class="col col-6" id="study-panels">
-                        <section class="px-5">
-                            <h2 class="pb-4">Studies 📚</h2>
-                            <ul class="mt-4" id="study-list"></ul>
-                        </section>
-                    </div>
-                </div>
+                <section class="px-5">
+                    <h2 class="pb-4">Work experience ⛏️</h2>
+                    <ul class="mt-4 mx-4" id="job-list"></ul>
+                </section>
+                <section class="px-5">
+                    <h2 class="pb-4">Studies 📚</h2>
+                    <ul class="mt-4 mx-4" id="study-list"></ul>
+                </section>
             </section>
             <section class="section border border-dark border-1 rounded bg-white mt-4 py-4" id="skills">
                 <div class="px-5">
                     <h2 class="py-4">Skills 💪</h2>
-                    <div class="row">
-                        <div class="col lang-chart">
-                            <canvas id="language-chart-1"></canvas>
-                        </div>
-                        <div class="col lang-chart">
-                            <canvas id="language-chart-2"></canvas>
-                        </div>
+                    <div class="container">
+                        <ul class="ms-4" id="skill-list"></ul>
                     </div>
                 </div>
             </section>
@@ -225,7 +211,7 @@
                     <ul id="project-list"></ul>
                 </div>
             </section>
-            <section class="section border border-dark border-1 rounded bg-white my-4 pt-4 pb-6" id="courses">
+            <section class="section border border-dark border-1 rounded bg-white my-4 py-4" id="courses">
                 <div class="px-5">
                     <h2 class="py-4">Courses and Certificates 📰</h2>
                     <ul id="course-list"></ul>
