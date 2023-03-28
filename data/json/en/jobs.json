@@ -1,9 +1,18 @@
 {
     "jobs": [
         {
+            "job": "Computer Technician",
+            "company": "Cabildo of Gran Canaria",
+            "type": "Internship contract",
+            "date": "jan. 2023 - now",
+            "location": "Las Palmas of Gran Canaria, Canary Islands, Spain",
+            "description": "",
+            "skills": "Git, Java, Python, Teamwork, Communication, Bash"
+        },
+        {
             "job": "Web Developer",
             "company": "INERZA S.A.",
-            "type": "Internship contract",
+            "type": "Apprenticeship contract",
             "date": "sept. 2021 - dec. 2021 (4 months)",
             "location": "Las Palmas of Gran Canaria, Canary Islands, Spain",
             "description": "Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.",

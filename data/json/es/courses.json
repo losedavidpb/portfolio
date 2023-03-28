@@ -1,6 +1,14 @@
 {
     "courses": [
         {
+            "title": "La Guía Definitiva para el Desarrollo de Videojuegos con Unity (Oficial)",
+            "subtitle": "Udemy (2023)"
+        },
+        {
+            "title": "Curso Completo de Desarrollo ASP.NET MVC",
+            "subtitle": "Udemy (2023)"
+        },
+        {
             "title": "Curso Superior Universitario de Promotor Digital",
             "subtitle": "Fundación Universitaria de Las Palmas (2022)"
         },

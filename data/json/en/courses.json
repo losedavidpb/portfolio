@@ -1,6 +1,14 @@
 {
     "courses": [
         {
+            "title": "The Ultimate Guide to Game Development with Unity (Official)",
+            "subtitle": "Udemy (2023)"
+        },
+        {
+            "title": "Complete ASP.NET MVC Development Course",
+            "subtitle": "Udemy (2023)"
+        },
+        {
             "title": "Higher University Course of Digital Promoter",
             "subtitle": "Las Palmas University Foundation (2022)"
         },
