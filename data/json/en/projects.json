@@ -1,6 +1,28 @@
 {
     "projects": [
         {
+            "name": "Expedia - Expedient Manager",
+            "date": "jan. 2023 - jan. 2024 (1 year and 1 month)",
+            "description": "Expedia is a desktop application designed for the efficient management of general entry records and expedients processed by the Industry and Commerce Service of the Cabildo de Gran Canaria.<p>The main objective of this project is to facilitate Service workers to monitor the status and evolution of each of the processed records, optimizing certain repetitive tasks and reducing possible human errors.</p>",
+            "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java"
+        },
+        {
+            "name": "Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL",
+            "date": "jun. 2022 - dec. 2022 (8 months)",
+            "description": "Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>",
+            "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
+            "urls": [
+                {
+                    "name": "Source code",
+                    "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+                },
+                {
+                    "name": "User manual",
+                    "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+                }
+            ]
+        },
+        {
             "name": "Personal Portfolio",
             "date": "dec. 2020 - now",
             "description": "This portfolio shows my professional trajectory in the Computer Engineer field. <br>The development of this website has been manually codified using Bootstrap and other useful tools.",
@@ -25,22 +47,6 @@
                 {
                     "name": "Source code",
                     "value": "https://github.com/losedavidpb/bash-dotfiles"
-                }
-            ]
-        },
-        {
-            "name": "Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL",
-            "date": "jun. 2022 - dec. 2022 (8 months)",
-            "description": "Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>",
-            "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
-            "urls": [
-                {
-                    "name": "Source code",
-                    "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
-                },
-                {
-                    "name": "User manual",
-                    "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
                 }
             ]
         }

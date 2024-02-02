@@ -1,6 +1,10 @@
 {
     "courses": [
         {
+            "title": "First Certificate in English",
+            "subtitle": "Cambridge University Press & Assessment (2023)"
+        },
+        {
             "title": "The Ultimate Guide to Game Development with Unity (Official)",
             "subtitle": "Udemy (2023)"
         },

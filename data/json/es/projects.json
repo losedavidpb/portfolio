@@ -1,6 +1,28 @@
 {
     "projects": [
         {
+            "name": "Expedia - Gestor de Expedientes",
+            "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
+            "description": "Expedia es una aplicación de escritorio diseñada para la gestión eficaz de los registros generales de entrada y expedientes tramitados por el Servicio de Industria y Comercio del Cabildo de Gran Canaria.<p>El principal objetivo de este proyecto es facilitar a los trabajadores del Servicio el seguimiento del estado y evolución de cada uno de los registros procesados, optimizando determinadas tareas repetitivas y reduciendo posibles errores humanos.</p>",
+            "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java"
+        },
+        {
+            "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
+            "date": "jun. 2022 - dic. 2022 (8 meses)",
+            "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. <p>Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace. </p>",
+            "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
+            "urls": [
+                {
+                    "name": "Código fuente",
+                    "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+                },
+                {
+                    "name": "Manual de usuario",
+                    "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+                }
+            ]
+        },
+        {
             "name": "Portfolio Personal",
             "date": "dic. 2020 - actualidad",
             "description": "Este es mi portfolio personal y en él muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.",
@@ -25,22 +47,6 @@
                 {
                     "name": "Código fuente",
                     "value": "https://github.com/losedavidpb/bash-dotfiles"
-                }
-            ]
-        },
-        {
-            "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
-            "date": "jun. 2022 - dic. 2022 (8 meses)",
-            "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. <p>Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace. </p>",
-            "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
-            "urls": [
-                {
-                    "name": "Código fuente",
-                    "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
-                },
-                {
-                    "name": "Manual de usuario",
-                    "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
                 }
             ]
         }

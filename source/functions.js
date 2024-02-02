@@ -164,12 +164,14 @@ function include_project(project, lang = 'en') {
         <br><span class="fs-5"><span class="fw-bold">' + skill_name + ': </span>' + project.skills + '</span><br> \
         <div class="fs-5"><p class="pt-3 mb-2 pe-4">' + project.description + '</p></div>';
 
-    project.urls.forEach(url => {
-        html_content += '<a class="btn btn-primary me-3 mb-3" href="' + url.value + '" \
+    if (project.urls) {
+        project.urls.forEach(url => {
+            html_content += '<a class="btn btn-primary me-3 mb-3" href="' + url.value + '" \
             target="_blank" role="button"> \
             <span class="fw-bold">' + url.name + ' <i class="bi bi-box-arrow-up-right"></i></span> \
         </a>';
-    });
+        });
+    }
 
     html_content += '</li>';
 
