@@ -1,0 +1,42 @@
+skills:
+  - title: Lenguajes de programación
+    values:
+      # Java
+      ######################################
+
+      - alt: Logo de Java
+        tooltip: Java
+        src: ../../data/image/languages/java.png
+        href: https://www.java.com/es/
+
+        # Python
+        ######################################
+
+      - alt: Logo de Python
+        tooltip: Python
+        src: ../../data/image/languages/python.png
+        href: https://www.python.org/
+
+        # C#
+        ######################################
+
+      - alt: Logo de C#
+        tooltip: C#
+        src: ../../data/image/languages/csharp.png
+        href: https://learn.microsoft.com/en-us/dotnet/csharp/
+
+        # PHP
+        ######################################
+
+      - alt: Logo de PHP
+        tooltip: "PHP: Hypertext Preprocessor"
+        src: ../../data/image/languages/php.png
+        href: https://www.php.net/
+
+        # JavaScript
+        ######################################
+
+      - alt: Logo de JavaScript
+        tooltip: JavaScript
+        src: ../../data/image/languages/javascript.png
+        href: https://www.javascript.com/

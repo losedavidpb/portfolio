@@ -1,0 +1,30 @@
+courses:
+  # First Certificate in English
+  ######################################
+
+  - title: First Certificate in English
+    subtitle: Cambridge University Press & Assessment (2023)
+
+  # The Ultimate Guide to Game Development with Unity (Official)
+  ######################################
+
+  - title: The Ultimate Guide to Game Development with Unity (Official)
+    subtitle: Udemy (2023)
+
+  # Complete ASP.NET MVC Development Course
+  ######################################
+
+  - title: Complete ASP.NET MVC Development Course
+    subtitle: Udemy (2023)
+
+  # Higher University Course of Digital Promoter
+  ######################################
+
+  - title: Higher University Course of Digital Promoter
+    subtitle: Las Palmas University Foundation (2022)
+
+  # Press Start: How to enter the game industry
+  ######################################
+
+  - title: "Press Start: How to enter the game industry"
+    subtitle: University of Las Palmas of Gran Canaria (2022)

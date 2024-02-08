@@ -1,0 +1,60 @@
+general:
+  # Meta
+  ######################################
+
+  meta:
+    title: David Parreño - Computer Engineering
+    author: David Parreño
+    keywords: portfolio,developer,code,game,games,videogame,videogames,unity,c#,java,javascript,js,php,python
+    description: |
+      Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas of Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development.
+
+  # Author
+  ######################################
+
+  person: David Parreño
+  location: Las Palmas of Gran Canaria, Canary Islands, Spain
+  current_rol: Computer Engineering
+
+  # Sections
+  ######################################
+
+  sections:
+    home: Home
+    contact: Contact
+    about_me: About me
+    experience_studies: Experience and Studies
+    skills: Skills
+    projects: Projects
+    courses_certificates: Courses and Certificates
+
+  # Headers
+  ######################################
+
+  headers:
+    home: Home
+    contact: Contact 📞
+    about_me: About me 💻🎮
+    experience: Work experience ⛏️
+    studies: Studies 📚
+    skills: Skills 💪
+    projects: Projects 🛠️
+    courses_certificates: Courses and Certificates 📰
+
+  # Introduction
+  ######################################
+
+  introduction:
+    title: Hello world! 👋
+    content: |
+      <p>
+        My name is David, and one of my great passions is programming. Although I recently finished
+        my studies at the University of Las Palmas of Gran Canaria, my intention is to continue training
+        in different areas of Computer Engineering.
+      </p>
+      <p>
+        During these years, I have acquired knowledge and experience in the development of software
+        products with programming languages such as Java, C++, C#, JavaScript, or Python. The projects
+        I have worked on follow Clean Code principles, and apply architectural models such as MVC, and
+        design patterns such as Command, Singleton, or Abstract Factory.
+      </p>

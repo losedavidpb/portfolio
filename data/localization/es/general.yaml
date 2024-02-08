@@ -1,0 +1,61 @@
+general:
+  # Meta
+  ######################################
+
+  meta:
+    title: David Parreño Barbuzano - Ingeniero Informático
+    author: David Parreño Barbuzano
+    keywords: portfolio,desarrollador,código,juego,juegos,videojuegos,unity,c#,java,javascript,js,php,python
+    description: |
+      Portfolio personal de David Parreño Barbuzano, ingeniero informático graduado en la Universidad de Las Palmas de Gran Canaria (ULPGC) que busca una oportunidad con la que demostrar sus habilidades y conocimientos para el desarrollo de aplicaciones software.
+
+  # Author
+  ######################################
+
+  person: David Parreño
+  location: Las Palmas de Gran Canaria, Canarias, España
+  current_rol: Ingeniero Informático
+
+  # Sections
+  ######################################
+
+  sections:
+    home: Home
+    contact: Contacto
+    about_me: Sobre mí
+    experience_studies: Experiencia y Estudios
+    skills: Habilidades
+    projects: Proyectos
+    courses_certificates: Cursos y Certificados
+
+  # Headers
+  ######################################
+
+  headers:
+    home: Home
+    contact: Contacto 📞
+    about_me: Sobre mí 💻🎮
+    experience: Experiencia laboral ⛏️
+    studies: Estudios 📚
+    skills: Habilidades 💪
+    projects: Proyectos 🛠️
+    courses_certificates: Cursos y Certificados 📰
+
+  # Introduction
+  ######################################
+
+  introduction:
+    title: ¡Hola mundo! 👋
+    content: |
+      <p>
+        Me llamo David, y una de mis grandes pasiones es la programación. Aunque hace poco tiempo terminé
+        mis estudios en la Universidad de Las Palmas de Gran Canaria, mi intención es seguir formándome en
+        diferentes áreas de la Ingeniería Informática.
+      </p>
+
+      <p>
+        Durante estos años, he adquirido conocimientos y experiencia en el desarrollo de productos software
+        con lenguajes de programación como Java, C++, C#, JavaScript, o Python. Los proyectos en los que he
+        trabajado siguen los principios Clean Code, y aplican modelos arquitectónicos tales como MVC, y patrones
+        de diseño como Command, Singleton, o Abstract Factory.
+      </p>
