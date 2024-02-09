@@ -14,7 +14,7 @@ projects:
     date: jun. 2022 - dec. 2022 (8 months)
     skills: PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx
     description: |
-      Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>",
+      Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>
     urls:
       - name: Source code"
         value: https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++
