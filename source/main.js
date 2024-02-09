@@ -1,7 +1,7 @@
 import { prepare_json } from './functions.js'
 
 const lang = document.URL.split('?')[1].split('lang=')[1];
-const localization_dir = './../../data/localization/';
+const localization_dir = './../data/localization/';
 
 /**
  * Load localization file from the data folder
