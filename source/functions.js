@@ -255,11 +255,24 @@ function include_skill(skill, lang = 'en') {
         <div class="row justify-content-md mt-5 ps-5">';
 
     skill.values.forEach(value => {
-        html_content += '<div class="col-md-auto"> \
-            <a href="' + value.href + '" target="_blank"> \
-                <img src="' + value.src + '" class="lang-image img-fluid" alt="' + value.alt + '" \
-                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="' + value.tooltip + '" /> \
-            </a> \
+        html_content += '<h4>' + value.tooltip + '</h4>';
+
+        html_content += '<div class="row align-items-center pt-2 pb-4"> \
+            <div class="col-auto"> \
+                <a href="' + value.href + '" target="_blank"> \
+                    <img src="' + value.src + '" class="lang-image img-fluid" alt="' + value.alt + '" \
+                        style="max-width: 80px; height: auto;" \
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="' + value.tooltip + '" /> \
+                </a> \
+            </div> \
+            <div class="col"> \
+                <div class="progress" style="height: 30px"> \
+                    <div class="progress-bar" role="progressbar" style="width: ' + value.value * 2 + '%;" \
+                        aria-valuenow="' + value.value + '" aria-valuemin="0" aria-valuemax="100"> \
+                        <h4 class="my-4">' + value.value * 2 + '%</h4> \
+                    </div> \
+                </div> \
+            </div> \
         </div>';
     });
 

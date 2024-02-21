@@ -9,8 +9,12 @@ jobs:
       location: Las Palmas of Gran Canaria, Canary Islands, Spain
       skills: Git, Java, Python, Teamwork, Communication, Bash
       description: |
-        - Development and implementation of a computer application for the internal management of the expedients processed by the Industry and Commerce Service from the Cabildo of Gran Canaria.<p>
-        - Meetings with the Cabildo and with other external companies contracted, for the intermediation and technical assistance in several issues of Computer Engineering.</p>
+        <ul>
+          <li>Development and maintenance of an expedient manager.</li>
+          <li>Technical assistance in the field of Computer Engineering.</li>
+          <li>Meetings with the Cabildo and with other external companies contracted.</li>
+          <li>Drafting of technical specifications.</li>
+        </ul>
 
   # Web Developer
   ######################################

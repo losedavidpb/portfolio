@@ -8,35 +8,49 @@ skills:
         tooltip: Java
         src: ../data/image/languages/java.png
         href: https://www.java.com/es/
+        value: 50
 
-        # Python
-        ######################################
+      # Python
+      ######################################
 
       - alt: Python's logo
         tooltip: Python
         src: ../data/image/languages/python.png
         href: https://www.python.org/
+        value: 40
 
-        # C#
-        ######################################
+      # C#
+      ######################################
 
       - alt: C#'s logo
         tooltip: C#
         src: ../data/image/languages/csharp.png
         href: https://learn.microsoft.com/en-us/dotnet/csharp/
+        value: 30
 
-        # PHP
-        ######################################
+      # PHP
+      ######################################
 
       - alt: PHP's logo
         tooltip: "PHP: Hypertext Preprocessor"
         src: ../data/image/languages/php.png
         href: https://www.php.net/
+        value: 40
 
-        # JavaScript
-        ######################################
+      # JavaScript
+      ######################################
 
       - alt: JavaScript's logo
         tooltip: JavaScript
         src: ../data/image/languages/javascript.png
         href: https://www.javascript.com/
+        value: 30
+
+      # Bash
+      ######################################
+
+      - alt: Bash's logo
+        tooltip: Bash
+        src: ../data/image/languages/bash.png
+        href: https://www.gnu.org/software/bash/
+        value: 50

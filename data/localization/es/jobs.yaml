@@ -9,8 +9,12 @@ jobs:
       location: Las Palmas de Gran Canaria, Canarias, España
       skills: Git, Java, Python, Teamwork, Communication, Bash
       description: |
-        - Desarrollo e implantación de una aplicación informática para la gestión interna de los expedientes tramitados desde el Servicio de Industria y Comercio, Cabildo de Gran Canaria.
-        <p>- Realización de reuniones, tanto con el Cabildo como con otras empresas externas contratadas, para la intermediación y asistencia técnica en diversas cuestiones de la Ingeniería Informática.</p>
+        <ul>
+          <li>Desarrollo y mantenimiento de un gestor de expedientes.</li>
+          <li>Asistencia técnica en el campo de la Ingeniería Informática.</li>
+          <li>Reuniones con el Cabildo y otras empresas externas contratadas.</li>
+          <li>Redacción de pliegos de prescripciones técnicas.</li>
+        </ul>
 
   # Web Developer
   ######################################
