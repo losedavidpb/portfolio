@@ -1,4 +1,14 @@
 studies:
+  # Master of Science in Software Engineering
+  ######################################
+
+  - title: Máster de Ciencias en Ingeniería de Software
+    institution: Universidad de Limerick
+    date: 2024 - (presente)
+    extra:
+      - name: Corriente
+        value: Proceso y Análisis de Software
+
   # Computer Engineering Degree
   ######################################
 

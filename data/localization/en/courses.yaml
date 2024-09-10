@@ -1,8 +1,14 @@
 courses:
+  # Advanced English
+  ######################################
+
+  - title: Advanced English (C1)
+    subtitle: Cambridge University Press & Assessment (2024)
+
   # First Certificate in English
   ######################################
 
-  - title: First Certificate in English
+  - title: First Certificate in English (B2)
     subtitle: Cambridge University Press & Assessment (2023)
 
   # The Ultimate Guide to Game Development with Unity (Official)

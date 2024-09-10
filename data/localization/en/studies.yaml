@@ -1,4 +1,14 @@
 studies:
+  # Master of Science in Software Engineering
+  ######################################
+
+  - title: Master of Science in Software Engineering
+    institution: University of Limerick
+    date: 2024 - (present)
+    extra:
+      - name: Stream
+        value: Software Process and Analysis
+
   # Computer Engineering Degree
   ######################################
 
