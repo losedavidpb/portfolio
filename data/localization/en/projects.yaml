@@ -20,6 +20,8 @@ projects:
         value: https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++
       - name: User manual
         value: https://github.com/losedavidpb/tokenizer-doc_vpl
+      - name: Thesis
+        value: https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf
 
   # Personal Portfolio
   ######################################
