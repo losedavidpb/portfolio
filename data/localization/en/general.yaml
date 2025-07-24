@@ -13,8 +13,8 @@ general:
   ######################################
 
   person: David Parreño
-  location: Las Palmas of Gran Canaria, Canary Islands, Spain
-  current_rol: Computer Engineering
+  location: Las Palmas de Gran Canaria, Canary Islands, Spain
+  current_rol: Computer Engineer
 
   # Sections
   ######################################
@@ -48,8 +48,8 @@ general:
     title: Hello world! 👋
     content: |
       <p>
-        My name is David, and one of my great passions is programming. Last year 2022 I completed my Computer
-        Engineering Degree at the University of Las Palmas de Gran Canaria, and now I am starting my Master's
+        My name is David, and one of my great passions is programming. In 2022, I completed my degree in Computer
+        Engineering at the University de Las Palmas de Gran Canaria, and now I am finishing my Master's
         studies at the University of Limerick.
       </p>
       <p>

@@ -1,9 +1,26 @@
 jobs:
+
+  # Technical Staff in Research Project
+  ######################################
+
+    - job: Technical Staff in Research Project
+      company: Instituto Universitario IATEXT
+      type: Full-time contract
+      date: jul. 2025 - present
+      location: Las Palmas de Gran Canaria, Canary Islands, Spain
+      skills: ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server
+      description: |
+        <ul>
+          <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>
+          <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES</li>
+          <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>
+        </ul>
+
   # Computer Technician
   ######################################
 
     - job: Computer Technician
-      company: Cabildo of Gran Canaria
+      company: Cabildo de Gran Canaria
       type: Internship contract
       date: jan. 2023 - jan. 2024 (1 year and 1 month)
       location: Las Palmas of Gran Canaria, Canary Islands, Spain

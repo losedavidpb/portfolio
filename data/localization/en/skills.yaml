@@ -4,7 +4,7 @@ skills:
       # Java
       ######################################
 
-      - alt: Java's logo
+      - alt: Java logo
         tooltip: Java
         src: ../data/image/languages/java.png
         href: https://www.java.com/es/
@@ -13,7 +13,7 @@ skills:
       # Python
       ######################################
 
-      - alt: Python's logo
+      - alt: Python logo
         tooltip: Python
         src: ../data/image/languages/python.png
         href: https://www.python.org/
@@ -22,7 +22,7 @@ skills:
       # C#
       ######################################
 
-      - alt: C#'s logo
+      - alt: C# logo
         tooltip: C#
         src: ../data/image/languages/csharp.png
         href: https://learn.microsoft.com/en-us/dotnet/csharp/
@@ -31,7 +31,7 @@ skills:
       # PHP
       ######################################
 
-      - alt: PHP's logo
+      - alt: PHP logo
         tooltip: "PHP: Hypertext Preprocessor"
         src: ../data/image/languages/php.png
         href: https://www.php.net/
@@ -40,7 +40,7 @@ skills:
       # JavaScript
       ######################################
 
-      - alt: JavaScript's logo
+      - alt: JavaScript logo
         tooltip: JavaScript
         src: ../data/image/languages/javascript.png
         href: https://www.javascript.com/
@@ -54,3 +54,56 @@ skills:
         src: ../data/image/languages/bash.png
         href: https://www.gnu.org/software/bash/
         value: 50
+
+  - title: Database Management
+    values:
+      # Microsoft Access
+      ######################################
+
+      - alt: Microsoft Access logo
+        tooltip: "Microsoft Access"
+        src: ../data/image/database/access.png
+        value: 30
+
+      # SQLite
+      ######################################
+
+      - alt: SQLite logo
+        tooltip: SQLite
+        src: ../data/image/database/sqlite.png
+        value: 40
+
+      # MySQL
+      ######################################
+
+      - alt: MySQL logo
+        tooltip: MySQL
+        src: ../data/image/database/mysql.png
+        value: 40
+
+  - title: Development Frameworks
+    values:
+
+      # React
+      ######################################
+
+      - alt: React logo
+        tooltip: React
+        src: ../data/image/frameworks/react.png
+        value: 40
+
+      # ASP.NET MVC
+      ######################################
+
+      - alt: ASP.NET MVC logo
+        tooltip: ASP.NET MVC
+        src: ../data/image/frameworks/netmvc.png
+        value: 45
+
+      # SpringBoot
+      ######################################
+
+      - alt: Spring Boot logo
+        tooltip: Spring Boot
+        src: ../data/image/frameworks/springboot.png
+        value: 45

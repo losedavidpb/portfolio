@@ -49,8 +49,61 @@ skills:
       # Bash
       ######################################
 
-      - alt: Bash's logo
+      - alt: Logo de Bash
         tooltip: Bash
         src: ../data/image/languages/bash.png
         href: https://www.gnu.org/software/bash/
         value: 50
+
+  - title: Gestión de Bases de Datos
+    values:
+      # Microsoft Access
+      ######################################
+
+      - alt: Logo de Microsoft Access
+        tooltip: Microsoft Access
+        src: ../data/image/database/access.png
+        value: 30
+
+      # SQLite
+      ######################################
+
+      - alt: Logo de SQLite
+        tooltip: SQLite
+        src: ../data/image/database/sqlite.png
+        value: 40
+
+      # MySQL
+      ######################################
+
+      - alt: Logo de MySQL
+        tooltip: MySQL
+        src: ../data/image/database/mysql.png
+        value: 40
+
+  - title: Frameworks de desarrollo
+    values:
+
+      # React
+      ######################################
+
+      - alt: Logo de React
+        tooltip: React
+        src: ../data/image/frameworks/react.png
+        value: 40
+
+      # ASP.NET MVC
+      ######################################
+
+      - alt: Logo de ASP.NET MVC
+        tooltip: ASP.NET MVC
+        src: ../data/image/frameworks/netmvc.png
+        value: 45
+
+      # Spring Boot
+      ######################################
+
+      - alt: Logo de Spring Boot
+        tooltip: Spring Boot
+        src: ../data/image/frameworks/springboot.png
+        value: 45
