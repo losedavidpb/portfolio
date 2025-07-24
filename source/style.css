@@ -100,6 +100,34 @@
         padding-right: 20px;
         padding-left: 0;
     }
+
+    /** Loading Animation **/
+
+    #loader.fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        pointer-events: none;
+    }
+
+    .background-spinner {
+        background-color: rgba(255, 255, 255, 0.0);
+        z-index: 1050;
+    }
+
+    .spinner-xl {
+        width: 5rem;
+        height: 5rem;
+        border-width: 0.6rem;
+    }
+
+    .loader-box {
+        padding: 3rem;
+        min-width: 12rem;
+    }
+
+    .loader-text {
+        font-size: 1.5rem;
+    }
 }
 
 /** Small screens **/

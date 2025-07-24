@@ -115,9 +115,19 @@
             </div>
         </nav>
 
+        <!-- Loading spinner -->
+        <div id="loader" class="position-fixed top-0 start-0 w-100 h-100
+                                d-flex justify-content-center align-items-center
+                                fade show background-spinner">
+
+            <div class="bg-white rounded shadow d-flex flex-column align-items-center loader-box">
+                <div class="spinner-border text-primary mb-4 spinner-xl" role="status"></div>
+                <span class="text-primary fw-semibold loader-text">Cargando...</span>
+            </div>
+        </div>
+
         <!-- Main content -->
         <div class="container pt-3" id="main-content" style="clear:both;">
-
             <!-- Vertical navigator -->
             <nav class="navbar ms-5 sticky-top float-end" id="navbar-vertical">
                 <ul class="nav navbar-nav navbar-icons">
