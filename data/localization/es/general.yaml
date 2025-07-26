@@ -16,6 +16,11 @@ general:
   location: Las Palmas de Gran Canaria, Canarias, España
   current_rol: Ingeniero Informático
 
+  # Other
+  ######################################
+
+  loading: Cargando...
+
   # Sections
   ######################################
 

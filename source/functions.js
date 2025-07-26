@@ -28,6 +28,11 @@ export function prepare_json(json_data, lang = 'en') {
             set_author(person, location, current_rol, lang);
         }
 
+        if (general.loading) {
+            let loading = general.loading;
+            set_loading(loading);
+        }
+
         if (general.sections) {
             let sections = general.sections;
             set_sections(sections, lang);
@@ -140,6 +145,17 @@ function set_author(person, location, current_rol, lang = 'en') {
     $(".person-header").append(person);
     $(".location-header").append(location);
     $(".current-rol-header").append(current_rol);
+}
+
+/**
+ * Set loading spinner configuration
+ *
+ * @param {*} loading
+ * @param {*} lang
+ */
+function set_loading(loading, lang = 'en') {
+    $("#loading-text").text(loading);
+    $("#loading").addClass("show");
 }
 
 /**
