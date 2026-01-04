@@ -8,12 +8,14 @@ studies:
     extra:
       - name: Stream
         value: Software Process and Analysis
+      - name: Class
+        value: First Class Honours
 
   # Computer Engineering Degree
   ######################################
 
   - title: Computer Engineering Degree
-    institution: Las Palmas of Gran Canaria University
+    institution: University of Las Palmas de Gran Canaria
     date: 2018 - 2022
     extra:
       - name: Specialty

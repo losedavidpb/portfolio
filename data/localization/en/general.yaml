@@ -7,7 +7,7 @@ general:
     author: David Parreño
     keywords: portfolio,developer,code,game,games,videogame,videogames,unity,c#,java,javascript,js,php,python
     description: |
-      Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas of Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development.
+      Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas de Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development.
 
   # Author
   ######################################
@@ -48,13 +48,13 @@ general:
     title: Hello world! 👋
     content: |
       <p>
-        My name is David, and one of my great passions is programming. In 2022, I completed my degree in Computer
-        Engineering at the University de Las Palmas de Gran Canaria, and now I am finishing my Master's
-        studies at the University of Limerick.
+        My name is David, and I have always been passionate about programming. I completed my Computer
+        Engineering degree at the University of Las Palmas de Gran Canaria in 2022, and in 2025 I went
+        on to finish my Master’s degree at the University of Limerick.
       </p>
       <p>
-        During these years, I have acquired knowledge and experience in the development of software
-        products with programming languages such as Java, C++, C#, JavaScript, or Python. The projects
-        I have worked on follow Clean Code principles, and apply architectural models such as MVC, and
-        design patterns such as Command, Singleton, or Abstract Factory.
+        Over the years, I have gained knowledge and experience in developing software products using
+        programming languages such as Java, C++, C#, JavaScript and Python. The projects I have worked
+        on adhere to Clean Code principles and utilise architectural models such as MVC and design
+        patterns such as Command and Observer.
       </p>

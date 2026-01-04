@@ -1,4 +1,16 @@
 projects:
+  # Canarias Flavor Pack
+  ######################################
+
+  - name: Canarias Flavor Pack
+    date: dec. 2025 - now
+    skills: CK3, YAML
+    description: |
+      Canarias Flavor Pack is a mod for CK3 focused on the historical and cultural representation of the indigenous peoples and their traditions in the Canary Islands. An effort has been made to represent each of the islands as faithfully as possible, based on historical sources or plausible and well-founded assumptions.
+    urls:
+      - name: Steam Workshop
+        value: https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472
+
   # Expedia - Expedient Manager
   ######################################
 
@@ -42,7 +54,7 @@ projects:
   ##################################################
 
   - name: DotFiles Configuration for GNU/Linux Systems
-    date: oct. 2020 - now
+    date: oct. 2020 - jan. 2023 (2 years and 3 months)
     skills: GNU/Linux, Bash, ZSH, Visual Studio Code
     description: |
       This project includes a set of configuration files I use for machines with Linux distributions installed. <br>

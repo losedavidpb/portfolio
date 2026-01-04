@@ -8,7 +8,7 @@ jobs:
       type: Full-time contract
       date: jul. 2025 - present
       location: Las Palmas de Gran Canaria, Canary Islands, Spain
-      skills: ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server
+      skills: ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker
       description: |
         <ul>
           <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>
@@ -23,7 +23,7 @@ jobs:
       company: Cabildo de Gran Canaria
       type: Internship contract
       date: jan. 2023 - jan. 2024 (1 year and 1 month)
-      location: Las Palmas of Gran Canaria, Canary Islands, Spain
+      location: Las Palmas de Gran Canaria, Canary Islands, Spain
       skills: Git, Java, Python, Teamwork, Communication, Bash
       description: |
         <ul>
@@ -40,7 +40,7 @@ jobs:
       company: INERZA S.A.
       type: Apprenticeship contract
       date: sept. 2021 - dec. 2021 (4 months)
-      location: Las Palmas of Gran Canaria, Canary Islands, Spain
+      location: Las Palmas de Gran Canaria, Canary Islands, Spain
       skills: JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum
       description: |
         Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.

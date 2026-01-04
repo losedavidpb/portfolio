@@ -7,7 +7,7 @@ jobs:
       type: Contrato a tiempo completo
       date: jul. 2025 - actualidad
       location: Las Palmas de Gran Canaria, Canarias, España
-      skills: ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server
+      skills: ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker
       description: |
         <ul>
           <li>Desarrollar aplicaciones de escritorio, web, y servicios WCF en el ámbito de las Humanidades Digitales.</li>
@@ -21,7 +21,7 @@ jobs:
     - job: Técnico Superior de Informática
       company: Cabildo de Gran Canaria
       type: Contrato de práticas
-      date: ene. 2023 - ene. 2024 (1 año and 1 mes)
+      date: ene. 2023 - ene. 2024 (1 año y 1 mes)
       location: Las Palmas de Gran Canaria, Canarias, España
       skills: Git, Java, Python, Teamwork, Communication, Bash
       description: |

@@ -8,6 +8,8 @@ studies:
     extra:
       - name: Corriente
         value: Proceso y Análisis de Software
+      - name: Clase
+        value: Matrícula de honor
 
   # Computer Engineering Degree
   ######################################
