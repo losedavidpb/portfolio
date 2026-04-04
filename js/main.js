@@ -1,7 +1,9 @@
 import { prepare_json } from './functions.js'
 
-const lang = document.URL.split('?')[1].split('lang=')[1];
-const localization_dir = './../data/localization/';
+const path = window.location.pathname;
+const lang = path.includes('/es/') ? 'es' : 'en';
+
+const localization_dir = './../localization/';
 
 /**
  * Load localization file from the data folder
@@ -11,9 +13,8 @@ const localization_dir = './../data/localization/';
  */
 async function load_localization(filename) {
     if (filename) {
-        let response = await fetch(localization_dir + lang + '/' + filename);
+        let response = await fetch(`${localization_dir}${lang}/${filename}`);
         let yaml_data = await response.text();
-
         return jsyaml.load(yaml_data);
     }
 
@@ -24,12 +25,26 @@ async function load_localization(filename) {
  * Set language selector based on current language
  */
 function set_lang_selector() {
-    const curr_page = window.location.pathname.split('/').pop().split('?')[0];
+    const path_parts = window.location.pathname.split('/').filter(Boolean);
 
-    const urls = {
-        es: `${curr_page}?lang=es`,
-        en: `${curr_page}?lang=en`
-    };
+    let base = window.location.origin + '/';
+    let page = '';
+
+    // Add project base path if not in language root
+    if (path_parts.length > 0 && path_parts[0] !== 'en' && path_parts[0] !== 'es') {
+        base += path_parts[0] + '/';
+    }
+
+    // Get current page based on language
+    if (path_parts.includes('en') || path_parts.includes('es')) {
+        const lang_index = path_parts.findIndex(p => p === 'en' || p === 'es');
+        page = path_parts[lang_index + 1] || '';
+    }
+
+    // Fallback for invalid pages
+    if (!page || page === '') page = '';
+
+    const urls = { es: `${base}es/${page}`, en: `${base}en/${page}` };
 
     $("#language-div").children().eq(0).attr("href", urls.es);
     $("#language-div").children().eq(1).attr("href", urls.en);
@@ -45,10 +60,8 @@ function set_lang_selector() {
  * Set navbar links
  */
 function set_navbar_links() {
-    const curr_page = window.location.pathname.split('/').pop().split('?')[0];
-
-    $("#index-nav-link").attr("href", "./index.html?lang=" + lang)
-    $("#contact-nav-link").attr("href", "./contact.html?lang=" + lang);
+    $("#index-nav-link").attr("href", "./");
+    $("#contact-nav-link").attr("href", `./contact.html`);
 }
 
 /**

@@ -40,11 +40,7 @@
     }
 
     #background-image {
-        background-image: url('../data/image/wallpaper.jpg');
-    }
-
-    #background-gif {
-        background-image: url('../data/gif/wallpaper.gif');
+        background-image: url('./images/wallpaper.jpg');
     }
 
     /** Profile **/

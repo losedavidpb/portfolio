@@ -127,7 +127,6 @@ function set_meta(meta, lang = 'en') {
     $('meta[name=keywords]').attr('content', meta.keywords);
 }
 
-
 /**
  * Set person and current rol
  *

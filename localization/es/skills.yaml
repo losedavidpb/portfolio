@@ -1,109 +1,109 @@
 skills:
-  - title: Programming Languages
+  - title: Lenguajes de programación
     values:
       # Java
       ######################################
 
-      - alt: Java logo
+      - alt: Logo de Java
         tooltip: Java
-        src: ../data/image/languages/java.png
+        src: ../images/languages/java.png
         href: https://www.java.com/es/
         value: 50
 
       # Python
       ######################################
 
-      - alt: Python logo
+      - alt: Logo de Python
         tooltip: Python
-        src: ../data/image/languages/python.png
+        src: ../images/languages/python.png
         href: https://www.python.org/
         value: 40
 
       # C#
       ######################################
 
-      - alt: C# logo
+      - alt: Logo de C#
         tooltip: C#
-        src: ../data/image/languages/csharp.png
+        src: ../images/languages/csharp.png
         href: https://learn.microsoft.com/en-us/dotnet/csharp/
         value: 30
 
       # PHP
       ######################################
 
-      - alt: PHP logo
+      - alt: Logo de PHP
         tooltip: "PHP: Hypertext Preprocessor"
-        src: ../data/image/languages/php.png
+        src: ../images/languages/php.png
         href: https://www.php.net/
         value: 40
 
       # JavaScript
       ######################################
 
-      - alt: JavaScript logo
+      - alt: Logo de JavaScript
         tooltip: JavaScript
-        src: ../data/image/languages/javascript.png
+        src: ../images/languages/javascript.png
         href: https://www.javascript.com/
         value: 30
 
       # Bash
       ######################################
 
-      - alt: Bash's logo
+      - alt: Logo de Bash
         tooltip: Bash
-        src: ../data/image/languages/bash.png
+        src: ../images/languages/bash.png
         href: https://www.gnu.org/software/bash/
         value: 50
 
-  - title: Database Management
+  - title: Gestión de Bases de Datos
     values:
       # Microsoft Access
       ######################################
 
-      - alt: Microsoft Access logo
-        tooltip: "Microsoft Access"
-        src: ../data/image/database/access.png
+      - alt: Logo de Microsoft Access
+        tooltip: Microsoft Access
+        src: ../images/database/access.png
         value: 30
 
       # SQLite
       ######################################
 
-      - alt: SQLite logo
+      - alt: Logo de SQLite
         tooltip: SQLite
-        src: ../data/image/database/sqlite.png
+        src: ../images/database/sqlite.png
         value: 40
 
       # MySQL
       ######################################
 
-      - alt: MySQL logo
+      - alt: Logo de MySQL
         tooltip: MySQL
-        src: ../data/image/database/mysql.png
+        src: ../images/database/mysql.png
         value: 40
 
-  - title: Development Frameworks
+  - title: Frameworks de desarrollo
     values:
 
       # React
       ######################################
 
-      - alt: React logo
+      - alt: Logo de React
         tooltip: React
-        src: ../data/image/frameworks/react.png
+        src: ../images/frameworks/react.png
         value: 40
 
       # ASP.NET MVC
       ######################################
 
-      - alt: ASP.NET MVC logo
+      - alt: Logo de ASP.NET MVC
         tooltip: ASP.NET MVC
-        src: ../data/image/frameworks/netmvc.png
+        src: ../images/frameworks/netmvc.png
         value: 45
 
-      # SpringBoot
+      # Spring Boot
       ######################################
 
-      - alt: Spring Boot logo
+      - alt: Logo de Spring Boot
         tooltip: Spring Boot
-        src: ../data/image/frameworks/springboot.png
+        src: ../images/frameworks/springboot.png
         value: 45
