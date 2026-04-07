@@ -4,12 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=devide-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title></title>
-    <meta name="keywords" />
-    <meta name="description" />
-    <meta name="author" />
+    <title>David Parreño - Computer Engineering</title>
+    <meta name="description" content="Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas de Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development." />
+    <meta name="author" content="David Parreño" />
+
+    <link rel="canonical" href="https://losedavidpb.github.io/portfolio/en/" />
+
+    <link rel="alternate" hreflang="es" href="https://losedavidpb.github.io/portfolio/es/" />
+    <link rel="alternate" hreflang="en" href="https://losedavidpb.github.io/portfolio/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://losedavidpb.github.io/portfolio/" />
+
     <meta name="google-site-verification" content="JOO4joSA4NevMASQPV2XWKz10Mcm7z_lpbDb0yRkDKk" />
 
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
@@ -39,6 +45,7 @@
     <!-- https://cdnjs.cloudflare.com -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 
+    <!-- local -->
     <script type="module" src="../js/functions.js"></script>
     <script type="module" src="../js/main.js"></script>
 </head>
@@ -59,7 +66,7 @@
         <!-- Header -->
         <header class="container-sm mt-5" id="home">
             <div class="mt-3 bg-primary bg-gradient border-0 rounded float-start">
-                <span class="text-white fs-1 person-header"></span>
+                <span class="text-white fs-1 person-header">David Parreño</span>
             </div>
             <button class="mt-3 px-3 bg-white navbar navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false"
@@ -73,13 +80,12 @@
             <div class="container-fluid">
                 <div class="offcanvas offcanvas-end card" data-bs-scroll="true" data-bs-backdrop="static" tabindex="-1" id="navbar-menu">
                     <div class="offcanvas-body card-body">
-                        <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         <div class="profile" id="nav-upper">
-                            <img src="../images/profile.jpg" id="profile-image" alt="Profile image"
-                                class="img-fluid rounded-circle mx-auto d-block" />
+                            <img src="../images/profile.jpg" id="profile-image" alt="Profile image" class="img-fluid rounded-circle mx-auto d-block" />
                             <div class="mt-4 text-center">
-                                <h2 class="card-title text-upper" id="person-header"></h2>
-                                <p class="card-subtitle my-2 text-muted" id="current-rol-header"></p>
+                                <h2 class="card-title text-upper" id="person-header">David Parreño</h2>
+                                <p class="card-subtitle my-2 text-muted" id="current-rol-header">Computer Engineer</p>
                                 <div class="mt-4 navbar-icons">
                                     <a class="link-dark bi bi-linkedin me-2"
                                         href="https://www.linkedin.com/in/losedavidpb/" target="_blank"
@@ -101,14 +107,14 @@
                             <li class="nav-item d-inline-block">
                                 <a class="nav-link fs-5 ps-3 py-1 active" aria-current="page" id="index-nav-link">
                                     <i class="bi bi-house-door-fill"></i>
-                                    <span class="home-section"></span>
+                                    <span class="home-section">Home</span>
                                 </a>
                             </li>
                             <hr>
                             <li class="nav-item d-inline-block">
                                 <a class="nav-link fs-5 ps-3 py-1" id="contact-nav-link">
                                     <i class="bi bi-telephone-fill"></i>
-                                    <span class="contact-section"></span>
+                                    <span class="contact-section">Contact</span>
                                 </a>
                             </li>
                             <hr>
@@ -119,10 +125,7 @@
         </nav>
 
         <!-- Loading spinner -->
-        <div id="loader" class="position-fixed top-0 start-0 w-100 h-100
-                                d-flex justify-content-center align-items-center
-                                fade show background-spinner">
-
+        <div id="loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center fade show background-spinner">
             <div class="bg-white rounded shadow d-flex flex-column align-items-center loader-box">
                 <div class="spinner-border text-primary mb-4 spinner-xl" role="status"></div>
                 <span class="text-primary fw-semibold loader-text" id="loading-text">Loading...</span>
@@ -135,45 +138,38 @@
             <nav class="navbar ms-5 sticky-top float-end" id="navbar-vertical">
                 <ul class="nav navbar-nav navbar-icons">
                     <li class="nav-item bg-primary bg-gradient border-0 rounded-circle my-2 px-3 py-1">
-                        <a class="link-light bi bi-house-fill home-link" href="#home" data-toggle="tooltip"
-                            data-placement="right">
-                        </a>
+                        <a class="link-light bi bi-house-fill home-link" href="#home"
+                            data-toggle="tooltip" data-placement="right" title="Home"></a>
                     </li>
                     <li class="nav-item bg-primary bg-gradient border-0 rounded-circle my-2 px-3 py-1">
-                        <a class="link-light bi bi-person-fill about-me-link" href="#about-me" data-toggle="tooltip"
-                            data-placement="right">
-                        </a>
+                        <a class="link-light bi bi-person-fill about-me-link" href="#about-me"
+                            data-toggle="tooltip" data-placement="right" title="About me"></a>
                     </li>
                     <li class="nav-item bg-primary bg-gradient border-0 rounded-circle my-2 px-3 py-1">
                         <a class="link-light bi bi-pc-display-horizontal experience-studies-link" href="#jobs-studies"
-                            data-toggle="tooltip" data-placement="right">
-                        </a>
+                            data-toggle="tooltip" data-placement="right" title="Experience and Studies"></a>
                     </li>
                     <li class="nav-item bg-primary bg-gradient border-0 rounded-circle my-2 px-3 py-1">
-                        <a class="link-light bi bi-hand-thumbs-up-fill skills-link"" href="#skills" data-toggle="tooltip"
-                            data-placement="right">
-                        </a>
+                        <a class="link-light bi bi-hand-thumbs-up-fill skills-link"" href="#skills"
+                            data-toggle="tooltip" data-placement="right" title="Skills"></a>
                     </li>
                     <li class="nav-item bg-primary bg-gradient border-0 rounded-circle my-2 px-3 py-1">
-                        <a class="link-light bi bi-hammer projects-link" href="#projects" data-toggle="tooltip"
-                            data-placement="right">
-                        </a>
+                        <a class="link-light bi bi-hammer projects-link" href="#projects"
+                            data-toggle="tooltip" data-placement="right" title="Projects"></a>
                     </li>
                     <li class="nav-item bg-primary bg-gradient border-0 rounded-circle my-2 px-3 py-1">
-                        <a class="link-light bi bi-file-text-fill courses-certificates-link" href="#courses" data-toggle="tooltip"
-                            data-placement="right">
-                        </a>
+                        <a class="link-light bi bi-file-text-fill courses-certificates-link" href="#courses"
+                            data-toggle="tooltip" data-placement="right" title="Courses and Certificates"></a>
                     </li>
                 </ul>
             </nav>
 
             <!-- Content -->
             <section class="section border border-dark border-1 rounded bg-white py-4 px-5" id="about-me">
-                <h1 class="py-4 ps-1 about-me-header"></h1>
+                <h1 class="py-4 ps-1 about-me-header">About me 💻🎮</h1>
                 <div class="row">
                     <div class="col col-xs-2 text-center">
-                        <img src="../images/profile.jpg" class="img-fluid rounded-circle"
-                            id="profile-image" alt="Profile image" />
+                        <img src="../images/profile.jpg" class="img-fluid rounded-circle" id="profile-image" alt="Profile image" />
                         <div class="mt-3 navbar-icons">
                             <a class="link-dark bi bi-linkedin me-2"
                                 href="https://www.linkedin.com/in/losedavidpb/" target="_blank" data-toggle="tooltip"
@@ -188,24 +184,36 @@
                         </div>
                     </div>
                     <div class="fs-5 fw-normal pb-4 ms-3 col col-9">
-                        <p class="fw-bold fs-4 introduction-title"></p>
-                        <div class="introduction-content"></div>
+                        <p class="fw-bold fs-4 introduction-title">Hello world! 👋</p>
+                        <div class="introduction-content">
+                            <p>
+                                My name is David, and I have always been passionate about programming. I completed my Computer
+                                Engineering degree at the University of Las Palmas de Gran Canaria in 2022, and in 2025 I went
+                                on to finish my Master’s degree at the University of Limerick.
+                            </p>
+                            <p>
+                                Over the years, I have gained knowledge and experience in developing software products using
+                                programming languages such as Java, C++, C#, JavaScript and Python. The projects I have worked
+                                on adhere to Clean Code principles and utilise architectural models such as MVC and design
+                                patterns such as Command and Observer.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="section border border-dark border-1 rounded bg-white mt-4 px-2 py-5" id="jobs-studies">
                 <section class="px-5">
-                    <h2 class="pb-4 experience-header"></h2>
+                    <h2 class="pb-4 experience-header">Work experience ⛏️</h2>
                     <ul class="mt-4 mx-4" id="job-list"></ul>
                 </section>
                 <section class="px-5">
-                    <h2 class="pb-4 studies-header"></h2>
+                    <h2 class="pb-4 studies-header">Studies 📚</h2>
                     <ul class="mt-4 mx-4" id="study-list"></ul>
                 </section>
             </section>
             <section class="section border border-dark border-1 rounded bg-white mt-4 py-4" id="skills">
                 <div class="px-5">
-                    <h2 class="py-4 skills-header"></h2>
+                    <h2 class="py-4 skills-header">Skills 💪</h2>
                     <div class="container">
                         <ul class="ms-4" id="skill-list"></ul>
                     </div>
@@ -213,13 +221,13 @@
             </section>
             <section class="section border border-dark border-1 rounded bg-white mt-4 py-4" id="projects">
                 <div class="px-5">
-                    <h2 class="py-4 projects-header"></h2>
+                    <h2 class="py-4 projects-header">Projects 🛠️</h2>
                     <ul id="project-list"></ul>
                 </div>
             </section>
             <section class="section border border-dark border-1 rounded bg-white my-4 py-4" id="courses">
                 <div class="px-5">
-                    <h2 class="py-4 courses-certificates-header"></h2>
+                    <h2 class="py-4 courses-certificates-header">Courses and Certificates 📰</h2>
                     <ul id="course-list"></ul>
                 </div>
             </section>

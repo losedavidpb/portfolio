@@ -72,7 +72,6 @@ async function main() {
     set_navbar_links();
 
     const json_data = {
-        general_json: await load_localization('general.yaml'),
         courses_json: await load_localization('courses.yaml'),
         jobs_json: await load_localization('jobs.yaml'),
         projects_json: await load_localization('projects.yaml'),
