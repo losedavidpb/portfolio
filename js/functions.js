@@ -71,16 +71,22 @@ export function prepare_json(json_data, lang = 'en') {
  * @param {string} lang
  */
 function include_job(job, lang = 'en') {
-    let skill_name = lang == 'es' ? 'Aptitudes' : 'Skills';
+    const skill_name = lang == 'es' ? 'Aptitudes' : 'Skills';
 
-    let html_content = '<li class="mb-3 pb-3"> \
-        <h4>' + job.job + '</h4> \
-        <div class="fs-5"><span><i>' + job.company + ' - ' + job.type + '</i></span><br> \
-        <span class="text-muted">' + job.date + '</span><br> \
-        <p class="text-muted">' + job.location + '</p> \
-        <p>' + job.description + '</p> \
-        <span><span class="fw-bold">' + skill_name + ': </span> ' + job.skills + '</span></div> \
-    </li>';
+    const html_content = `
+        <li class="mb-3 pb-3">
+            <h4>${job.job}</h4>
+            <div class="fs-5">
+                <span><i>${job.company} - ${job.type}</i></span><br>
+                <span class="text-muted">${job.date}</span><br>
+                <p class="text-muted">${job.location}</p>
+                <p>${job.description}</p>
+                <span>
+                    <span class="fw-bold">${skill_name}: </span> ${job.skills}
+                </span>
+            </div>
+        </li>
+    `;
 
     $("#job-list").append(html_content);
 }
@@ -92,24 +98,30 @@ function include_job(job, lang = 'en') {
  * @param {string} lang
  */
 function include_study(study, lang = 'en') {
-    let html_content = '<li class="mb-3 pb-3"> \
-        <h4>' + study.title + '</h4> \
-        <div class="fs-5"><span><i>' + study.institution + '</i></span><br> \
-        <p class="text-muted">' + study.date + '</p>';
+    let extra_html = '';
 
     if (study.extra) {
-        html_content += '<ul>';
-
-        study.extra.forEach(element => {
-            html_content += ' \
-                <li><span class="fw-bold">' + element.name + ': </span>' + element.value + '</li> \
-            ';
-        });
-
-        html_content += '</ul>';
+        extra_html = `
+            <ul>
+                ${study.extra.map(element => `
+                    <li>
+                        <span class="fw-bold">${element.name}: </span>${element.value}
+                    </li>
+                `).join('')}
+            </ul>
+        `;
     }
 
-    html_content += '</li>';
+    const html_content = `
+        <li class="mb-3 pb-3">
+            <h4>${study.title}</h4>
+            <div class="fs-5">
+                <span><i>${study.institution}</i></span><br>
+                <p class="text-muted">${study.date}</p>
+                ${extra_html}
+            </div>
+        </li>
+    `;
 
     $("#study-list").append(html_content);
 }
@@ -121,33 +133,37 @@ function include_study(study, lang = 'en') {
  * @param {string} lang
  */
 function include_skill(skill, lang = 'en') {
-    let html_content = '<li class="py-4"> \
-        <h4>' + skill.title + '</h4> \
-        <div class="row justify-content-md mt-5 ps-5">';
+    const values_html = skill.values.map(value => `
+        <h4>${value.tooltip}</h4>
 
-    skill.values.forEach(value => {
-        html_content += '<h4>' + value.tooltip + '</h4>';
+        <div class="row align-items-center pt-2 pb-4">
+            <div class="col-auto">
+                <a href="${value.href}" target="_blank">
+                    <img src="${value.src}" class="lang-image img-fluid" alt="${value.alt}"
+                        style="max-width: 80px; height: auto;" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="${value.tooltip}" />
+                </a>
+            </div>
 
-        html_content += '<div class="row align-items-center pt-2 pb-4"> \
-            <div class="col-auto"> \
-                <a href="' + value.href + '" target="_blank"> \
-                    <img src="' + value.src + '" class="lang-image img-fluid" alt="' + value.alt + '" \
-                        style="max-width: 80px; height: auto;" \
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="' + value.tooltip + '" /> \
-                </a> \
-            </div> \
-            <div class="col"> \
-                <div class="progress" style="height: 30px"> \
-                    <div class="progress-bar" role="progressbar" style="width: ' + value.value * 2 + '%;" \
-                        aria-valuenow="' + value.value + '" aria-valuemin="0" aria-valuemax="100"> \
-                        <h4 class="my-4">' + value.value * 2 + '%</h4> \
-                    </div> \
-                </div> \
-            </div> \
-        </div>';
-    });
+            <div class="col">
+                <div class="progress" style="height: 30px">
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        style="width: ${value.value * 2}%" aria-valuenow="${value.value}">
+                        <h4 class="my-4">${value.value * 2}%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
 
-    html_content += '</div></li>';
+    const html_content = `
+        <li class="py-4">
+            <h4>${skill.title}</h4>
+            <div class="row justify-content-md mt-5 ps-5">
+                ${values_html}
+            </div>
+        </li>
+    `;
 
     $('#skill-list').append(html_content);
 }
@@ -159,12 +175,14 @@ function include_skill(skill, lang = 'en') {
  * @param {string} lang
  */
 function include_course(course, lang = 'en') {
-    let html_content = '\
-        <li class="mb-4"> \
-            <h4>' + course.title + '</h4> \
-            <span class="fs-5"><i>' + course.subtitle + '</i></span><br> \
-        </li> \
-    ';
+    const html_content = `
+        <li class="mb-4">
+            <h4>${course.title}</h4>
+            <span class="fs-5">
+                <i>${course.subtitle}</i>
+            </span><br>
+        </li>
+    `;
 
     $("#course-list").append(html_content);
 }
@@ -175,25 +193,36 @@ function include_course(course, lang = 'en') {
  * @param {object} project
  * @param {string} lang
  */
+
 function include_project(project, lang = 'en') {
-    let skill_name = lang == 'es' ? 'Aptitudes' : 'Skills';
+    const skill_name = lang === 'es' ? 'Aptitudes' : 'Skills';
 
-    let html_content = '<li class="mb-5"> \
-        <h4>' + project.name + '</h4> \
-        <span class="text-muted fs-5">' + project.date + '</span><br> \
-        <br><span class="fs-5"><span class="fw-bold">' + skill_name + ': </span>' + project.skills + '</span><br> \
-        <div class="fs-5"><p class="pt-3 mb-2 pe-4">' + project.description + '</p></div>';
+    const urls_html = project.urls
+        ? project.urls.map(url => `
+            <a class="btn btn-primary me-3 mb-3" href="${url.value}" target="_blank" role="button">
+                <span class="fw-bold">
+                    ${url.name} <i class="bi bi-box-arrow-up-right"></i>
+                </span>
+            </a>
+        `).join('')
+        : '';
 
-    if (project.urls) {
-        project.urls.forEach(url => {
-            html_content += '<a class="btn btn-primary me-3 mb-3" href="' + url.value + '" \
-            target="_blank" role="button"> \
-            <span class="fw-bold">' + url.name + ' <i class="bi bi-box-arrow-up-right"></i></span> \
-        </a>';
-        });
-    }
+    const html_content = `
+        <li class="mb-5">
+            <h4>${project.name}</h4>
+            <span class="text-muted fs-5">${project.date}</span><br><br>
 
-    html_content += '</li>';
+            <span class="fs-5">
+                <span class="fw-bold">${skill_name}: </span>${project.skills}
+            </span><br>
+
+            <div class="fs-5">
+                <p class="pt-3 mb-2 pe-4">${project.description}</p>
+            </div>
+
+            ${urls_html}
+        </li>
+    `;
 
     $("#project-list").append(html_content);
 }
