@@ -1,9 +1,23 @@
 import { prepare_json } from './functions.js'
 
-const path = window.location.pathname;
-const lang = path.includes('/es/') ? 'es' : 'en';
-
 const localization_dir = './../localization/';
+
+function get_clean_path() {
+    let path = window.location.pathname;
+
+    const base_path = path.startsWith('/portfolio/') ? '/portfolio/' : '/';
+
+    path = path.substring(base_path.length);
+
+    if (path.endsWith('index.html')) {
+        path = path.replace('index.html', '');
+    }
+
+    return { path, base_path };
+}
+
+const { path, base_path } = get_clean_path();
+const lang = path.includes('es/') ? 'es' : 'en';
 
 /**
  * Load localization file from the data folder
@@ -25,26 +39,14 @@ async function load_localization(filename) {
  * Set language selector based on current language
  */
 function set_lang_selector() {
-    const path_parts = window.location.pathname.split('/').filter(Boolean);
+    let page = path.replace(/^es\//, '');
 
-    let base = window.location.origin + '/';
-    let page = '';
+    const base = window.location.origin + base_path;
 
-    // Add project base path if not in language root
-    if (path_parts.length > 0 && path_parts[0] !== 'en' && path_parts[0] !== 'es') {
-        base += path_parts[0] + '/';
-    }
-
-    // Get current page based on language
-    if (path_parts.includes('en') || path_parts.includes('es')) {
-        const lang_index = path_parts.findIndex(p => p === 'en' || p === 'es');
-        page = path_parts[lang_index + 1] || '';
-    }
-
-    // Fallback for invalid pages
-    if (!page || page === '') page = '';
-
-    const urls = { es: `${base}es/${page}`, en: `${base}en/${page}` };
+    const urls = {
+        en: base + page,
+        es: base + 'es/' + page
+    };
 
     $("#language-div").children().eq(0).attr("href", urls.es);
     $("#language-div").children().eq(1).attr("href", urls.en);
