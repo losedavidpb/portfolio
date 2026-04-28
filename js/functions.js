@@ -133,7 +133,7 @@ function include_study(study, lang = 'en') {
  * @param {string} lang
  */
 function include_skill(skill, lang = 'en') {
-    const base_path = window.location.pathname.startsWith('/portfolio/') ? '/portfolio/' : '/';
+    const base_path = lang == 'en' ? '/portfolio/' : '';
 
     const values_html = skill.values.map(value => `
         <h4>${value.tooltip}</h4>
