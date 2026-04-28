@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME -->
+  <!-- EN -->
 	<url>
 	  <loc>https://losedavidpb.github.io/portfolio/</loc>
 	</url>
 
-  <!-- EN -->
   <url>
-    <loc>https://losedavidpb.github.io/portfolio/en/</loc>
-  </url>
-
-  <url>
-    <loc>https://losedavidpb.github.io/portfolio/en/contact.html</loc>
+    <loc>https://losedavidpb.github.io/portfolio/contact.html</loc>
   </url>
 
   <!-- ES -->
