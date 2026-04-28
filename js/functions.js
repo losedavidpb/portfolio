@@ -133,13 +133,15 @@ function include_study(study, lang = 'en') {
  * @param {string} lang
  */
 function include_skill(skill, lang = 'en') {
+    const base_path = window.location.pathname.startsWith('/portfolio/') ? '/portfolio/' : '/';
+
     const values_html = skill.values.map(value => `
         <h4>${value.tooltip}</h4>
 
         <div class="row align-items-center pt-2 pb-4">
             <div class="col-auto">
                 <a href="${value.href}" target="_blank">
-                    <img src="${value.src}" class="lang-image img-fluid" alt="${value.alt}"
+                    <img src="${base_path + value.src}" class="lang-image img-fluid" alt="${value.alt}"
                         style="max-width: 80px; height: auto;" data-bs-toggle="tooltip"
                         data-bs-placement="bottom" title="${value.tooltip}" />
                 </a>
