@@ -6,7 +6,7 @@ skills:
 
       - alt: Java logo
         tooltip: Java
-        src: ../images/languages/java.png
+        src: ./images/languages/java.png
         href: https://www.java.com/es/
         value: 50
 
@@ -15,7 +15,7 @@ skills:
 
       - alt: Python logo
         tooltip: Python
-        src: ../images/languages/python.png
+        src: ./images/languages/python.png
         href: https://www.python.org/
         value: 40
 
@@ -24,7 +24,7 @@ skills:
 
       - alt: C# logo
         tooltip: C#
-        src: ../images/languages/csharp.png
+        src: ./images/languages/csharp.png
         href: https://learn.microsoft.com/en-us/dotnet/csharp/
         value: 30
 
@@ -33,7 +33,7 @@ skills:
 
       - alt: PHP logo
         tooltip: "PHP: Hypertext Preprocessor"
-        src: ../images/languages/php.png
+        src: ./images/languages/php.png
         href: https://www.php.net/
         value: 40
 
@@ -42,7 +42,7 @@ skills:
 
       - alt: JavaScript logo
         tooltip: JavaScript
-        src: ../images/languages/javascript.png
+        src: ./images/languages/javascript.png
         href: https://www.javascript.com/
         value: 30
 
@@ -51,7 +51,7 @@ skills:
 
       - alt: Bash's logo
         tooltip: Bash
-        src: ../images/languages/bash.png
+        src: ./images/languages/bash.png
         href: https://www.gnu.org/software/bash/
         value: 50
 
@@ -62,7 +62,7 @@ skills:
 
       - alt: Microsoft Access logo
         tooltip: "Microsoft Access"
-        src: ../images/database/access.png
+        src: ./images/database/access.png
         value: 30
 
       # SQLite
@@ -70,7 +70,7 @@ skills:
 
       - alt: SQLite logo
         tooltip: SQLite
-        src: ../images/database/sqlite.png
+        src: ./images/database/sqlite.png
         value: 40
 
       # MySQL
@@ -78,7 +78,7 @@ skills:
 
       - alt: MySQL logo
         tooltip: MySQL
-        src: ../images/database/mysql.png
+        src: ./images/database/mysql.png
         value: 40
 
   - title: Development Frameworks
@@ -89,7 +89,7 @@ skills:
 
       - alt: React logo
         tooltip: React
-        src: ../images/frameworks/react.png
+        src: ./images/frameworks/react.png
         value: 40
 
       # ASP.NET MVC
@@ -97,7 +97,7 @@ skills:
 
       - alt: ASP.NET MVC logo
         tooltip: ASP.NET MVC
-        src: ../images/frameworks/netmvc.png
+        src: ./images/frameworks/netmvc.png
         value: 45
 
       # SpringBoot
@@ -105,5 +105,5 @@ skills:
 
       - alt: Spring Boot logo
         tooltip: Spring Boot
-        src: ../images/frameworks/springboot.png
+        src: ./images/frameworks/springboot.png
         value: 45
