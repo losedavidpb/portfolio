@@ -1,7 +1,5 @@
 import { prepare_json } from './functions.js'
 
-const localization_dir = './../localization/';
-
 function get_clean_path() {
     let path = window.location.pathname;
 
@@ -18,6 +16,8 @@ function get_clean_path() {
 
 const { path, base_path } = get_clean_path();
 const lang = path.includes('es/') ? 'es' : 'en';
+
+const localization_dir = `${base_path}localization/`;
 
 /**
  * Load localization file from the data folder
