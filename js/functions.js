@@ -138,8 +138,8 @@ function include_skill(skill, lang = 'en') {
     const values_html = skill.values.map(value => `
         <h4>${value.tooltip}</h4>
 
-        <div class="row align-items-center pt-2 pb-4">
-            <div class="col-auto">
+        <div class="row align-items-center pt-1 pb-4">
+            <div class="col-auto pb-2">
                 <a href="${value.href}" target="_blank">
                     <img src="${base_path + value.src}" class="lang-image img-fluid" alt="${value.alt}"
                         style="max-width: 80px; height: auto;" data-bs-toggle="tooltip"
@@ -159,7 +159,7 @@ function include_skill(skill, lang = 'en') {
     `).join('');
 
     const html_content = `
-        <li class="py-4">
+        <li class="py-2">
             <h4>${skill.title}</h4>
             <div class="row justify-content-md mt-5 ps-5">
                 ${values_html}

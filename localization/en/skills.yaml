@@ -10,15 +10,6 @@ skills:
         href: https://www.java.com/es/
         value: 50
 
-      # Python
-      ######################################
-
-      - alt: Python logo
-        tooltip: Python
-        src: images/languages/python.png
-        href: https://www.python.org/
-        value: 40
-
       # C#
       ######################################
 
@@ -26,25 +17,7 @@ skills:
         tooltip: C#
         src: images/languages/csharp.png
         href: https://learn.microsoft.com/en-us/dotnet/csharp/
-        value: 30
-
-      # PHP
-      ######################################
-
-      - alt: PHP logo
-        tooltip: "PHP: Hypertext Preprocessor"
-        src: images/languages/php.png
-        href: https://www.php.net/
-        value: 40
-
-      # JavaScript
-      ######################################
-
-      - alt: JavaScript logo
-        tooltip: JavaScript
-        src: images/languages/javascript.png
-        href: https://www.javascript.com/
-        value: 30
+        value: 50
 
       # Bash
       ######################################
@@ -55,15 +28,42 @@ skills:
         href: https://www.gnu.org/software/bash/
         value: 50
 
-  - title: Database Management
-    values:
-      # Microsoft Access
+      # Python
       ######################################
 
-      - alt: Microsoft Access logo
-        tooltip: "Microsoft Access"
-        src: images/database/access.png
-        value: 30
+      - alt: Python logo
+        tooltip: Python
+        src: images/languages/python.png
+        href: https://www.python.org/
+        value: 45
+
+      # PHP
+      ######################################
+
+      - alt: PHP logo
+        tooltip: "PHP: Hypertext Preprocessor"
+        src: images/languages/php.png
+        href: https://www.php.net/
+        value: 35
+
+      # JavaScript
+      ######################################
+
+      - alt: JavaScript logo
+        tooltip: JavaScript
+        src: images/languages/javascript.png
+        href: https://www.javascript.com/
+        value: 40
+
+  - title: Database Management
+    values:
+      # MySQL
+      ######################################
+
+      - alt: MySQL logo
+        tooltip: MySQL
+        src: images/database/mysql.png
+        value: 45
 
       # SQLite
       ######################################
@@ -73,24 +73,16 @@ skills:
         src: images/database/sqlite.png
         value: 40
 
-      # MySQL
+      # Microsoft Access
       ######################################
 
-      - alt: MySQL logo
-        tooltip: MySQL
-        src: images/database/mysql.png
-        value: 40
+      - alt: Microsoft Access logo
+        tooltip: "Microsoft Access"
+        src: images/database/access.png
+        value: 35
 
   - title: Development Frameworks
     values:
-
-      # React
-      ######################################
-
-      - alt: React logo
-        tooltip: React
-        src: images/frameworks/react.png
-        value: 40
 
       # ASP.NET MVC
       ######################################
@@ -100,10 +92,18 @@ skills:
         src: images/frameworks/netmvc.png
         value: 45
 
+      # React
+      ######################################
+
+      - alt: React logo
+        tooltip: React
+        src: images/frameworks/react.png
+        value: 35
+
       # SpringBoot
       ######################################
 
       - alt: Spring Boot logo
         tooltip: Spring Boot
         src: images/frameworks/springboot.png
-        value: 45
+        value: 30

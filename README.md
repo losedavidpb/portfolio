@@ -1,4 +1,5 @@
 # Personal Portfolio
 
-<span><b>Webpage:</b></span>
-<a href="https://losedavidpb.github.io">https://losedavidpb.github.io/portfolio</a>
+Personal portfolio website presenting my professional trajectory, technical skills, work experience, and software development projects.
+
+🌐 *Website:* https://losedavidpb.github.io/portfolio
