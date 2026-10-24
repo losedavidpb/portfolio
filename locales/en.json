@@ -1,0 +1,290 @@
+{
+  "site": {
+    "title": "David Parreño - Computer Engineering",
+    "description": "Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas de Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development.",
+    "author": "David Parreño",
+    "name": "David Parreño",
+    "role": "Computer Engineer",
+    "profileImageAlt": "Profile image",
+    "loading": "Loading...",
+    "openNavigation": "Enable vertical navigation",
+    "closeNavigation": "Close",
+    "homeLabel": "Home",
+    "mailLabel": "Mail",
+    "skillsLabel": "Skills"
+  },
+  "home": {
+    "homeTooltip": "Home",
+    "aboutTooltip": "About me",
+    "experienceStudiesTooltip": "Experience and Studies",
+    "skillsTooltip": "Skills",
+    "projectsTooltip": "Projects",
+    "coursesTooltip": "Courses and Certificates",
+    "aboutTitle": "About me 💻🎮",
+    "introductionTitle": "Hello world! 👋",
+    "introduction": [
+      "My name is David, and I have always been passionate about programming. I completed my Computer Engineering degree at the University of Las Palmas de Gran Canaria in 2022, and in 2025 I went on to finish my Master’s degree at the University of Limerick.",
+      "Over the years, I have gained knowledge and experience in developing software products using programming languages such as Java, C++, C#, JavaScript and Python. The projects I have worked on adhere to Clean Code principles and utilise architectural models such as MVC and design patterns such as Command and Observer."
+    ],
+    "experienceTitle": "Work experience ⛏️",
+    "studiesTitle": "Studies 📚",
+    "skillsTitle": "Skills 💪",
+    "projectsTitle": "Projects 🛠️",
+    "coursesTitle": "Courses and Certificates 📰"
+  },
+  "studies": [
+    {
+      "title": "Master of Science in Software Engineering",
+      "institution": "University of Limerick",
+      "date": "2024 - 2025",
+      "extra": [
+        {
+          "name": "Stream",
+          "value": "Software Process and Analysis"
+        },
+        {
+          "name": "Class",
+          "value": "First Class Honours"
+        }
+      ]
+    },
+    {
+      "title": "Computer Engineering Degree",
+      "institution": "University of Las Palmas de Gran Canaria",
+      "date": "2018 - 2022",
+      "extra": [
+        {
+          "name": "Specialty",
+          "value": "Computation"
+        },
+        {
+          "name": "Average grade",
+          "value": "8,08"
+        }
+      ]
+    },
+    {
+      "title": "Science and Technology Bachelor's Degree",
+      "institution": "IES Siete Palmas",
+      "date": "2016 - 2018"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Canarias Flavor Pack",
+      "date": "dec. 2025 - now",
+      "skills": "CK3, YAML",
+      "description": "Canarias Flavor Pack is a mod for CK3 focused on the historical and cultural representation of the indigenous peoples and their traditions in the Canary Islands. An effort has been made to represent the islands as faithfully as possible, based on historical sources or plausible assumptions.\n",
+      "urls": [
+        {
+          "name": "Steam Workshop",
+          "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+        }
+      ]
+    },
+    {
+      "name": "Expedia - Expedient Manager",
+      "date": "jan. 2023 - jan. 2024 (1 year and 1 month)",
+      "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
+      "description": "Expedia is a desktop application designed for the efficient management of general entry records and expedients processed by the Industry and Commerce Service of the Cabildo de Gran Canaria.<p class='mt-4'>The main objective of this project is to facilitate Service workers to monitor the status and evolution of each of the processed records, optimizing certain repetitive tasks and reducing possible human errors.</p>\n"
+    },
+    {
+      "name": "Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL",
+      "date": "jun. 2022 - dec. 2022 (8 months)",
+      "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
+      "description": "Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p class='mt-4'>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>\n",
+      "urls": [
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+        },
+        {
+          "name": "User manual",
+          "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+        },
+        {
+          "name": "Thesis",
+          "value": "https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Personal Portfolio",
+      "date": "jan. 2023 - now",
+      "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
+      "description": "This portfolio shows my professional trajectory in the Computer Engineer field. <br>\nThe development of this website has been manually codified using Bootstrap and other useful tools.\n",
+      "urls": [
+        {
+          "name": "Webpage",
+          "value": "https://losedavidpb.github.io/portfolio"
+        },
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/portfolio"
+        }
+      ]
+    },
+    {
+      "name": "DotFiles Configuration for GNU/Linux Systems",
+      "date": "oct. 2020 - jan. 2023 (2 years and 3 months)",
+      "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
+      "description": "This project includes a set of configuration files I use for machines with Linux distributions installed. <br>\nThere are .files for Bash, ZSH, Hyper, and Visual Studio Code, among others.\n",
+      "urls": [
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/bash-dotfiles"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "values": [
+        {
+          "alt": "Java logo",
+          "tooltip": "Java",
+          "src": "assets/images/languages/java.png",
+          "href": "https://www.java.com/es/",
+          "value": 50
+        },
+        {
+          "alt": "C# logo",
+          "tooltip": "C#",
+          "src": "assets/images/languages/csharp.png",
+          "href": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+          "value": 50
+        },
+        {
+          "alt": "Bash's logo",
+          "tooltip": "Bash",
+          "src": "assets/images/languages/bash.png",
+          "href": "https://www.gnu.org/software/bash/",
+          "value": 50
+        },
+        {
+          "alt": "Python logo",
+          "tooltip": "Python",
+          "src": "assets/images/languages/python.png",
+          "href": "https://www.python.org/",
+          "value": 45
+        },
+        {
+          "alt": "PHP logo",
+          "tooltip": "PHP: Hypertext Preprocessor",
+          "src": "assets/images/languages/php.png",
+          "href": "https://www.php.net/",
+          "value": 35
+        },
+        {
+          "alt": "JavaScript logo",
+          "tooltip": "JavaScript",
+          "src": "assets/images/languages/javascript.png",
+          "href": "https://www.javascript.com/",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "title": "Database Management",
+      "values": [
+        {
+          "alt": "MySQL logo",
+          "tooltip": "MySQL",
+          "src": "assets/images/database/mysql.png",
+          "value": 45
+        },
+        {
+          "alt": "SQLite logo",
+          "tooltip": "SQLite",
+          "src": "assets/images/database/sqlite.png",
+          "value": 40
+        },
+        {
+          "alt": "Microsoft Access logo",
+          "tooltip": "Microsoft Access",
+          "src": "assets/images/database/access.png",
+          "value": 35
+        }
+      ]
+    },
+    {
+      "title": "Development Frameworks",
+      "values": [
+        {
+          "alt": "ASP.NET MVC logo",
+          "tooltip": "ASP.NET MVC",
+          "src": "assets/images/frameworks/netmvc.png",
+          "value": 45
+        },
+        {
+          "alt": "React logo",
+          "tooltip": "React",
+          "src": "assets/images/frameworks/react.png",
+          "value": 35
+        },
+        {
+          "alt": "Spring Boot logo",
+          "tooltip": "Spring Boot",
+          "src": "assets/images/frameworks/springboot.png",
+          "value": 30
+        }
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "job": "Technical Staff in Research Project",
+      "company": "Instituto Universitario IATEXT",
+      "type": "Full-time contract",
+      "date": "jul. 2025 - present",
+      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
+      "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
+      "description": "<ul>\n  <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>\n  <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES</li>\n  <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>\n</ul>\n"
+    },
+    {
+      "job": "Computer Technician",
+      "company": "Cabildo de Gran Canaria",
+      "type": "Internship contract",
+      "date": "jan. 2023 - jan. 2024 (1 year and 1 month)",
+      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
+      "skills": "Git, Java, Python, Teamwork, Communication, Bash",
+      "description": "<ul>\n  <li>Development and maintenance of an expedient manager.</li>\n  <li>Technical assistance in the field of Computer Engineering.</li>\n  <li>Meetings with the Cabildo and with other external companies contracted.</li>\n  <li>Drafting of technical specifications.</li>\n</ul>\n"
+    },
+    {
+      "job": "Web Developer",
+      "company": "INERZA S.A.",
+      "type": "Apprenticeship contract",
+      "date": "sept. 2021 - dec. 2021 (4 months)",
+      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
+      "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum",
+      "description": "Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.\n"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Advanced English (C1)",
+      "subtitle": "Cambridge University Press & Assessment (2024)"
+    },
+    {
+      "title": "First Certificate in English (B2)",
+      "subtitle": "Cambridge University Press & Assessment (2023)"
+    },
+    {
+      "title": "The Ultimate Guide to Game Development with Unity (Official)",
+      "subtitle": "Udemy (2023)"
+    },
+    {
+      "title": "Complete ASP.NET MVC Development Course",
+      "subtitle": "Udemy (2023)"
+    },
+    {
+      "title": "Higher University Course of Digital Promoter",
+      "subtitle": "Las Palmas University Foundation (2022)"
+    },
+    {
+      "title": "Press Start: How to enter the game industry",
+      "subtitle": "University of Las Palmas de Gran Canaria (2022)"
+    }
+  ]
+}

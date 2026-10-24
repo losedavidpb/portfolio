@@ -1,0 +1,8 @@
+# Pending tasks file
+TODO.txt
+
+# Node.js dependencies
+node_modules/
+
+# Generated build files
+dist/

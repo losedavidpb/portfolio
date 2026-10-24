@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-environment="production">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>David Parreño - Computer Engineering</title>
+    <meta name="description" content="Personal Portfolio of David Parreño, computer engineering graduated from the University of Las Palmas de Gran Canaria (ULPGC) who is searching for an opportunity to demonstrate his skills and knowledge in software development." />
+    <meta name="author" content="David Parreño" />
+
+    <link rel="canonical" href="https://losedavidpb.github.io/portfolio/en/" />
+
+    <link rel="alternate" hreflang="es" href="https://losedavidpb.github.io/portfolio/es/" />
+    <link rel="alternate" hreflang="en" href="https://losedavidpb.github.io/portfolio/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://losedavidpb.github.io/portfolio/en/" />
+
+    <meta name="google-site-verification" content="JOO4joSA4NevMASQPV2XWKz10Mcm7z_lpbDb0yRkDKk" />
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+
+    <!-- https://www.bootstrapcdn.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- https://www.bootstrapcdn.com/bootstrapicons/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- https://developers.google.com/speed/libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- https://www.bootstrapcdn.com/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+
+    <!-- local -->
+    <script type="module" src="../assets/js/main.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+    <div class="background" id="background-image">
+
+        <!-- Language selector -->
+        <div class="list-group list-group-horizontal position-absolute top-0 start-0 m-4 shadow-sm rounded-3 overflow-hidden" id="language-div">
+            <a class="list-group-item list-group-item-action flex-fill border-0 px-3 py-2" href="../es/">
+                <span class="fw-bold">ES</span>
+            </a>
+            <a class="list-group-item list-group-item-action flex-fill border-0 px-3 py-2" href="../en/">
+                <span class="fw-bold">EN</span>
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="container mt-5 pt-5 pb-3 d-flex align-items-center justify-content-between" id="home">
+            <div class="d-inline-flex align-items-center px-4 py-3 bg-white border shadow-lg rounded-4">
+                <span class="text-dark fs-1 fw-bold person-header">David Parreño</span>
+            </div>
+            <button class="btn btn-light navbar-toggler d-flex align-items-center justify-content-center rounded-circle shadow p-3" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#navbar-menu" aria-controls="navbar-menu"
+                aria-expanded="false" aria-label="Enable vertical navigation" id="offcanvas-button"
+               >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </header>
+
+        <!-- Offcanvas Navigation -->
+        <nav class="navbar" id="navbar-offcanvas">
+            <div class="container-fluid">
+                <div class="offcanvas offcanvas-end border-0 shadow-lg" data-bs-scroll="true" data-bs-backdrop="static" tabindex="-1"
+                    id="navbar-menu">
+                    <div class="offcanvas-body p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                        <div class="profile pt-4" id="nav-upper">
+                            <img src="../assets/images/profile.jpg" id="profile-image" alt="Profile image"
+                               
+                                class="img-fluid rounded-circle border border-4 border-white shadow mx-auto d-block" />
+                            <div class="mt-4 text-center">
+                                <h2 class="card-title text-upper" id="person-header">David Parreño</h2>
+                                <p class="card-subtitle my-2 text-muted" id="current-rol-header">Computer Engineer</p>
+                                <div class="mt-4 navbar-icons d-flex justify-content-center gap-2">
+                                    <a class="btn btn-light rounded-circle shadow-sm link-dark bi bi-linkedin"
+                                        href="https://www.linkedin.com/in/losedavidpb/" target="_blank"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Linkedin">
+                                    </a>
+                                    <a class="btn btn-light rounded-circle shadow-sm link-dark bi bi-github" href="https://github.com/losedavidpb"
+                                        target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="GitHub">
+                                    </a>
+                                    <a class="btn btn-light rounded-circle shadow-sm link-dark bi bi-envelope-fill" href="mailto:losedavidpb@gmail.com"
+                                        target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mail"
+                                       >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4 opacity-25">
+                        <ul class="nav nav-pills flex-column gap-2" id="nav-under">
+                            <li class="nav-item d-inline-block">
+                                <a class="nav-link fs-5 px-3 py-2 rounded-3 active" aria-current="page" id="index-nav-link">
+                                    <i class="bi bi-house-door-fill me-2"></i>
+                                    <span class="home-section">Home</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Loading spinner -->
+        <div id="loader"
+            class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center fade show background-spinner">
+            <div class="bg-white rounded-4 shadow-lg d-flex flex-column align-items-center loader-box">
+                <div class="spinner-border text-primary mb-4 spinner-xl" role="status"></div>
+                <span class="text-primary fw-semibold loader-text" id="loading-text">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="container py-4" id="main-content">
+            <!-- Vertical navigator -->
+            <nav class="navbar sticky-top float-end ms-2 py-0 d-none d-xl-block" id="navbar-vertical">
+                <ul class="nav flex-column gap-2 navbar-icons">
+                    <li class="nav-item shadow-sm rounded-circle">
+                        <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-3 bi bi-house-fill home-link" href="#home" data-bs-toggle="tooltip"
+                            data-bs-placement="left" title="Home"></a>
+                    </li>
+                    <li class="nav-item shadow-sm rounded-circle">
+                        <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-3 bi bi-person-fill about-me-link" href="#about-me" data-bs-toggle="tooltip"
+                            data-bs-placement="left" title="About me"></a>
+                    </li>
+                    <li class="nav-item shadow-sm rounded-circle">
+                        <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-3 bi bi-pc-display-horizontal experience-studies-link" href="#jobs-studies"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Experience and Studies"
+                           ></a>
+                    </li>
+                    <li class="nav-item shadow-sm rounded-circle">
+                        <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-3 bi bi-hand-thumbs-up-fill skills-link" href="#skills"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Skills"
+                           ></a>
+                    </li>
+                    <li class="nav-item shadow-sm rounded-circle">
+                        <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-3 bi bi-hammer projects-link" href="#projects" data-bs-toggle="tooltip"
+                            data-bs-placement="left" title="Projects"></a>
+                    </li>
+                    <li class="nav-item shadow-sm rounded-circle">
+                        <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-3 bi bi-file-text-fill courses-certificates-link" href="#courses"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Courses and Certificates"
+                           ></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Content -->
+            <section class="section card border-0 shadow-lg rounded-4 p-4 p-lg-5" id="about-me">
+                <h1 class="display-6 fw-bold mb-4 about-me-header">About me 💻🎮</h1>
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-3 text-center">
+                        <img src="../assets/images/profile.jpg" class="img-fluid rounded-circle border border-4 border-white shadow" id="profile-image"
+                            alt="Profile image" />
+                        <div class="mt-4 navbar-icons d-flex justify-content-center gap-2">
+                            <a class="btn btn-light rounded-circle shadow-sm link-dark bi bi-linkedin" href="https://www.linkedin.com/in/losedavidpb/"
+                                target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Linkedin">
+                            </a>
+                            <a class="btn btn-light rounded-circle shadow-sm link-dark bi bi-github" href="https://github.com/losedavidpb" target="_blank"
+                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="GitHub">
+                            </a>
+                            <a class="btn btn-light rounded-circle shadow-sm link-dark bi bi-envelope-fill" href="mailto:losedavidpb@gmail.com"
+                                target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mail"
+                               >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9 fs-5 lh-lg">
+                        <p class="fw-bold fs-3 text-dark mb-3 introduction-title">Hello world! 👋</p>
+                        <div class="text-secondary introduction-content"><p>My name is David, and I have always been passionate about programming. I completed my Computer Engineering degree at the University of Las Palmas de Gran Canaria in 2022, and in 2025 I went on to finish my Master’s degree at the University of Limerick.</p><p>Over the years, I have gained knowledge and experience in developing software products using programming languages such as Java, C++, C#, JavaScript and Python. The projects I have worked on adhere to Clean Code principles and utilise architectural models such as MVC and design patterns such as Command and Observer.</p></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section card border-0 shadow-lg rounded-4 mt-4 p-4 p-lg-5" id="jobs-studies">
+                <section>
+                    <h2 class="fw-bold border-bottom pb-3 mb-4 experience-header">Work experience ⛏️</h2>
+                    <ul class="list-unstyled mb-5" id="job-list">
+        <li class="card border-0 bg-light rounded-4 p-4 mb-3">
+            <h4 class="fw-bold mb-2">Technical Staff in Research Project</h4>
+            <p class="text-primary fw-semibold mb-2">Instituto Universitario IATEXT · Full-time contract</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge rounded-pill bg-white text-dark border">jul. 2025 - present</span>
+                <span class="badge rounded-pill bg-white text-dark border">
+                    <i class="bi bi-geo-alt-fill me-1"></i>Las Palmas de Gran Canaria, Canary Islands, Spain
+                </span>
+            </div>
+            <div class="text-secondary mb-3"><ul>
+  <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>
+  <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES</li>
+  <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>
+</ul>
+</div>
+            <div class="bg-white border rounded-3 p-3">
+                <span class="fw-bold">Skills: </span>ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker
+            </div>
+        </li>
+    
+        <li class="card border-0 bg-light rounded-4 p-4 mb-3">
+            <h4 class="fw-bold mb-2">Computer Technician</h4>
+            <p class="text-primary fw-semibold mb-2">Cabildo de Gran Canaria · Internship contract</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge rounded-pill bg-white text-dark border">jan. 2023 - jan. 2024 (1 year and 1 month)</span>
+                <span class="badge rounded-pill bg-white text-dark border">
+                    <i class="bi bi-geo-alt-fill me-1"></i>Las Palmas de Gran Canaria, Canary Islands, Spain
+                </span>
+            </div>
+            <div class="text-secondary mb-3"><ul>
+  <li>Development and maintenance of an expedient manager.</li>
+  <li>Technical assistance in the field of Computer Engineering.</li>
+  <li>Meetings with the Cabildo and with other external companies contracted.</li>
+  <li>Drafting of technical specifications.</li>
+</ul>
+</div>
+            <div class="bg-white border rounded-3 p-3">
+                <span class="fw-bold">Skills: </span>Git, Java, Python, Teamwork, Communication, Bash
+            </div>
+        </li>
+    
+        <li class="card border-0 bg-light rounded-4 p-4 mb-3">
+            <h4 class="fw-bold mb-2">Web Developer</h4>
+            <p class="text-primary fw-semibold mb-2">INERZA S.A. · Apprenticeship contract</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge rounded-pill bg-white text-dark border">sept. 2021 - dec. 2021 (4 months)</span>
+                <span class="badge rounded-pill bg-white text-dark border">
+                    <i class="bi bi-geo-alt-fill me-1"></i>Las Palmas de Gran Canaria, Canary Islands, Spain
+                </span>
+            </div>
+            <div class="text-secondary mb-3">Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.
+</div>
+            <div class="bg-white border rounded-3 p-3">
+                <span class="fw-bold">Skills: </span>JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum
+            </div>
+        </li>
+    </ul>
+                </section>
+                <section>
+                    <h2 class="fw-bold border-bottom pb-3 mb-4 studies-header">Studies 📚</h2>
+                    <ul class="list-unstyled mb-0" id="study-list">
+            <li class="card border-0 bg-light rounded-4 p-4 mb-3">
+                <h4 class="fw-bold mb-2">Master of Science in Software Engineering</h4>
+                <div>
+                    <p class="text-primary fw-semibold mb-2">University of Limerick</p>
+                    <span class="badge rounded-pill bg-white text-dark border mb-3">2024 - 2025</span>
+                    
+                <ul class="text-secondary ps-4 mb-0">
+                    
+                        <li class="mb-1">
+                            <span class="text-dark fw-semibold">Stream: </span>Software Process and Analysis
+                        </li>
+                    
+                        <li class="mb-1">
+                            <span class="text-dark fw-semibold">Class: </span>First Class Honours
+                        </li>
+                    
+                </ul>
+            
+                </div>
+            </li>
+        
+            <li class="card border-0 bg-light rounded-4 p-4 mb-3">
+                <h4 class="fw-bold mb-2">Computer Engineering Degree</h4>
+                <div>
+                    <p class="text-primary fw-semibold mb-2">University of Las Palmas de Gran Canaria</p>
+                    <span class="badge rounded-pill bg-white text-dark border mb-3">2018 - 2022</span>
+                    
+                <ul class="text-secondary ps-4 mb-0">
+                    
+                        <li class="mb-1">
+                            <span class="text-dark fw-semibold">Specialty: </span>Computation
+                        </li>
+                    
+                        <li class="mb-1">
+                            <span class="text-dark fw-semibold">Average grade: </span>8,08
+                        </li>
+                    
+                </ul>
+            
+                </div>
+            </li>
+        
+            <li class="card border-0 bg-light rounded-4 p-4 mb-3">
+                <h4 class="fw-bold mb-2">Science and Technology Bachelor's Degree</h4>
+                <div>
+                    <p class="text-primary fw-semibold mb-2">IES Siete Palmas</p>
+                    <span class="badge rounded-pill bg-white text-dark border mb-3">2016 - 2018</span>
+                    
+                </div>
+            </li>
+        </ul>
+                </section>
+            </section>
+            <section class="section card border-0 shadow-lg rounded-4 mt-4 p-4 p-lg-5" id="skills">
+                <div>
+                    <h2 class="fw-bold border-bottom pb-3 mb-4 skills-header">Skills 💪</h2>
+                    <div>
+                        <ul class="list-unstyled mb-0" id="skill-list">
+            <li class="bg-light rounded-4 p-4 mb-4">
+                <h3 class="h4 fw-bold mb-4">Programming Languages</h3>
+                <div>
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                        href="https://www.java.com/es/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/languages/java.png" class="lang-image img-fluid" alt="Java logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Java" /></a>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">Java</h5>
+                            <span class="badge rounded-pill text-bg-primary">100%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 100%" aria-valuenow="100"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                        href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/languages/csharp.png" class="lang-image img-fluid" alt="C# logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="C#" /></a>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">C#</h5>
+                            <span class="badge rounded-pill text-bg-primary">100%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 100%" aria-valuenow="100"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                        href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/languages/bash.png" class="lang-image img-fluid" alt="Bash's logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bash" /></a>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">Bash</h5>
+                            <span class="badge rounded-pill text-bg-primary">100%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 100%" aria-valuenow="100"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                        href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/languages/python.png" class="lang-image img-fluid" alt="Python logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python" /></a>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">Python</h5>
+                            <span class="badge rounded-pill text-bg-primary">90%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 90%" aria-valuenow="90"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                        href="https://www.php.net/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/languages/php.png" class="lang-image img-fluid" alt="PHP logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="PHP: Hypertext Preprocessor" /></a>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">PHP: Hypertext Preprocessor</h5>
+                            <span class="badge rounded-pill text-bg-primary">70%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 70%" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                        href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/images/languages/javascript.png" class="lang-image img-fluid" alt="JavaScript logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="JavaScript" /></a>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">JavaScript</h5>
+                            <span class="badge rounded-pill text-bg-primary">80%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 80%" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </li>
+        
+            <li class="bg-light rounded-4 p-4 mb-4">
+                <h3 class="h4 fw-bold mb-4">Database Management</h3>
+                <div>
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">
+                <img src="../assets/images/database/mysql.png" class="lang-image img-fluid" alt="MySQL logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="MySQL" /></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">MySQL</h5>
+                            <span class="badge rounded-pill text-bg-primary">90%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 90%" aria-valuenow="90"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">
+                <img src="../assets/images/database/sqlite.png" class="lang-image img-fluid" alt="SQLite logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="SQLite" /></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">SQLite</h5>
+                            <span class="badge rounded-pill text-bg-primary">80%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 80%" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">
+                <img src="../assets/images/database/access.png" class="lang-image img-fluid" alt="Microsoft Access logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Microsoft Access" /></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">Microsoft Access</h5>
+                            <span class="badge rounded-pill text-bg-primary">70%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 70%" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </li>
+        
+            <li class="bg-light rounded-4 p-4 mb-4">
+                <h3 class="h4 fw-bold mb-4">Development Frameworks</h3>
+                <div>
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">
+                <img src="../assets/images/frameworks/netmvc.png" class="lang-image img-fluid" alt="ASP.NET MVC logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="ASP.NET MVC" /></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">ASP.NET MVC</h5>
+                            <span class="badge rounded-pill text-bg-primary">90%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 90%" aria-valuenow="90"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">
+                <img src="../assets/images/frameworks/react.png" class="lang-image img-fluid" alt="React logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="React" /></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">React</h5>
+                            <span class="badge rounded-pill text-bg-primary">70%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 70%" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row align-items-center g-3 mb-4">
+                    <div class="col-auto">
+                        <div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">
+                <img src="../assets/images/frameworks/springboot.png" class="lang-image img-fluid" alt="Spring Boot logo"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spring Boot" /></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-semibold mb-0">Spring Boot</h5>
+                            <span class="badge rounded-pill text-bg-primary">60%</span>
+                        </div>
+                        <div class="progress rounded-pill bg-white" style="height: 0.75rem">
+                            <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
+                                style="width: 60%" aria-valuenow="60"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </li>
+        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section card border-0 shadow-lg rounded-4 mt-4 p-4 p-lg-5" id="projects">
+                <div>
+                    <h2 class="fw-bold border-bottom pb-3 mb-4 projects-header">Projects 🛠️</h2>
+                    <ul class="list-unstyled mb-0" id="project-list">
+            <li class="card border-0 bg-light rounded-4 p-4 mb-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                    <h4 class="fw-bold mb-0">Canarias Flavor Pack</h4>
+                    <span class="badge rounded-pill bg-white text-dark border">dec. 2025 - now</span>
+                </div>
+
+                <div class="bg-white border rounded-3 p-3 mb-3">
+                    <span class="fw-bold">Skills: </span>CK3, YAML
+                </div>
+
+                <div class="text-secondary lh-lg mb-3">
+                    <p class="mb-0">Canarias Flavor Pack is a mod for CK3 focused on the historical and cultural representation of the indigenous peoples and their traditions in the Canary Islands. An effort has been made to represent the islands as faithfully as possible, based on historical sources or plausible assumptions.
+</p>
+                </div>
+
+                <div>
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        Steam Workshop <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            </div>
+            </li>
+        
+            <li class="card border-0 bg-light rounded-4 p-4 mb-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                    <h4 class="fw-bold mb-0">Expedia - Expedient Manager</h4>
+                    <span class="badge rounded-pill bg-white text-dark border">jan. 2023 - jan. 2024 (1 year and 1 month)</span>
+                </div>
+
+                <div class="bg-white border rounded-3 p-3 mb-3">
+                    <span class="fw-bold">Skills: </span>Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java
+                </div>
+
+                <div class="text-secondary lh-lg mb-3">
+                    <p class="mb-0">Expedia is a desktop application designed for the efficient management of general entry records and expedients processed by the Industry and Commerce Service of the Cabildo de Gran Canaria.<p class='mt-4'>The main objective of this project is to facilitate Service workers to monitor the status and evolution of each of the processed records, optimizing certain repetitive tasks and reducing possible human errors.</p>
+</p>
+                </div>
+
+                <div></div>
+            </li>
+        
+            <li class="card border-0 bg-light rounded-4 p-4 mb-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                    <h4 class="fw-bold mb-0">Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL</h4>
+                    <span class="badge rounded-pill bg-white text-dark border">jun. 2022 - dec. 2022 (8 months)</span>
+                </div>
+
+                <div class="bg-white border rounded-3 p-3 mb-3">
+                    <span class="fw-bold">Skills: </span>PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx
+                </div>
+
+                <div class="text-secondary lh-lg mb-3">
+                    <p class="mb-0">Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p class='mt-4'>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>
+</p>
+                </div>
+
+                <div>
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        Source code <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://github.com/losedavidpb/tokenizer-doc_vpl"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        User manual <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        Thesis <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            </div>
+            </li>
+        
+            <li class="card border-0 bg-light rounded-4 p-4 mb-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                    <h4 class="fw-bold mb-0">Personal Portfolio</h4>
+                    <span class="badge rounded-pill bg-white text-dark border">jan. 2023 - now</span>
+                </div>
+
+                <div class="bg-white border rounded-3 p-3 mb-3">
+                    <span class="fw-bold">Skills: </span>HTML, CSS, JavaScript, Bootstrap, jQuery
+                </div>
+
+                <div class="text-secondary lh-lg mb-3">
+                    <p class="mb-0">This portfolio shows my professional trajectory in the Computer Engineer field. <br>
+The development of this website has been manually codified using Bootstrap and other useful tools.
+</p>
+                </div>
+
+                <div>
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://losedavidpb.github.io/portfolio"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        Webpage <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://github.com/losedavidpb/portfolio"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        Source code <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            </div>
+            </li>
+        
+            <li class="card border-0 bg-light rounded-4 p-4 mb-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                    <h4 class="fw-bold mb-0">DotFiles Configuration for GNU/Linux Systems</h4>
+                    <span class="badge rounded-pill bg-white text-dark border">oct. 2020 - jan. 2023 (2 years and 3 months)</span>
+                </div>
+
+                <div class="bg-white border rounded-3 p-3 mb-3">
+                    <span class="fw-bold">Skills: </span>GNU/Linux, Bash, ZSH, Visual Studio Code
+                </div>
+
+                <div class="text-secondary lh-lg mb-3">
+                    <p class="mb-0">This project includes a set of configuration files I use for machines with Linux distributions installed. <br>
+There are .files for Bash, ZSH, Hyper, and Visual Studio Code, among others.
+</p>
+                </div>
+
+                <div>
+                <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="https://github.com/losedavidpb/bash-dotfiles"
+                    target="_blank" role="button">
+                    <span class="fw-bold">
+                        Source code <i class="bi bi-box-arrow-up-right"></i>
+                    </span>
+                </a>
+            </div>
+            </li>
+        </ul>
+                </div>
+            </section>
+            <section class="section card border-0 shadow-lg rounded-4 my-4 p-4 p-lg-5" id="courses">
+                <div>
+                    <h2 class="fw-bold border-bottom pb-3 mb-4 courses-certificates-header">Courses and Certificates 📰</h2>
+                    <ul class="list-unstyled mb-0" id="course-list">
+        <li class="bg-light border-start border-primary border-4 rounded-3 p-3 mb-3">
+            <h4 class="h5 fw-bold mb-1">Advanced English (C1)</h4>
+            <span class="text-secondary">Cambridge University Press & Assessment (2024)</span>
+        </li>
+    
+        <li class="bg-light border-start border-primary border-4 rounded-3 p-3 mb-3">
+            <h4 class="h5 fw-bold mb-1">First Certificate in English (B2)</h4>
+            <span class="text-secondary">Cambridge University Press & Assessment (2023)</span>
+        </li>
+    
+        <li class="bg-light border-start border-primary border-4 rounded-3 p-3 mb-3">
+            <h4 class="h5 fw-bold mb-1">The Ultimate Guide to Game Development with Unity (Official)</h4>
+            <span class="text-secondary">Udemy (2023)</span>
+        </li>
+    
+        <li class="bg-light border-start border-primary border-4 rounded-3 p-3 mb-3">
+            <h4 class="h5 fw-bold mb-1">Complete ASP.NET MVC Development Course</h4>
+            <span class="text-secondary">Udemy (2023)</span>
+        </li>
+    
+        <li class="bg-light border-start border-primary border-4 rounded-3 p-3 mb-3">
+            <h4 class="h5 fw-bold mb-1">Higher University Course of Digital Promoter</h4>
+            <span class="text-secondary">Las Palmas University Foundation (2022)</span>
+        </li>
+    
+        <li class="bg-light border-start border-primary border-4 rounded-3 p-3 mb-3">
+            <h4 class="h5 fw-bold mb-1">Press Start: How to enter the game industry</h4>
+            <span class="text-secondary">University of Las Palmas de Gran Canaria (2022)</span>
+        </li>
+    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
