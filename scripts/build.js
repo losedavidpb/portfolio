@@ -21,7 +21,7 @@ const languages = ['en', 'es'];
 const default_language = 'en';
 
 /**
- * Remove JSON comments without changing strings.
+ * Remove JSON comments without changing strings
  *
  * @param {string} jsonc
  * @returns {string}
@@ -34,7 +34,7 @@ function strip_json_comments(jsonc) {
 }
 
 /**
- * Read and parse a locale source file.
+ * Read and parse a locale source file
  *
  * @param {string} language
  * @returns {Promise<object>}
@@ -46,7 +46,7 @@ async function read_locale(language) {
 }
 
 /**
- * Describe a value structure without including its content.
+ * Describe a value structure without including its content
  *
  * @param {unknown} value
  * @returns {unknown}
@@ -70,7 +70,7 @@ function get_structure(value) {
 }
 
 /**
- * Get a nested locale value.
+ * Get a nested locale value
  *
  * @param {object} locale
  * @param {string} key
@@ -87,7 +87,7 @@ function get_locale_value(locale, key) {
 }
 
 /**
- * Escape visible HTML text.
+ * Escape visible HTML text
  *
  * @param {unknown} value
  * @returns {string}
@@ -102,7 +102,7 @@ function escape_html(value) {
 }
 
 /**
- * Replace localized element text markers.
+ * Replace localized element text markers
  *
  * @param {string} html
  * @param {object} locale
@@ -119,7 +119,7 @@ function render_text_markers(html, locale) {
 }
 
 /**
- * Replace localized attribute markers.
+ * Replace localized attribute markers
  *
  * @param {string} html
  * @param {object} locale
@@ -147,7 +147,7 @@ function render_attribute_markers(html, locale) {
 }
 
 /**
- * Replace localized paragraph lists.
+ * Replace localized paragraph lists
  *
  * @param {string} html
  * @param {object} locale
@@ -171,7 +171,7 @@ function render_list_markers(html, locale) {
 }
 
 /**
- * Replace portfolio content markers.
+ * Replace portfolio content markers
  *
  * @param {string} html
  * @param {object} locale
@@ -200,7 +200,7 @@ function render_content_markers(html, locale) {
 }
 
 /**
- * Set or replace an HTML attribute.
+ * Set or replace an HTML attribute
  *
  * @param {string} tag
  * @param {string} attribute
@@ -215,7 +215,7 @@ function set_attribute(tag, attribute, value) {
 }
 
 /**
- * Render one localized production page.
+ * Render one localized production page
  *
  * @param {string} template
  * @param {string} language
@@ -257,7 +257,7 @@ function render_page(template, language, locale) {
 }
 
 /**
- * Generate the root language redirect page.
+ * Generate the root language redirect page
  *
  * @param {Map<string, object>} locales
  * @returns {string}
@@ -288,7 +288,7 @@ function render_root_page(locales) {
 }
 
 /**
- * Generate the production sitemap.
+ * Generate the production sitemap
  *
  * @returns {string}
  */
@@ -306,7 +306,7 @@ ${urls}
 }
 
 /**
- * Validate generated production files.
+ * Validate generated production files
  *
  * @param {Map<string, object>} locales
  */

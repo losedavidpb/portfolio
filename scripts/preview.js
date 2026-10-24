@@ -31,14 +31,17 @@ const server = http.createServer(async (request, response) => {
         }
 
         const details = await stat(file);
+
         if (details.isDirectory()) {
             file = path.join(file, 'index.html');
         }
 
         const extension = path.extname(file).toLowerCase();
+
         response.writeHead(200, {
             'Content-Type': mime_types[extension] ?? 'application/octet-stream'
         });
+
         createReadStream(file).pipe(response);
     } catch {
         response.writeHead(404).end('Not found');
