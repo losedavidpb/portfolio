@@ -11,8 +11,10 @@ export function render_jobs(jobs, skill_name) {
             <h4 class="fw-bold mb-2">${job.job}</h4>
             <p class="text-primary fw-semibold mb-2">${job.company} · ${job.type}</p>
             <div class="d-flex flex-wrap gap-2 mb-3">
-                <span class="badge rounded-pill bg-white text-dark border">${job.date}</span>
-                <span class="badge rounded-pill bg-white text-dark border">
+                <span class="badge rounded-pill bg-white text-dark border text-wrap text-break">
+                    ${job.date}
+                </span>
+                <span class="badge rounded-pill bg-white text-dark border text-wrap text-break">
                     <i class="bi bi-geo-alt-fill me-1"></i>${job.location}
                 </span>
             </div>
@@ -70,6 +72,7 @@ export function render_skills(skills, asset_prefix = '') {
             const image = `
                 <img src="${asset_prefix}${value.src}" class="lang-image img-fluid" alt="${value.alt}"
                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="${value.tooltip}" />`;
+
             const image_container = value.href
                 ? `<a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
                         href="${value.href}" target="_blank" rel="noopener noreferrer">${image}</a>`
