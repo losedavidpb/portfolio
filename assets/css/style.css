@@ -1,0 +1,124 @@
+/****************************************************************
+ * Stylesheet for losedavidpb.github.io
+ *
+ * @author losedavidpb <losedavidpb@gmail.com>
+ *
+ ***************************************************************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#background-image {
+    background-image:
+        linear-gradient(135deg, rgba(13, 110, 253, 0.18), rgba(15, 23, 42, 0.5)),
+        url('../images/wallpaper.jpg');
+    background-attachment: fixed;
+}
+
+.section {
+    scroll-margin-top: 1.5rem;
+}
+
+header .person-header,
+header #person-header {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+}
+
+#nav-upper #profile-image,
+#about-me #profile-image {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.navbar-icons a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.35rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar-icons a:hover {
+    transform: translateY(-2px);
+}
+
+#language-div {
+    z-index: 1020;
+    width: fit-content;
+}
+
+#offcanvas-button {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+#navbar-vertical {
+    top: 1.5rem;
+    z-index: 1020;
+}
+
+#navbar-vertical .btn {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.15rem;
+}
+
+.lang-image {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+}
+
+.background-spinner {
+    z-index: 1050;
+    background-color: rgba(248, 249, 250, 0.88);
+    backdrop-filter: blur(4px);
+}
+
+.spinner-xl {
+    width: 4rem;
+    height: 4rem;
+    border-width: 0.45rem;
+}
+
+.loader-box {
+    min-width: 12rem;
+    padding: 3rem;
+}
+
+.loader-text {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 575.98px) {
+    #language-div {
+        margin: 1rem !important;
+    }
+
+    #nav-upper #profile-image,
+    #about-me #profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #main-content .section {
+        width: calc(100% - 4.75rem);
+    }
+}

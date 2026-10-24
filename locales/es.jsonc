@@ -1,0 +1,382 @@
+{
+  // Site
+  // ######################################
+
+  "site": {
+    "title": "David Parreño Barbuzano - Ingeniero Informático",
+    "description": "Portfolio personal de David Parreño Barbuzano, ingeniero informático graduado en la Universidad de Las Palmas de Gran Canaria (ULPGC) que busca una oportunidad con la que demostrar sus habilidades y conocimientos para el desarrollo de aplicaciones software.",
+    "author": "David Parreño Barbuzano",
+    "name": "David Parreño",
+    "role": "Ingeniero Informático",
+    "profileImageAlt": "Imagen de perfil",
+    "loading": "Cargando...",
+    "openNavigation": "Activar navegación vertical",
+    "closeNavigation": "Cerrar",
+    "homeLabel": "Inicio",
+    "mailLabel": "Correo",
+    "skillsLabel": "Aptitudes"
+  },
+
+  // Home page
+  // ######################################
+
+  "home": {
+    "homeTooltip": "Inicio",
+    "aboutTooltip": "Sobre mí",
+    "experienceStudiesTooltip": "Experiencia y Estudios",
+    "skillsTooltip": "Habilidades",
+    "projectsTooltip": "Proyectos",
+    "coursesTooltip": "Cursos y Certificados",
+    "aboutTitle": "Sobre mí 💻🎮",
+    "introductionTitle": "¡Hola mundo! 👋",
+    "introduction": [
+      "Me llamo David, y una de mis grandes pasiones es la programación. En el año 2022 terminé mi Grado de Ingeniería Informática en la Universidad de Las Palmas de Gran Canaria, y en 2025 completé mis estudios de Máster en la Universidad de Limerick.",
+      "Durante estos años, he adquirido conocimientos y experiencia en el desarrollo de productos software con lenguajes de programación como Java, C++, C#, JavaScript, o Python. Los proyectos en los que he trabajado siguen los principios Clean Code, y aplican modelos arquitectónicos tales como MVC, y patrones de diseño como Observer o Command."
+    ],
+    "experienceTitle": "Experiencia laboral ⛏️",
+    "studiesTitle": "Estudios 📚",
+    "skillsTitle": "Habilidades 💪",
+    "projectsTitle": "Proyectos 🛠️",
+    "coursesTitle": "Cursos y Certificados 📰"
+  },
+
+  "studies": [
+    // Master of Science in Software Engineering
+    // ######################################
+    {
+      "title": "Máster de Ciencias en Ingeniería de Software",
+      "institution": "Universidad de Limerick",
+      "date": "2024 - 2025",
+      "extra": [
+        {
+          "name": "Corriente",
+          "value": "Proceso y Análisis de Software"
+        },
+        {
+          "name": "Clase",
+          "value": "Matrícula de honor"
+        }
+      ]
+    },
+
+    // Computer Engineering Degree
+    // ######################################
+    {
+      "title": "Grado de Ingeniería Informática",
+      "institution": "Universidad de Las Palmas de Gran Canaria",
+      "date": "2018 - 2022",
+      "extra": [
+        {
+          "name": "Especialidad",
+          "value": "Computación"
+        },
+        {
+          "name": "Nota media",
+          "value": "8,08"
+        }
+      ]
+    },
+
+    // Science and Technology Bachelor's Degree
+    // ######################################
+    {
+      "title": "Bachillerato Científico Tecnológico",
+      "institution": "IES Siete Palmas",
+      "date": "2016 - 2018"
+    }
+  ],
+
+  "projects": [
+    // Canarias Flavor Pack
+    // ######################################
+    {
+      "name": "Canarias Flavor Pack",
+      "date": "dic. 2025 - actualidad",
+      "skills": "CK3, YAML",
+      "description": "Canarias Flavor Pack es un mod para CK3 centrado en la representación histórica y cultural de los pueblos indígenas y sus tradiciones de Canarias.<br> Se ha procurado representar las islas de la manera más fiel posible, basándose en fuentes históricas o en suposiciones plausibles.\n",
+      "urls": [
+        {
+          "name": "Steam Workshop",
+          "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+        }
+      ]
+    },
+
+    // Expedia - Expedient Manager
+    // ######################################
+    {
+      "name": "Expedia - Gestor de Expedientes",
+      "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
+      "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
+      "description": "Expedia es una aplicación de escritorio diseñada para la gestión eficaz de los registros generales de entrada y expedientes tramitados por el Servicio de Industria y Comercio del Cabildo de Gran Canaria.<p class='mt-4'>El principal objetivo de este proyecto es facilitar a los trabajadores del Servicio el seguimiento del estado y evolución de cada uno de los registros procesados, optimizando determinadas tareas repetitivas y reduciendo posibles errores humanos.</p>\n"
+    },
+
+    // Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL
+    // #################################################################################################
+    {
+      "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
+      "date": "jun. 2022 - dic. 2022 (8 meses)",
+      "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
+      "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. <p class='mt-4'>Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace. </p>\n",
+      "urls": [
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+        },
+        {
+          "name": "Manual de usuario",
+          "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+        },
+        {
+          "name": "Tesis",
+          "value": "https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
+        }
+      ]
+    },
+
+    // Personal Portfolio
+    // ######################################
+    {
+      "name": "Portfolio personal",
+      "date": "ene. 2023 - actualidad",
+      "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
+      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. <br>\nEl desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.\n",
+      "urls": [
+        {
+          "name": "Página web",
+          "value": "https://losedavidpb.github.io/portfolio"
+        },
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/portfolio"
+        }
+      ]
+    },
+
+    // DotFiles Configuration for GNU/Linux Systems
+    // ##################################################
+    {
+      "name": "Configuración DotFiles para Sistemas GNU/Linux",
+      "date": "oct. 2020 - ene. 2023 (2 años y 3 meses)",
+      "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
+      "description": "Repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. <br>\nEn el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.\n",
+      "urls": [
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/bash-dotfiles"
+        }
+      ]
+    }
+  ],
+
+  "skills": [
+    {
+      "title": "Lenguajes de Programación",
+      "values": [
+        // Java
+        // ######################################
+        {
+          "alt": "Java logo",
+          "tooltip": "Java",
+          "src": "assets/images/languages/java.png",
+          "href": "https://www.java.com/es/",
+          "value": 50
+        },
+
+        // C#
+        // ######################################
+        {
+          "alt": "C# logo",
+          "tooltip": "C#",
+          "src": "assets/images/languages/csharp.png",
+          "href": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+          "value": 50
+        },
+
+        // Bash
+        // ######################################
+        {
+          "alt": "Bash's logo",
+          "tooltip": "Bash",
+          "src": "assets/images/languages/bash.png",
+          "href": "https://www.gnu.org/software/bash/",
+          "value": 50
+        },
+
+        // Python
+        // ######################################
+        {
+          "alt": "Python logo",
+          "tooltip": "Python",
+          "src": "assets/images/languages/python.png",
+          "href": "https://www.python.org/",
+          "value": 45
+        },
+
+        // PHP
+        // ######################################
+        {
+          "alt": "PHP logo",
+          "tooltip": "PHP: Hypertext Preprocessor",
+          "src": "assets/images/languages/php.png",
+          "href": "https://www.php.net/",
+          "value": 35
+        },
+
+        // JavaScript
+        // ######################################
+        {
+          "alt": "JavaScript logo",
+          "tooltip": "JavaScript",
+          "src": "assets/images/languages/javascript.png",
+          "href": "https://www.javascript.com/",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "title": "Gestión de Bases de Datos",
+      "values": [
+        // MySQL
+        // ######################################
+        {
+          "alt": "MySQL logo",
+          "tooltip": "MySQL",
+          "src": "assets/images/database/mysql.png",
+          "value": 45
+        },
+
+        // SQLite
+        // ######################################
+        {
+          "alt": "SQLite logo",
+          "tooltip": "SQLite",
+          "src": "assets/images/database/sqlite.png",
+          "value": 40
+        },
+
+        // Microsoft Access
+        // ######################################
+        {
+          "alt": "Microsoft Access logo",
+          "tooltip": "Microsoft Access",
+          "src": "assets/images/database/access.png",
+          "value": 35
+        }
+      ]
+    },
+    {
+      "title": "Frameworks de desarrollo",
+      "values": [
+        // ASP.NET MVC
+        // ######################################
+        {
+          "alt": "ASP.NET MVC logo",
+          "tooltip": "ASP.NET MVC",
+          "src": "assets/images/frameworks/netmvc.png",
+          "value": 45
+        },
+
+        // React
+        // ######################################
+        {
+          "alt": "React logo",
+          "tooltip": "React",
+          "src": "assets/images/frameworks/react.png",
+          "value": 35
+        },
+
+        // SpringBoot
+        // ######################################
+        {
+          "alt": "Spring Boot logo",
+          "tooltip": "Spring Boot",
+          "src": "assets/images/frameworks/springboot.png",
+          "value": 30
+        }
+      ]
+    }
+  ],
+
+  "jobs": [
+    // Technical Staff in Research Project
+    // ######################################
+    {
+      "job": "Personal Técnico en Proyecto de Investigación",
+      "company": "Instituto Universitario IATEXT",
+      "type": "Contrato a tiempo completo",
+      "date": "jul. 2025 - actualidad",
+      "location": "Las Palmas de Gran Canaria, Canarias, España",
+      "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
+      "description": "<ul>\n  <li>Desarrollar aplicaciones de escritorio, web, y servicios WCF en el ámbito de las Humanidades Digitales.</li>\n  <li>Actualizar y mantener las aplicaciones ya desarrolladas en el IATEXT y CLARIAH-ES.</li>\n  <li>Asistir en la gestión de sistemas informáticos para cumplir con los requisitos de los servidores actuales.</li>\n</ul>\n"
+    },
+
+    // Computer Technician
+    // ######################################
+    {
+      "job": "Técnico Superior de Informática",
+      "company": "Cabildo de Gran Canaria",
+      "type": "Contrato de práticas",
+      "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
+      "location": "Las Palmas de Gran Canaria, Canarias, España",
+      "skills": "Git, Java, Python, Teamwork, Communication, Bash",
+      "description": "<ul>\n  <li>Desarrollo y mantenimiento de un gestor de expedientes.</li>\n  <li>Asistencia técnica en el campo de la Ingeniería Informática.</li>\n  <li>Reuniones con el Cabildo y otras empresas externas contratadas.</li>\n  <li>Redacción de pliegos de prescripciones técnicas.</li>\n</ul>\n"
+    },
+
+    // Web Developer
+    // ######################################
+    {
+      "job": "Desarrollador web",
+      "company": "INERZA S.A.",
+      "type": "Contrato de formación",
+      "date": "sept. 2021 - dic. 2021 (4 meses)",
+      "location": "Las Palmas de Gran Canaria, Canarias, España",
+      "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum",
+      "description": "Realización de pruebas, implantación y soporte de aplicaciones web informáticas destinadas a la Consejería de Educación, Universidades, Cultura y Deportes del Gobierno de Canarias.\n"
+    }
+  ],
+
+  "courses": [
+    // Advanced English
+    // ######################################
+    {
+      "title": "Advanced English (C1)",
+      "subtitle": "Cambridge University Press & Assessment (2024)"
+    },
+
+    // First Certificate in English
+    // ######################################
+    {
+      "title": "First Certificate in English (B2)",
+      "subtitle": "Cambridge University Press & Assessment (2023)"
+    },
+
+    // The Ultimate Guide to Game Development with Unity (Official)
+    // ######################################
+    {
+      "title": "La Guía Definitiva para el Desarrollo de Videojuegos con Unity (Oficial)",
+      "subtitle": "Udemy (2023)"
+    },
+
+    // Complete ASP.NET MVC Development Course
+    // ######################################
+    {
+      "title": "Curso Completo de Desarrollo ASP.NET MVC",
+      "subtitle": "Udemy (2023)"
+    },
+
+    // Higher University Course of Digital Promoter
+    // ######################################
+    {
+      "title": "Curso Superior Universitario de Promotor Digital",
+      "subtitle": "Fundación Universitaria de Las Palmas (2022)"
+    },
+
+    // Press Start: How to enter the game industry
+    // ######################################
+    {
+      "title": "Press Start: Cómo entrar en la industria del videojuego",
+      "subtitle": "Universidad de Las Palmas de Gran Canaria (2022)"
+    }
+  ]
+}
