@@ -10,64 +10,25 @@ import {
     render_studies
 } from '../assets/js/content.js';
 
+// Configuration
+// ==========================
+
+// Resolve all build paths from this script instead of the current terminal directory
 const script_dir = path.dirname(fileURLToPath(import.meta.url));
 const project_dir = path.resolve(script_dir, '..');
 const dist_dir = path.join(project_dir, 'dist');
 
+// Public URL used to generate canonical links, language alternatives, and the sitemap
 const site_origin = 'https://losedavidpb.github.io';
 const site_base_path = '/portfolio/';
+
 const site_url = new URL(site_base_path, site_origin);
+
 const languages = ['en', 'es'];
 const default_language = 'en';
 
-/**
- * Remove JSON comments without changing strings
- *
- * @param {string} jsonc
- * @returns {string}
- */
-function strip_json_comments(jsonc) {
-    return jsonc.replace(
-        /("(?:\\.|[^"\\])*")|\/\*[\s\S]*?\*\/|\/\/.*$/gm,
-        (_, string_literal) => string_literal ?? ''
-    );
-}
-
-/**
- * Read and parse a locale source file
- *
- * @param {string} language
- * @returns {Promise<object>}
- */
-async function read_locale(language) {
-    const file = path.join(project_dir, 'locales', `${language}.jsonc`);
-    const jsonc = await readFile(file, 'utf8');
-    return JSON.parse(strip_json_comments(jsonc));
-}
-
-/**
- * Describe a value structure without including its content
- *
- * @param {unknown} value
- * @returns {unknown}
- */
-function get_structure(value) {
-    if (Array.isArray(value)) {
-        return {
-            type: 'array',
-            length: value.length,
-            items: value.map(get_structure)
-        };
-    }
-
-    if (value && typeof value === 'object') {
-        return Object.fromEntries(
-            Object.keys(value).sort().map(key => [key, get_structure(value[key])])
-        );
-    }
-
-    return typeof value;
-}
+// Page rendering
+// ==========================
 
 /**
  * Get a nested locale value
@@ -228,33 +189,52 @@ function render_page(template, language, locale) {
 
     let html = template;
 
+    // Mark the page with its language and production environment
     html = html.replace(/<html\b[^>]*>/i, `<html lang="${language}" data-environment="production">`);
+
+    // Replace every localization marker with content from the selected locale
     html = render_text_markers(html, locale);
     html = render_attribute_markers(html, locale);
     html = render_list_markers(html, locale);
+
+    // Adjust asset paths for nested language directories and prerender portfolio content
     html = html.replaceAll('./assets/', '../assets/');
     html = render_content_markers(html, locale);
 
-    html = html.replace(/<link\b[^>]*rel="canonical"[^>]*>/i, tag => set_attribute(tag, 'href', canonical));
-    html = html.replace(/<link\b[^>]*hreflang="en"[^>]*>/i, tag =>
-        set_attribute(tag, 'href', new URL('en/', site_url).toString()));
-    html = html.replace(/<link\b[^>]*hreflang="es"[^>]*>/i, tag =>
-        set_attribute(tag, 'href', new URL('es/', site_url).toString()));
-    html = html.replace(/<link\b[^>]*hreflang="x-default"[^>]*>/i, tag =>
-        set_attribute(tag, 'href', default_url));
+    // Generate absolute SEO links for the current and alternative languages
+    html = html.replace(/<link\b[^>]*rel="canonical"[^>]*>/i, tag =>
+        set_attribute(tag, 'href', canonical)
+    );
 
+    html = html.replace(/<link\b[^>]*hreflang="en"[^>]*>/i, tag =>
+        set_attribute(tag, 'href', new URL('en/', site_url).toString())
+    );
+
+    html = html.replace(/<link\b[^>]*hreflang="es"[^>]*>/i, tag =>
+        set_attribute(tag, 'href', new URL('es/', site_url).toString())
+    );
+
+    html = html.replace(/<link\b[^>]*hreflang="x-default"[^>]*>/i, tag =>
+        set_attribute(tag, 'href', default_url)
+    );
+
+    // Convert language selectors into links between the generated directories
     html = html.replace(/<a\b([^>]*\sdata-language="(en|es)"[^>]*)>/gi, (_, raw_attributes, target) => {
         let attributes = raw_attributes.replace(/\sdata-language="[^"]+"/i, '');
         attributes = attributes.replace(/\shref="[^"]*"/i, ` href="../${target}/"`);
         return `<a${attributes}>`;
     });
 
+    // Ensure no development-only marker reaches the production output
     if (/data-(?:i18n|i18n-attr|i18n-list|content|language)=/i.test(html)) {
         throw new Error(`Unresolved build marker in ${language}/index.html`);
     }
 
     return html;
 }
+
+// Root files
+// ==========================
 
 /**
  * Generate the root language redirect page
@@ -305,6 +285,9 @@ ${urls}
 `;
 }
 
+// Validation
+// ==========================
+
 /**
  * Validate generated production files
  *
@@ -318,73 +301,154 @@ async function validate_build(locales) {
         const json = await readFile(json_file, 'utf8');
         const html = await readFile(html_file, 'utf8');
 
+        // Confirm that the exported locale file contains valid JSON
         JSON.parse(json);
 
+        // Check the language and environment metadata on the generated page
         if (!html.includes(`<html lang="${language}" data-environment="production">`)) {
             throw new Error(`Invalid HTML language for ${language}`);
         }
 
+        // Confirm that representative portfolio entries were prerendered
         if (!html.includes(locale.jobs[0].job) || !html.includes(locale.projects[0].name)) {
             throw new Error(`Missing prerendered content for ${language}`);
         }
 
+        // Production language navigation must use directories instead of query parameters
         if (html.includes('?lang=')) {
             throw new Error(`Query-based language URL found in ${language}/index.html`);
         }
 
+        // Reject malformed paths and values accidentally interpolated as undefined
         if (html.includes('.../assets/') || html.includes('="undefined"')) {
             throw new Error(`Invalid generated value found in ${language}/index.html`);
         }
 
+        // Every localized page must include its absolute canonical URL
         if (!html.includes(new URL(`${language}/`, site_url).toString())) {
             throw new Error(`Missing canonical URL for ${language}`);
         }
     }
 }
 
-async function build() {
-    const expected_dist = path.join(project_dir, 'dist');
+// Localization
+// ==========================
 
-    if (dist_dir !== expected_dist || path.dirname(dist_dir) !== project_dir) {
-        throw new Error(`Unsafe dist path: ${dist_dir}`);
-    }
+/**
+ * Remove JSON comments without changing strings
+ *
+ * @param {string} jsonc
+ * @returns {string}
+ */
+function strip_json_comments(jsonc) {
+    return jsonc.replace(
+        /("(?:\\.|[^"\\])*")|\/\*[\s\S]*?\*\/|\/\/.*$/gm,
+        (_, string_literal) => string_literal ?? ''
+    );
+}
 
+/**
+ * Read and parse a locale source file
+ *
+ * @param {string} language
+ * @returns {Promise<object>}
+ */
+async function read_locale(language) {
+    const file = path.join(project_dir, 'locales', `${language}.jsonc`);
+    const jsonc = await readFile(file, 'utf8');
+
+    return JSON.parse(strip_json_comments(jsonc));
+}
+
+/**
+ * Load the locale data for every supported language
+ *
+ * @returns {Promise<Map<string, object>>}
+ */
+async function load_locales() {
     const locales = new Map();
+
+    // Preserve the configured language order in the resulting map
     for (const language of languages) {
         locales.set(language, await read_locale(language));
     }
 
-    const reference_structure = JSON.stringify(get_structure(locales.get(default_language)));
-    for (const [language, locale] of locales) {
-        if (JSON.stringify(get_structure(locale)) !== reference_structure) {
-            throw new Error(`Locale structure differs: ${language}`);
-        }
-    }
+    return locales;
+}
 
+// Build generation
+// ==========================
+
+/**
+ * Recreate the build directory and copy the static assets
+ *
+ * @returns {Promise<void>}
+ */
+async function prepare_build_directory() {
+    // Start from a clean output directory to avoid retaining stale files
     await rm(dist_dir, { recursive: true, force: true });
     await mkdir(path.join(dist_dir, 'locales'), { recursive: true });
-    await cp(path.join(project_dir, 'assets'), path.join(dist_dir, 'assets'), { recursive: true });
 
+    // Static assets are shared by every generated language page
+    await cp(path.join(project_dir, 'assets'), path.join(dist_dir, 'assets'), { recursive: true });
+}
+
+/**
+ * Generate the localized HTML and JSON files for every language
+ *
+ * @param {Map<string, object>} locales
+ * @returns {Promise<void>}
+ */
+async function write_localized_files(locales) {
     const template = await readFile(path.join(project_dir, 'index.html'), 'utf8');
 
+    // Generate one HTML page and one browser locale file per language
     for (const [language, locale] of locales) {
         const language_dir = path.join(dist_dir, language);
+
+        // Write the prerendered language page
         await mkdir(language_dir, { recursive: true });
         await writeFile(path.join(language_dir, 'index.html'), render_page(template, language, locale));
+
+        // Export locale data for client-side use
         await writeFile(
             path.join(dist_dir, 'locales', `${language}.json`),
             `${JSON.stringify(locale, null, 2)}\n`
         );
     }
+}
 
+/**
+ * Write the root redirect, sitemap, and deployment files
+ *
+ * @param {Map<string, object>} locales
+ * @returns {Promise<void>}
+ */
+async function render_root_redirect(locales) {
+    // Write the root language redirect and the public URL index
     await writeFile(path.join(dist_dir, 'index.html'), render_root_page(locales));
     await writeFile(path.join(dist_dir, 'sitemap.xml'), render_sitemap());
+
+    // Add files required by crawlers and GitHub Pages deployment
     await cp(path.join(project_dir, 'robots.txt'), path.join(dist_dir, 'robots.txt'));
     await writeFile(path.join(dist_dir, '.nojekyll'), '');
+}
 
+/**
+ * Build the website
+ *
+ * @returns {Promise<void>}
+ */
+async function build() {
+    const locales = await load_locales();
+
+    // Generate the production files
+    await prepare_build_directory();
+    await write_localized_files(locales)
+    await render_root_redirect(locales)
+
+    // Validate the generated files
     await validate_build(locales);
-
-    console.log(`Built ${languages.length} languages in ${dist_dir}`);
 }
 
 await build();

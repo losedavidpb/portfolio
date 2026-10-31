@@ -1,3 +1,6 @@
+// Content rendering
+// ==========================
+
 /**
  * Render jobs
  *
@@ -18,7 +21,7 @@ export function render_jobs(jobs, skill_name) {
                     <i class="bi bi-geo-alt-fill me-1"></i>${job.location}
                 </span>
             </div>
-            <div class="text-secondary mb-3">${job.description}</div>
+            <div class="text-secondary text-justify mb-3">${job.description}</div>
             <div class="bg-white border rounded-3 p-3">
                 <span class="fw-bold">${skill_name}: </span>${job.skills}
             </div>
@@ -34,6 +37,7 @@ export function render_jobs(jobs, skill_name) {
  */
 export function render_studies(studies) {
     return studies.map(study => {
+        // Some studies include an optional list of results or qualifications
         const extra_html = study.extra
             ? `
                 <ul class="text-secondary ps-4 mb-0">
@@ -73,17 +77,18 @@ export function render_skills(skills, asset_prefix = '') {
                 <img src="${asset_prefix}${value.src}" class="lang-image img-fluid" alt="${value.alt}"
                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="${value.tooltip}" />`;
 
+            // Wrap skills with a source URL in a link while keeping the same layout
             const image_container = value.href
                 ? `<a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
                         href="${value.href}" target="_blank" rel="noopener noreferrer">${image}</a>`
                 : `<div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">${image}</div>`;
 
+            // Skill values use a 0-50 scale and are displayed as percentages
             return `
                 <div class="row align-items-center g-3 mb-4">
                     <div class="col-auto">
                         ${image_container}
                     </div>
-
                     <div class="col">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <h5 class="fw-semibold mb-0">${value.tooltip}</h5>
@@ -133,6 +138,7 @@ export function render_courses(courses) {
  */
 export function render_projects(projects, skill_name) {
     return projects.map(project => {
+        // Projects may expose one or more external links
         const urls_html = project.urls
             ? project.urls.map(url => `
                 <a class="btn btn-primary rounded-pill px-4 me-2 mb-2" href="${url.value}"
@@ -150,20 +156,20 @@ export function render_projects(projects, skill_name) {
                     <h4 class="fw-bold mb-0">${project.name}</h4>
                     <span class="badge rounded-pill bg-white text-dark border">${project.date}</span>
                 </div>
-
                 <div class="bg-white border rounded-3 p-3 mb-3">
                     <span class="fw-bold">${skill_name}: </span>${project.skills}
                 </div>
-
-                <div class="text-secondary lh-lg mb-3">
+                <div class="text-secondary text-justify lh-lg mb-3">
                     <p class="mb-0">${project.description}</p>
                 </div>
-
                 <div>${urls_html}</div>
             </li>
         `;
     }).join('');
 }
+
+// Browser integration
+// ==========================
 
 /**
  * Render localized portfolio content
@@ -174,6 +180,7 @@ export function render_projects(projects, skill_name) {
 export function render_content(locale, asset_prefix = '') {
     const skill_name = locale.site.skillsLabel;
 
+    // Empty arrays keep optional sections renderable when locale data is absent
     $('#job-list').html(render_jobs(locale.jobs ?? [], skill_name));
     $('#study-list').html(render_studies(locale.studies ?? []));
     $('#skill-list').html(render_skills(locale.skills ?? [], asset_prefix));

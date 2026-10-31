@@ -1,9 +1,5 @@
-/****************************************************************
- * Stylesheet for losedavidpb.github.io
- *
- * @author losedavidpb <losedavidpb@gmail.com>
- *
- ***************************************************************/
+/* Base layout
+ * ========================== */
 
 html {
     scroll-behavior: smooth;
@@ -12,6 +8,9 @@ html {
 body {
     min-height: 100vh;
 }
+
+/* Background
+ * ========================== */
 
 .background {
     position: fixed;
@@ -23,14 +22,23 @@ body {
 }
 
 #background-image {
+    /* Darken the wallpaper to preserve contrast behind the content cards */
     background-image:
         linear-gradient(135deg, rgba(13, 110, 253, 0.18), rgba(15, 23, 42, 0.5)),
         url('../images/wallpaper.jpg');
     background-attachment: fixed;
 }
 
+/* Page sections and profile
+ * ========================== */
+
 .section {
     scroll-margin-top: 1.5rem;
+}
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
 }
 
 header .person-header,
@@ -45,6 +53,9 @@ header #person-header {
     object-fit: cover;
 }
 
+/* Navigation
+ * ========================== */
+
 .navbar-icons a {
     width: 3rem;
     height: 3rem;
@@ -57,6 +68,7 @@ header #person-header {
     transform: translateY(-2px);
 }
 
+/* Keep floating navigation controls above the page content */
 #language-div {
     z-index: 1020;
     width: fit-content;
@@ -76,7 +88,32 @@ header #person-header {
     width: 3.25rem;
     height: 3.25rem;
     font-size: 1.15rem;
+    transition: color 0.2s ease, background-color 0.2s ease,
+        border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
+
+#navbar-vertical .btn:not(.active) {
+    color: var(--bs-primary);
+    background-color: white;
+    border-color: white;
+}
+
+#navbar-vertical .btn:not(.active):hover,
+#navbar-vertical .btn:not(.active):focus-visible {
+    color: white;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+#navbar-vertical .btn.active {
+    color: white;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    box-shadow: 0 0.25rem 0.75rem rgba(13, 110, 253, 0.35);
+}
+
+/* Skills
+ * ========================== */
 
 .lang-image {
     width: 3.5rem;
@@ -84,7 +121,11 @@ header #person-header {
     object-fit: contain;
 }
 
+/* Loading screen
+ * ========================== */
+
 .background-spinner {
+    /* Soften the page beneath the loader without hiding it completely */
     z-index: 1050;
     background-color: rgba(248, 249, 250, 0.88);
     backdrop-filter: blur(4px);
@@ -105,6 +146,9 @@ header #person-header {
     font-size: 1.25rem;
 }
 
+/* Responsive layout
+ * ========================== */
+
 @media screen and (max-width: 575.98px) {
     #language-div {
         margin: 1rem !important;
@@ -118,6 +162,7 @@ header #person-header {
 }
 
 @media screen and (min-width: 1200px) {
+    /* Reserve room for the fixed vertical navigation on wide screens */
     #main-content .section {
         width: calc(100% - 4.75rem);
     }
