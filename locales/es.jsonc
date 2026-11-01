@@ -93,13 +93,18 @@
       "name": "Canarias Flavor Pack",
       "date": "dic. 2025 - actualidad",
       "skills": "CK3, YAML",
-      "description": "Canarias Flavor Pack es un mod para CK3 centrado en la representación histórica y cultural de los pueblos indígenas y sus tradiciones de Canarias.<br> Se ha procurado representar las islas de la manera más fiel posible, basándose en fuentes históricas o en suposiciones plausibles.\n",
+      "description": "Canarias Flavor Pack es un mod para CK3 centrado en la representación histórica y cultural de los pueblos indígenas y sus tradiciones de Canarias. Se ha procurado representar las islas de la manera más fiel posible, basándose en fuentes históricas o en suposiciones plausibles.\n",
       "urls": [
         {
           "name": "Steam Workshop",
           "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/images/projects/canarias-flavor-pack.jpg",
+        "alt": "Canarias Flavor Pack",
+        "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+      }
     },
 
     // Expedia - Expedient Manager
@@ -140,7 +145,7 @@
       "name": "Portfolio personal",
       "date": "ene. 2023 - actualidad",
       "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
-      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. <br>\nEl desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.\n",
+      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.\n",
       "urls": [
         {
           "name": "Página web",
@@ -159,7 +164,7 @@
       "name": "Configuración DotFiles para Sistemas GNU/Linux",
       "date": "oct. 2020 - ene. 2023 (2 años y 3 meses)",
       "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
-      "description": "Repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. <br>\nEn el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.\n",
+      "description": "Repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. En el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.\n",
       "urls": [
         {
           "name": "Código fuente",
@@ -188,7 +193,7 @@
         {
           "alt": "C# logo",
           "tooltip": "C#",
-          "src": "assets/images/languages/csharp.png",
+          "src": "assets/images/languages/c-sharp.png",
           "href": "https://learn.microsoft.com/en-us/dotnet/csharp/",
           "value": 50
         },
@@ -260,7 +265,7 @@
         {
           "alt": "Microsoft Access logo",
           "tooltip": "Microsoft Access",
-          "src": "assets/images/database/access.png",
+          "src": "assets/images/database/microsoft-access.png",
           "value": 35
         }
       ]
@@ -273,7 +278,7 @@
         {
           "alt": "ASP.NET MVC logo",
           "tooltip": "ASP.NET MVC",
-          "src": "assets/images/frameworks/netmvc.png",
+          "src": "assets/images/frameworks/asp-net-mvc.png",
           "value": 45
         },
 
@@ -291,7 +296,7 @@
         {
           "alt": "Spring Boot logo",
           "tooltip": "Spring Boot",
-          "src": "assets/images/frameworks/springboot.png",
+          "src": "assets/images/frameworks/spring-boot.png",
           "value": 30
         }
       ]

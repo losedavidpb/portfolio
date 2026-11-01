@@ -1,6 +1,9 @@
-import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { transform } from 'esbuild';
+import { minify as minify_html } from 'html-minifier-terser';
 
 import {
     render_courses,
@@ -143,7 +146,7 @@ function render_content_markers(html, locale) {
         jobs: render_jobs(locale.jobs, locale.site.skillsLabel),
         studies: render_studies(locale.studies),
         skills: render_skills(locale.skills, '../'),
-        projects: render_projects(locale.projects, locale.site.skillsLabel),
+        projects: render_projects(locale.projects, locale.site.skillsLabel, '../'),
         courses: render_courses(locale.courses)
     };
 
@@ -170,6 +173,7 @@ function render_content_markers(html, locale) {
  */
 function set_attribute(tag, attribute, value) {
     const pattern = new RegExp(`\\s${attribute}="[^"]*"`, 'i');
+
     return pattern.test(tag)
         ? tag.replace(pattern, ` ${attribute}="${escape_html(value)}"`)
         : tag.replace(/>$/, ` ${attribute}="${escape_html(value)}">`);
@@ -393,6 +397,99 @@ async function prepare_build_directory() {
     await cp(path.join(project_dir, 'assets'), path.join(dist_dir, 'assets'), { recursive: true });
 }
 
+// Asset optimization
+// ==========================
+
+/**
+ * Find files with a given extension inside a directory tree
+ *
+ * @param {string} directory
+ * @param {string} extension
+ * @returns {Promise<string[]>}
+ */
+async function find_files(directory, extension) {
+    // Read entry types once so directories can be traversed without extra filesystem calls
+    const entries = await readdir(directory, { withFileTypes: true });
+
+    // Recursively collect only files whose extension matches the requested asset type
+    const matches = await Promise.all(entries.map(async entry => {
+        const file = path.join(directory, entry.name);
+
+        if (entry.isDirectory()) {
+            return find_files(file, extension);
+        }
+
+        return entry.isFile() && path.extname(entry.name) === extension ? [file] : [];
+    }));
+
+    // Merge the results from every directory branch into one file list
+    return matches.flat();
+}
+
+/**
+ * Minify generated JavaScript and CSS without changing readable source files
+ *
+ * @returns {Promise<void>}
+ */
+async function optimize_static_assets() {
+    // Limit optimization to generated production assets so source files remain readable
+    const asset_types = [
+        { directory: path.join(dist_dir, 'assets', 'js'), extension: '.js', loader: 'js' },
+        { directory: path.join(dist_dir, 'assets', 'css'), extension: '.css', loader: 'css' }
+    ];
+
+    // Process JavaScript and CSS with their corresponding esbuild loader
+    for (const asset_type of asset_types) {
+        const files = await find_files(asset_type.directory, asset_type.extension);
+
+        for (const file of files) {
+            const source = await readFile(file, 'utf8');
+
+            // Lower JavaScript template literals so their embedded whitespace becomes escaped
+            const result = await transform(source, {
+                charset: 'utf8',
+                legalComments: 'none',
+                loader: asset_type.loader,
+                minify: true,
+                target: 'es2020',
+                ...(asset_type.loader === 'js'
+                    ? { supported: { 'template-literal': false } }
+                    : {})
+            });
+
+            // Replace only the generated copy with its single-line minified output
+            await writeFile(file, result.code);
+        }
+    }
+}
+
+/**
+ * Minify generated HTML pages without changing the readable template
+ *
+ * @returns {Promise<void>}
+ */
+async function optimize_html_files() {
+    // Include the root redirect and every localized page generated inside dist
+    const files = await find_files(dist_dir, '.html');
+
+    for (const file of files) {
+        const source = await readFile(file, 'utf8');
+
+        // Remove comments and redundant whitespace while preserving meaningful content spacing
+        const result = await minify_html(source, {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true
+        });
+
+        // Replace only the generated page with its single-line optimized output
+        await writeFile(file, result);
+    }
+}
+
 /**
  * Generate the localized HTML and JSON files for every language
  *
@@ -444,8 +541,10 @@ async function build() {
 
     // Generate the production files
     await prepare_build_directory();
+    await optimize_static_assets();
     await write_localized_files(locales)
     await render_root_redirect(locales)
+    await optimize_html_files();
 
     // Validate the generated files
     await validate_build(locales);

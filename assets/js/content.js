@@ -75,6 +75,7 @@ export function render_skills(skills, asset_prefix = '') {
         const values_html = skill.values.map(value => {
             const image = `
                 <img src="${asset_prefix}${value.src}" class="lang-image img-fluid" alt="${value.alt}"
+                    width="56" height="56" loading="lazy" decoding="async"
                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="${value.tooltip}" />`;
 
             // Wrap skills with a source URL in a link while keeping the same layout
@@ -134,10 +135,29 @@ export function render_courses(courses) {
  *
  * @param {object[]} projects
  * @param {string} skill_name
+ * @param {string} asset_prefix
  * @returns {string}
  */
-export function render_projects(projects, skill_name) {
+export function render_projects(projects, skill_name, asset_prefix = '') {
     return projects.map(project => {
+        // Some projects include an optional image
+        let image_html = '';
+
+        if (project.image) {
+            const image = `
+                <img src="${asset_prefix}${project.image.src}" class="project-image"
+                    alt="${project.image.alt}" loading="lazy" decoding="async"
+                    width="1920" height="1080"
+                    style="object-position: ${project.image.position ?? 'center'}" />
+            `;
+
+            // Wrap linked project images while leaving unlinked images unchanged
+            image_html = project.image.href
+                ? `<a class="project-image-link" href="${project.image.href}"
+                    target="_blank" rel="noopener noreferrer">${image}</a>`
+                : image;
+        }
+
         // Projects may expose one or more external links
         const urls_html = project.urls
             ? project.urls.map(url => `
@@ -151,18 +171,21 @@ export function render_projects(projects, skill_name) {
             : '';
 
         return `
-            <li class="card border-0 bg-light rounded-4 p-4 mb-4">
-                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
-                    <h4 class="fw-bold mb-0">${project.name}</h4>
-                    <span class="badge rounded-pill bg-white text-dark border">${project.date}</span>
+            <li class="card project-card border-0 bg-light rounded-4 overflow-hidden mb-4">
+                ${image_html}
+                <div class="p-4">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                        <h4 class="fw-bold mb-0">${project.name}</h4>
+                        <span class="badge rounded-pill bg-white text-dark border">${project.date}</span>
+                    </div>
+                    <div class="bg-white border rounded-3 p-3 mb-3">
+                        <span class="fw-bold">${skill_name}: </span>${project.skills}
+                    </div>
+                    <div class="text-secondary text-justify lh-lg mb-3">
+                        ${project.description}
+                    </div>
+                    <div>${urls_html}</div>
                 </div>
-                <div class="bg-white border rounded-3 p-3 mb-3">
-                    <span class="fw-bold">${skill_name}: </span>${project.skills}
-                </div>
-                <div class="text-secondary text-justify lh-lg mb-3">
-                    <p class="mb-0">${project.description}</p>
-                </div>
-                <div>${urls_html}</div>
             </li>
         `;
     }).join('');
@@ -185,5 +208,5 @@ export function render_content(locale, asset_prefix = '') {
     $('#study-list').html(render_studies(locale.studies ?? []));
     $('#skill-list').html(render_skills(locale.skills ?? [], asset_prefix));
     $('#course-list').html(render_courses(locale.courses ?? []));
-    $('#project-list').html(render_projects(locale.projects ?? [], skill_name));
+    $('#project-list').html(render_projects(locale.projects ?? [], skill_name, asset_prefix));
 }

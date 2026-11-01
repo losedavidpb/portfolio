@@ -38,7 +38,6 @@ body {
 
 .text-justify {
     text-align: justify;
-    hyphens: auto;
 }
 
 header .person-header,
@@ -121,6 +120,20 @@ header #person-header {
     object-fit: contain;
 }
 
+/* Projects
+ * ========================== */
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: clamp(12rem, 28vw, 17rem);
+    object-fit: cover;
+}
+
+.project-image-link {
+    display: block;
+}
+
 /* Loading screen
  * ========================== */
 
@@ -159,6 +172,7 @@ header #person-header {
         width: 150px;
         height: 150px;
     }
+
 }
 
 @media screen and (min-width: 1200px) {

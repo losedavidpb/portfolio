@@ -99,7 +99,12 @@
           "name": "Steam Workshop",
           "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
         }
-      ]
+      ],
+      "image": {
+        "src": "assets/images/projects/canarias-flavor-pack.jpg",
+        "alt": "Canarias Flavor Pack",
+        "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+      }
     },
 
     // Expedia - Expedient Manager
@@ -140,7 +145,7 @@
       "name": "Personal Portfolio",
       "date": "jan. 2023 - now",
       "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
-      "description": "This portfolio shows my professional trajectory in the Computer Engineer field. <br>\nThe development of this website has been manually codified using Bootstrap and other useful tools.\n",
+      "description": "This portfolio shows my professional trajectory in the Computer Engineer field. The development of this website has been manually codified using Bootstrap and other useful tools.\n",
       "urls": [
         {
           "name": "Webpage",
@@ -159,7 +164,7 @@
       "name": "DotFiles Configuration for GNU/Linux Systems",
       "date": "oct. 2020 - jan. 2023 (2 years and 3 months)",
       "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
-      "description": "This project includes a set of configuration files I use for machines with Linux distributions installed. <br>\nThere are .files for Bash, ZSH, Hyper, and Visual Studio Code, among others.\n",
+      "description": "This project includes a set of configuration files I use for machines with Linux distributions installed. There are .files for Bash, ZSH, Hyper, and Visual Studio Code, among others.\n",
       "urls": [
         {
           "name": "Source code",
@@ -188,7 +193,7 @@
         {
           "alt": "C# logo",
           "tooltip": "C#",
-          "src": "assets/images/languages/csharp.png",
+          "src": "assets/images/languages/c-sharp.png",
           "href": "https://learn.microsoft.com/en-us/dotnet/csharp/",
           "value": 50
         },
@@ -260,7 +265,7 @@
         {
           "alt": "Microsoft Access logo",
           "tooltip": "Microsoft Access",
-          "src": "assets/images/database/access.png",
+          "src": "assets/images/database/microsoft-access.png",
           "value": 35
         }
       ]
@@ -273,7 +278,7 @@
         {
           "alt": "ASP.NET MVC logo",
           "tooltip": "ASP.NET MVC",
-          "src": "assets/images/frameworks/netmvc.png",
+          "src": "assets/images/frameworks/asp-net-mvc.png",
           "value": 45
         },
 
@@ -291,7 +296,7 @@
         {
           "alt": "Spring Boot logo",
           "tooltip": "Spring Boot",
-          "src": "assets/images/frameworks/springboot.png",
+          "src": "assets/images/frameworks/spring-boot.png",
           "value": 30
         }
       ]
@@ -308,7 +313,7 @@
       "date": "jul. 2025 - present",
       "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
       "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
-      "description": "<ul>\n  <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>\n  <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES</li>\n  <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>\n</ul>\n"
+      "description": "<ul>\n  <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>\n  <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES.</li>\n  <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>\n</ul>\n"
     },
 
     // Computer Technician
