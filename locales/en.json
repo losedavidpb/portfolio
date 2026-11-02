@@ -32,6 +32,35 @@
     "projectsTitle": "Projects 🛠️",
     "coursesTitle": "Courses and Certificates 📰"
   },
+  "jobs": [
+    {
+      "job": "Technical Staff in Research Project",
+      "company": "Instituto Universitario IATEXT",
+      "type": "Full-time contract",
+      "date": "jul. 2025 - present",
+      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
+      "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
+      "description": "<ul>\n  <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>\n  <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES.</li>\n  <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>\n</ul>\n"
+    },
+    {
+      "job": "Computer Technician",
+      "company": "Cabildo de Gran Canaria",
+      "type": "Internship contract",
+      "date": "jan. 2023 - jan. 2024 (1 year and 1 month)",
+      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
+      "skills": "Git, Java, Python, Teamwork, Communication, Bash",
+      "description": "<ul>\n  <li>Development and maintenance of an expedient manager.</li>\n  <li>Technical assistance in the field of Computer Engineering.</li>\n  <li>Meetings with the Cabildo and with other external companies contracted.</li>\n  <li>Drafting of technical specifications.</li>\n</ul>\n"
+    },
+    {
+      "job": "Web Developer",
+      "company": "INERZA S.A.",
+      "type": "Apprenticeship contract",
+      "date": "sept. 2021 - dec. 2021 (4 months)",
+      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
+      "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum",
+      "description": "Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.\n"
+    }
+  ],
   "studies": [
     {
       "title": "Master of Science in Software Engineering",
@@ -69,79 +98,6 @@
       "date": "2016 - 2018"
     }
   ],
-  "projects": [
-    {
-      "name": "Canarias Flavor Pack",
-      "date": "dec. 2025 - now",
-      "skills": "CK3, YAML",
-      "description": "Canarias Flavor Pack is a mod for CK3 focused on the historical and cultural representation of the indigenous peoples and their traditions in the Canary Islands. An effort has been made to represent the islands as faithfully as possible, based on historical sources or plausible assumptions.\n",
-      "urls": [
-        {
-          "name": "Steam Workshop",
-          "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
-        }
-      ],
-      "image": {
-        "src": "assets/images/projects/canarias-flavor-pack.jpg",
-        "alt": "Canarias Flavor Pack",
-        "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
-      }
-    },
-    {
-      "name": "Expedia - Expedient Manager",
-      "date": "jan. 2023 - jan. 2024 (1 year and 1 month)",
-      "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
-      "description": "Expedia is a desktop application designed for the efficient management of general entry records and expedients processed by the Industry and Commerce Service of the Cabildo de Gran Canaria.<p class='mt-4'>The main objective of this project is to facilitate Service workers to monitor the status and evolution of each of the processed records, optimizing certain repetitive tasks and reducing possible human errors.</p>\n"
-    },
-    {
-      "name": "Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL",
-      "date": "jun. 2022 - dec. 2022 (8 months)",
-      "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
-      "description": "Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. <p class='mt-4'>This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer. </p>\n",
-      "urls": [
-        {
-          "name": "Source code",
-          "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
-        },
-        {
-          "name": "User manual",
-          "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
-        },
-        {
-          "name": "Thesis",
-          "value": "https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
-        }
-      ]
-    },
-    {
-      "name": "Personal Portfolio",
-      "date": "jan. 2023 - now",
-      "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
-      "description": "This portfolio shows my professional trajectory in the Computer Engineer field. The development of this website has been manually codified using Bootstrap and other useful tools.\n",
-      "urls": [
-        {
-          "name": "Webpage",
-          "value": "https://losedavidpb.github.io/portfolio"
-        },
-        {
-          "name": "Source code",
-          "value": "https://github.com/losedavidpb/portfolio"
-        }
-      ]
-    },
-    {
-      "name": "DotFiles Configuration for GNU/Linux Systems",
-      "date": "oct. 2020 - jan. 2023 (2 years and 3 months)",
-      "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
-      "description": "This project includes a set of configuration files I use for machines with Linux distributions installed. There are .files for Bash, ZSH, Hyper, and Visual Studio Code, among others.\n",
-      "urls": [
-        {
-          "name": "Source code",
-          "value": "https://github.com/losedavidpb/bash-dotfiles"
-        }
-      ]
-    }
-  ],
   "skills": [
     {
       "title": "Programming Languages",
@@ -176,7 +132,7 @@
         },
         {
           "alt": "PHP logo",
-          "tooltip": "PHP: Hypertext Preprocessor",
+          "tooltip": "PHP",
           "src": "assets/images/languages/php.png",
           "href": "https://www.php.net/",
           "value": 35
@@ -237,33 +193,115 @@
       ]
     }
   ],
-  "jobs": [
+  "projects": [
     {
-      "job": "Technical Staff in Research Project",
-      "company": "Instituto Universitario IATEXT",
-      "type": "Full-time contract",
-      "date": "jul. 2025 - present",
-      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
-      "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
-      "description": "<ul>\n  <li>Development of desktop applications, web, and WCF services in the field of Digital Humanities.</li>\n  <li>Updating and maintaining applications that have already been developed at IATEXT and CLARIAH-ES.</li>\n  <li>Assisting in managing computer systems to meet the requirements of existing servers.</li>\n</ul>\n"
+      "name": "Argivo - Declarative Command-Line Framework for Bash",
+      "date": "may 2026 - now",
+      "skills": "Bash, GNU/Linux, CLI, Argument Parsing, Shell Scripting",
+      "description": "Argivo is a declarative command-line framework that turns Bash functions into documented commands through a simple annotation-based syntax. It provides function-based commands, declarative metadata, a built-in standard library and automatic help generation without requiring additional argument-parsing code.\n",
+      "urls": [
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/argivo-cmd"
+        }
+      ]
     },
     {
-      "job": "Computer Technician",
-      "company": "Cabildo de Gran Canaria",
-      "type": "Internship contract",
+      "name": "Canarias Flavor Pack",
+      "date": "dec. 2025 - now",
+      "skills": "CK3, YAML",
+      "description": "Canarias Flavor Pack is a mod for CK3 focused on the historical and cultural representation of the indigenous peoples and their traditions in the Canary Islands. An effort has been made to represent the islands as faithfully as possible, based on historical sources or plausible assumptions.\n",
+      "urls": [
+        {
+          "name": "Steam Workshop",
+          "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+        }
+      ],
+      "image": {
+        "src": "assets/images/projects/canarias-flavor-pack.jpg",
+        "alt": "Canarias Flavor Pack",
+        "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+      }
+    },
+    {
+      "name": "Migrating and Refactoring a Network Visualisation Application",
+      "date": "feb. 2025 - aug. 2025 (6 months)",
+      "skills": "React, TypeScript, Three.js, WebGL, Graph Algorithms, Network Visualisation, Software Refactoring",
+      "description": "The main objective of this project is to enhance the quality of NetvizGL through two complementary approaches. On the one hand, the project aims to migrate the application from a desktop-based architecture to a web-based platform. On the other hand, it intends to apply systematic refactoring techniques to the new codebase to improve its overall maintainability, extensibility, and usability.\n",
+      "urls": [
+        {
+          "name": "Webpage",
+          "value": "https://losedavidpb.github.io/netvizWeb/"
+        },
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/netvizWeb"
+        }
+      ],
+      "image": {
+        "src": "assets/images/projects/netviz-web.jpg",
+        "alt": "Netviz Web",
+        "href": "https://losedavidpb.github.io/netvizWeb/"
+      }
+    },
+    {
+      "name": "Expedia - Expedient Manager",
       "date": "jan. 2023 - jan. 2024 (1 year and 1 month)",
-      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
-      "skills": "Git, Java, Python, Teamwork, Communication, Bash",
-      "description": "<ul>\n  <li>Development and maintenance of an expedient manager.</li>\n  <li>Technical assistance in the field of Computer Engineering.</li>\n  <li>Meetings with the Cabildo and with other external companies contracted.</li>\n  <li>Drafting of technical specifications.</li>\n</ul>\n"
+      "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
+      "description": "Expedia is a desktop application designed for the efficient management of general entry records and expedients processed by the Industry and Commerce Service of the Cabildo de Gran Canaria. The main objective of this project is to facilitate Service workers to monitor the status and evolution of each of the processed records, optimizing certain repetitive tasks and reducing possible human errors.\n"
     },
     {
-      "job": "Web Developer",
-      "company": "INERZA S.A.",
-      "type": "Apprenticeship contract",
-      "date": "sept. 2021 - dec. 2021 (4 months)",
-      "location": "Las Palmas de Gran Canaria, Canary Islands, Spain",
-      "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum",
-      "description": "Testing, implementation and support of computer web applications for the Ministry of Education, Universities, Culture and Sports of the Government of the Canary Islands.\n"
+      "name": "Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL",
+      "date": "jun. 2022 - dec. 2022 (8 months)",
+      "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
+      "description": "Lexical analysis engine for VPL that improves the lexical processing with the lexical definition of the programming languages from external JSON files called rules files. This final degree project greatly facilitates the incorporation of programming languages for the lexical analysis performed in the early phases of the VPL similarity search. Besides, it is an adaptation of the current Ace source code editor tokenizer.\n",
+      "urls": [
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+        },
+        {
+          "name": "User manual",
+          "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+        },
+        {
+          "name": "Thesis",
+          "value": "https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
+        }
+      ],
+      "image": {
+        "src": "assets/images/projects/vpl-tokenizer.png",
+        "alt": "VPL Lexical Analysis Engine",
+        "href": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+      }
+    },
+    {
+      "name": "Personal Portfolio",
+      "date": "jan. 2023 - now",
+      "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
+      "description": "This portfolio shows my professional trajectory in the Computer Engineer field. The development of this website has been manually codified using Bootstrap and other useful tools.\n",
+      "urls": [
+        {
+          "name": "Webpage",
+          "value": "https://losedavidpb.github.io/portfolio"
+        },
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/portfolio"
+        }
+      ]
+    },
+    {
+      "name": "DotFiles Configuration for GNU/Linux Systems",
+      "date": "oct. 2020 - jan. 2023 (2 years and 3 months)",
+      "skills": "GNU/Linux, Bash, ZSH, Shell Scripting, Automation, Package Management, Visual Studio Code",
+      "description": "This project includes a set of configuration files I use for machines with Linux distributions installed. There are .files for Bash, ZSH, Hyper, and Visual Studio Code, among others.\n",
+      "urls": [
+        {
+          "name": "Source code",
+          "value": "https://github.com/losedavidpb/bash-dotfiles"
+        }
+      ]
     }
   ],
   "courses": [
