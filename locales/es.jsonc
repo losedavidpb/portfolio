@@ -40,6 +40,44 @@
     "coursesTitle": "Cursos y Certificados 📰"
   },
 
+  "jobs": [
+    // Technical Staff in Research Project
+    // ######################################
+    {
+      "job": "Personal Técnico en Proyecto de Investigación",
+      "company": "Instituto Universitario IATEXT",
+      "type": "Contrato a tiempo completo",
+      "date": "jul. 2025 - actualidad",
+      "location": "Las Palmas de Gran Canaria, Canarias, España",
+      "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
+      "description": "<ul>\n  <li>Desarrollar aplicaciones de escritorio, web, y servicios WCF en el ámbito de las Humanidades Digitales.</li>\n  <li>Actualizar y mantener las aplicaciones ya desarrolladas en el IATEXT y CLARIAH-ES.</li>\n  <li>Asistir en la gestión de sistemas informáticos para cumplir con los requisitos de los servidores actuales.</li>\n</ul>\n"
+    },
+
+    // Computer Technician
+    // ######################################
+    {
+      "job": "Técnico Superior de Informática",
+      "company": "Cabildo de Gran Canaria",
+      "type": "Contrato de práticas",
+      "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
+      "location": "Las Palmas de Gran Canaria, Canarias, España",
+      "skills": "Git, Java, Python, Teamwork, Communication, Bash",
+      "description": "<ul>\n  <li>Desarrollo y mantenimiento de un gestor de expedientes.</li>\n  <li>Asistencia técnica en el campo de la Ingeniería Informática.</li>\n  <li>Reuniones con el Cabildo y otras empresas externas contratadas.</li>\n  <li>Redacción de pliegos de prescripciones técnicas.</li>\n</ul>\n"
+    },
+
+    // Web Developer
+    // ######################################
+    {
+      "job": "Desarrollador web",
+      "company": "INERZA S.A.",
+      "type": "Contrato de formación",
+      "date": "sept. 2021 - dic. 2021 (4 meses)",
+      "location": "Las Palmas de Gran Canaria, Canarias, España",
+      "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum",
+      "description": "Realización de pruebas, implantación y soporte de aplicaciones web informáticas destinadas a la Consejería de Educación, Universidades, Cultura y Deportes del Gobierno de Canarias.\n"
+    }
+  ],
+
   "studies": [
     // Master of Science in Software Engineering
     // ######################################
@@ -83,94 +121,6 @@
       "title": "Bachillerato Científico Tecnológico",
       "institution": "IES Siete Palmas",
       "date": "2016 - 2018"
-    }
-  ],
-
-  "projects": [
-    // Canarias Flavor Pack
-    // ######################################
-    {
-      "name": "Canarias Flavor Pack",
-      "date": "dic. 2025 - actualidad",
-      "skills": "CK3, YAML",
-      "description": "Canarias Flavor Pack es un mod para CK3 centrado en la representación histórica y cultural de los pueblos indígenas y sus tradiciones de Canarias. Se ha procurado representar las islas de la manera más fiel posible, basándose en fuentes históricas o en suposiciones plausibles.\n",
-      "urls": [
-        {
-          "name": "Steam Workshop",
-          "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
-        }
-      ],
-      "image": {
-        "src": "assets/images/projects/canarias-flavor-pack.jpg",
-        "alt": "Canarias Flavor Pack",
-        "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
-      }
-    },
-
-    // Expedia - Expedient Manager
-    // ######################################
-    {
-      "name": "Expedia - Gestor de Expedientes",
-      "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
-      "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
-      "description": "Expedia es una aplicación de escritorio diseñada para la gestión eficaz de los registros generales de entrada y expedientes tramitados por el Servicio de Industria y Comercio del Cabildo de Gran Canaria.<p class='mt-4'>El principal objetivo de este proyecto es facilitar a los trabajadores del Servicio el seguimiento del estado y evolución de cada uno de los registros procesados, optimizando determinadas tareas repetitivas y reduciendo posibles errores humanos.</p>\n"
-    },
-
-    // Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL
-    // #################################################################################################
-    {
-      "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
-      "date": "jun. 2022 - dic. 2022 (8 meses)",
-      "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
-      "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. <p class='mt-4'>Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace. </p>\n",
-      "urls": [
-        {
-          "name": "Código fuente",
-          "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
-        },
-        {
-          "name": "Manual de usuario",
-          "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
-        },
-        {
-          "name": "Tesis",
-          "value": "https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
-        }
-      ]
-    },
-
-    // Personal Portfolio
-    // ######################################
-    {
-      "name": "Portfolio personal",
-      "date": "ene. 2023 - actualidad",
-      "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
-      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.\n",
-      "urls": [
-        {
-          "name": "Página web",
-          "value": "https://losedavidpb.github.io/portfolio"
-        },
-        {
-          "name": "Código fuente",
-          "value": "https://github.com/losedavidpb/portfolio"
-        }
-      ]
-    },
-
-    // DotFiles Configuration for GNU/Linux Systems
-    // ##################################################
-    {
-      "name": "Configuración DotFiles para Sistemas GNU/Linux",
-      "date": "oct. 2020 - ene. 2023 (2 años y 3 meses)",
-      "skills": "GNU/Linux, Bash, ZSH, Visual Studio Code",
-      "description": "Repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. En el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.\n",
-      "urls": [
-        {
-          "name": "Código fuente",
-          "value": "https://github.com/losedavidpb/bash-dotfiles"
-        }
-      ]
     }
   ],
 
@@ -222,7 +172,7 @@
         // ######################################
         {
           "alt": "PHP logo",
-          "tooltip": "PHP: Hypertext Preprocessor",
+          "tooltip": "PHP",
           "src": "assets/images/languages/php.png",
           "href": "https://www.php.net/",
           "value": 35
@@ -303,41 +253,135 @@
     }
   ],
 
-  "jobs": [
-    // Technical Staff in Research Project
-    // ######################################
+  "projects": [
+    // Argivo - Framework Declarativo de Línea de Comandos para Bash
+    // #############################################################
     {
-      "job": "Personal Técnico en Proyecto de Investigación",
-      "company": "Instituto Universitario IATEXT",
-      "type": "Contrato a tiempo completo",
-      "date": "jul. 2025 - actualidad",
-      "location": "Las Palmas de Gran Canaria, Canarias, España",
-      "skills": "ASP.NET MVC, C#, PL/SQL, MySQL, Microsoft Access, Azure DevOps Server, Docker",
-      "description": "<ul>\n  <li>Desarrollar aplicaciones de escritorio, web, y servicios WCF en el ámbito de las Humanidades Digitales.</li>\n  <li>Actualizar y mantener las aplicaciones ya desarrolladas en el IATEXT y CLARIAH-ES.</li>\n  <li>Asistir en la gestión de sistemas informáticos para cumplir con los requisitos de los servidores actuales.</li>\n</ul>\n"
+      "name": "Argivo - Framework Declarativo de Línea de Comandos para Bash",
+      "date": "may. 2026 - actualidad",
+      "skills": "Bash, GNU/Linux, CLI, Argument Parsing, Shell Scripting",
+      "description": "Argivo es un framework declarativo de línea de comandos que convierte funciones de Bash en comandos documentados mediante una sencilla sintaxis basada en anotaciones. Proporciona comandos basados en funciones, metadatos declarativos, una biblioteca estándar integrada y generación automática de ayuda sin necesidad de código adicional para procesar argumentos.\n",
+      "urls": [
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/argivo-cmd"
+        }
+      ]
     },
 
-    // Computer Technician
+    // Canarias Flavor Pack
     // ######################################
     {
-      "job": "Técnico Superior de Informática",
-      "company": "Cabildo de Gran Canaria",
-      "type": "Contrato de práticas",
+      "name": "Canarias Flavor Pack",
+      "date": "dic. 2025 - actualidad",
+      "skills": "CK3, YAML",
+      "description": "Canarias Flavor Pack es un mod para CK3 centrado en la representación histórica y cultural de los pueblos indígenas y sus tradiciones de Canarias. Se ha procurado representar las islas de la manera más fiel posible, basándose en fuentes históricas o en suposiciones plausibles.\n",
+      "urls": [
+        {
+          "name": "Steam Workshop",
+          "value": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+        }
+      ],
+      "image": {
+        "src": "assets/images/projects/canarias-flavor-pack.jpg",
+        "alt": "Canarias Flavor Pack",
+        "href": "https://steamcommunity.com/sharedfiles/filedetails/?id=3616212472"
+      }
+    },
+
+    // Migrating and Refactoring a Network Visualisation Application
+    // #######################################################################
+    {
+      "name": "Migración y Refactorización de una Aplicación de Visualización de Redes",
+      "date": "feb. 2025 - ago. 2025 (6 meses)",
+      "skills": "React, TypeScript, Three.js, WebGL, Graph Algorithms, Network Visualisation, Software Refactoring",
+      "description": "El objetivo principal de este proyecto es mejorar la calidad de NetvizGL mediante dos enfoques complementarios. Por un lado, el proyecto tiene como objetivo migrar la aplicación de una arquitectura de escritorio a una plataforma web. Por otro lado, pretende aplicar técnicas sistemáticas de refactorización al nuevo código fuente para mejorar su mantenibilidad, extensibilidad y usabilidad generales.\n",
+      "urls": [
+        {
+          "name": "Página web",
+          "value": "https://losedavidpb.github.io/netvizWeb/"
+        },
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/netvizWeb"
+        }
+      ],
+      "image": {
+        "src": "assets/images/projects/netviz-web.jpg",
+        "alt": "Netviz Web",
+        "href": "https://losedavidpb.github.io/netvizWeb/"
+      }
+    },
+
+    // Expedia - Expedient Manager
+    // ######################################
+    {
+      "name": "Expedia - Gestor de Expedientes",
       "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
-      "location": "Las Palmas de Gran Canaria, Canarias, España",
-      "skills": "Git, Java, Python, Teamwork, Communication, Bash",
-      "description": "<ul>\n  <li>Desarrollo y mantenimiento de un gestor de expedientes.</li>\n  <li>Asistencia técnica en el campo de la Ingeniería Informática.</li>\n  <li>Reuniones con el Cabildo y otras empresas externas contratadas.</li>\n  <li>Redacción de pliegos de prescripciones técnicas.</li>\n</ul>\n"
+      "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
+      "description": "Expedia es una aplicación de escritorio diseñada para la gestión eficaz de los registros generales de entrada y expedientes tramitados por el Servicio de Industria y Comercio del Cabildo de Gran Canaria. El principal objetivo de este proyecto es facilitar a los trabajadores del Servicio el seguimiento del estado y evolución de cada uno de los registros procesados, optimizando determinadas tareas repetitivas y reduciendo posibles errores humanos.\n"
     },
 
-    // Web Developer
+    // Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL
+    // #################################################################################################
+    {
+      "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
+      "date": "jun. 2022 - dic. 2022 (8 meses)",
+      "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
+      "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace.\n",
+      "urls": [
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+        },
+        {
+          "name": "Manual de usuario",
+          "value": "https://github.com/losedavidpb/tokenizer-doc_vpl"
+        },
+        {
+          "name": "Tesis",
+          "value": "https://accedacris.ulpgc.es/bitstream/10553/119757/1/EII-GII-2022-12-Parre%C3%B1o_D.pdf"
+        }
+      ],
+      "image": {
+                    "src": "assets/images/projects/vpl-tokenizer.png",
+        "alt": "VPL Lexical Analysis Engine",
+        "href": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
+      }
+    },
+
+    // Personal Portfolio
     // ######################################
     {
-      "job": "Desarrollador web",
-      "company": "INERZA S.A.",
-      "type": "Contrato de formación",
-      "date": "sept. 2021 - dic. 2021 (4 meses)",
-      "location": "Las Palmas de Gran Canaria, Canarias, España",
-      "skills": "JavaScript, C#, PL/SQL, ASP.NET MVC, Scrum",
-      "description": "Realización de pruebas, implantación y soporte de aplicaciones web informáticas destinadas a la Consejería de Educación, Universidades, Cultura y Deportes del Gobierno de Canarias.\n"
+      "name": "Portfolio personal",
+      "date": "ene. 2023 - actualidad",
+      "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
+      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.\n",
+      "urls": [
+        {
+          "name": "Página web",
+          "value": "https://losedavidpb.github.io/portfolio"
+        },
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/portfolio"
+        }
+      ]
+    },
+
+    // DotFiles Configuration for GNU/Linux Systems
+    // ##################################################
+    {
+      "name": "Configuración DotFiles para Sistemas GNU/Linux",
+      "date": "oct. 2020 - ene. 2023 (2 años y 3 meses)",
+      "skills": "GNU/Linux, Bash, ZSH, Shell Scripting, Automation, Package Management, Visual Studio Code",
+      "description": "Repertorio de los archivos de configuración que utilizo para máquinas que tengan instalada distribuciones Linux. En el repositorio hay .files para Bash, ZSH, Hyper, Visual Studio Code, entre otros.\n",
+      "urls": [
+        {
+          "name": "Código fuente",
+          "value": "https://github.com/losedavidpb/bash-dotfiles"
+        }
+      ]
     }
   ],
 

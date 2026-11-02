@@ -59,11 +59,29 @@ header #person-header {
     width: 3rem;
     height: 3rem;
     font-size: 1.35rem;
+}
+
+.navbar-icons a,
+.profile-link {
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.navbar-icons a:hover {
+.profile-link {
+    display: inline-block;
+}
+
+.navbar-icons a:hover,
+.profile-link:hover {
+    transform: translateY(-2px);
+}
+
+.project-card .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card .btn:hover,
+.project-card .btn:focus-visible {
     transform: translateY(-2px);
 }
 
@@ -127,6 +145,9 @@ header #person-header {
     display: block;
     width: 100%;
     height: clamp(12rem, 28vw, 17rem);
+    border: var(--bs-border-width) solid var(--bs-light);
+    border-bottom: 0;
+    border-radius: var(--bs-border-radius-xl) var(--bs-border-radius-xl) 0 0;
     object-fit: cover;
 }
 
