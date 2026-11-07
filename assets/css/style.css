@@ -22,11 +22,10 @@ body {
 }
 
 #background-image {
-    /* Darken the wallpaper to preserve contrast behind the content cards */
+    background-attachment: fixed;
     background-image:
         linear-gradient(135deg, rgba(13, 110, 253, 0.18), rgba(15, 23, 42, 0.5)),
         url('../images/wallpaper.jpg');
-    background-attachment: fixed;
 }
 
 /* Page sections and profile
@@ -85,7 +84,6 @@ header #person-header {
     transform: translateY(-2px);
 }
 
-/* Keep floating navigation controls above the page content */
 #language-div {
     z-index: 1020;
     width: fit-content;
@@ -138,6 +136,18 @@ header #person-header {
     object-fit: contain;
 }
 
+.skill-details {
+    min-width: 0;
+}
+
+.skill-heading {
+    gap: 0.75rem;
+}
+
+.skill-level {
+    flex: 0 0 auto;
+}
+
 /* Projects
  * ========================== */
 
@@ -155,11 +165,17 @@ header #person-header {
     display: block;
 }
 
+.project-date {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    text-align: center;
+    white-space: normal;
+}
+
 /* Loading screen
  * ========================== */
 
 .background-spinner {
-    /* Soften the page beneath the loader without hiding it completely */
     z-index: 1050;
     background-color: rgba(248, 249, 250, 0.88);
     backdrop-filter: blur(4px);
@@ -194,10 +210,54 @@ header #person-header {
         height: 150px;
     }
 
+    .text-justify {
+        text-align: left;
+    }
+
+    .courses-certificates-header {
+        font-size: clamp(1.25rem, 6.25vw, 1.5rem);
+        white-space: nowrap;
+    }
+
+    .skill-group {
+        padding: 1rem !important;
+    }
+
+    .skill-row {
+        --bs-gutter-x: 0.75rem;
+    }
+
+    .skill-logo {
+        padding: 0.5rem !important;
+    }
+
+    .lang-image {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .skill-heading {
+        gap: 0.5rem;
+    }
+
+    .skill-level {
+        padding-right: 0.55em;
+        padding-left: 0.55em;
+    }
+
+    .skill-name {
+        font-size: 0.875rem;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 359.98px) {
+    .skill-group {
+        padding: 0.5rem !important;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    /* Reserve room for the fixed vertical navigation on wide screens */
     #main-content .section {
         width: calc(100% - 4.75rem);
     }

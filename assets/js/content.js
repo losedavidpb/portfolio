@@ -80,20 +80,20 @@ export function render_skills(skills, asset_prefix = '') {
 
             // Wrap skills with a source URL in a link while keeping the same layout
             const image_container = value.href
-                ? `<a class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
+                ? `<a class="skill-logo d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3"
                         href="${value.href}" target="_blank" rel="noopener noreferrer">${image}</a>`
-                : `<div class="d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">${image}</div>`;
+                : `<div class="skill-logo d-flex align-items-center justify-content-center bg-white border rounded-3 shadow-sm p-3">${image}</div>`;
 
             // Skill values use a 0-50 scale and are displayed as percentages
             return `
-                <div class="row align-items-center g-3 mb-4">
+                <div class="skill-row row align-items-center g-3 mb-4">
                     <div class="col-auto">
                         ${image_container}
                     </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="fw-semibold mb-0">${value.tooltip}</h5>
-                            <span class="badge rounded-pill text-bg-primary">${value.value * 2}%</span>
+                    <div class="skill-details col">
+                        <div class="skill-heading d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="skill-name fw-semibold mb-0">${value.tooltip}</h5>
+                            <span class="skill-level badge rounded-pill text-bg-primary">${value.value * 2}%</span>
                         </div>
                         <div class="progress rounded-pill bg-white" style="height: 0.75rem">
                             <div class="progress-bar bg-primary bg-gradient rounded-pill" role="progressbar"
@@ -107,7 +107,7 @@ export function render_skills(skills, asset_prefix = '') {
         }).join('');
 
         return `
-            <li class="bg-light rounded-4 p-4 mb-4">
+            <li class="skill-group bg-light rounded-4 p-4 mb-4">
                 <h3 class="h4 fw-bold mb-4">${skill.title}</h3>
                 <div>${values_html}</div>
             </li>
@@ -176,7 +176,7 @@ export function render_projects(projects, skill_name, asset_prefix = '') {
                 <div class="p-4">
                     <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
                         <h4 class="fw-bold mb-0">${project.name}</h4>
-                        <span class="badge rounded-pill bg-white text-dark border">${project.date}</span>
+                        <span class="project-date badge rounded-pill bg-white text-dark border">${project.date}</span>
                     </div>
                     <div class="bg-white border rounded-3 p-3 mb-3">
                         <span class="fw-bold">${skill_name}: </span>${project.skills}
