@@ -15,6 +15,7 @@ body {
 .background {
     position: fixed;
     inset: 0;
+    overflow-x: hidden;
     overflow-y: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,6 +34,69 @@ body {
 
 .section {
     scroll-margin-top: 1.5rem;
+}
+
+.section-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: left;
+    background: transparent;
+    border: 0;
+}
+
+.section-toggle:focus-visible {
+    border-radius: var(--bs-border-radius-sm);
+    outline: 0.2rem solid rgba(13, 110, 253, 0.35);
+    outline-offset: 0.35rem;
+}
+
+.section-toggle .bi-chevron-down {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-primary);
+    font-size: 0.875rem;
+    background-color: transparent;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 50%;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.25s ease;
+}
+
+.section-toggle:hover .bi-chevron-down,
+.section-toggle:focus-visible .bi-chevron-down {
+    color: var(--bs-dark);
+    background-color: var(--bs-light);
+}
+
+.section-toggle[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Featured content
+ * ========================== */
+
+.featured-item {
+    min-width: 0;
+}
+
+.featured-link {
+    text-decoration: none;
+}
+
+.featured-link:hover,
+.featured-link:focus-visible {
+    text-decoration: underline;
 }
 
 .text-justify {
@@ -79,6 +143,10 @@ header #person-header {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.project-card {
+    scroll-margin-top: 1.5rem;
+}
+
 .project-card .btn:hover,
 .project-card .btn:focus-visible {
     transform: translateY(-2px);
@@ -87,11 +155,6 @@ header #person-header {
 #language-div {
     z-index: 1020;
     width: fit-content;
-}
-
-#offcanvas-button {
-    width: 3.5rem;
-    height: 3.5rem;
 }
 
 #navbar-vertical {
@@ -125,6 +188,20 @@ header #person-header {
     background-color: var(--bs-primary);
     border-color: var(--bs-primary);
     box-shadow: 0 0.25rem 0.75rem rgba(13, 110, 253, 0.35);
+}
+
+.mobile-nav-button {
+    z-index: 1040;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+#mobile-section-nav {
+    --bs-offcanvas-width: min(22rem, 100vw);
+}
+
+#mobile-section-nav .list-group-item.active i {
+    color: white !important;
 }
 
 /* Skills
@@ -248,6 +325,26 @@ header #person-header {
     .skill-name {
         font-size: 0.875rem;
         white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    #main-content {
+        padding-bottom: 5rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .section-toggle .bi-chevron-down,
+    .navbar-icons a,
+    .profile-link,
+    .project-card .btn,
+    #navbar-vertical .btn {
+        transition: none;
     }
 }
 

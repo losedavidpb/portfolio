@@ -31,11 +31,20 @@ function set_navbar_links() {
 }
 
 /**
+ * Respect the user's operating-system motion preference
+ *
+ * @returns {'auto'|'smooth'}
+ */
+function get_scroll_behavior() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+}
+
+/**
  * Smoothly scroll to the selected page section
  */
 function set_section_shortcuts() {
-    // Replace anchor jumps with smooth scrolling inside the page container
-    $('#navbar-vertical a[href^="#"]').on('click', event => {
+    // Delegation keeps links inserted by render_content() smooth-scrollable
+    $(document).on('click', '.section-shortcut[href^="#"], .featured-link[href^="#"]', event => {
         event.preventDefault();
 
         // Prevent Bootstrap's focus-triggered tooltip from remaining visible
@@ -49,16 +58,37 @@ function set_section_shortcuts() {
         if (target_id === '#home') {
             document.querySelector('.background').scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: get_scroll_behavior()
             });
 
             return;
         }
 
-        document.querySelector(target_id)?.scrollIntoView({
-            behavior: 'smooth',
+        const target = document.querySelector(target_id);
+
+        if (!target) {
+            return;
+        }
+
+        const scroll_to_target = () => target.scrollIntoView({
+            behavior: get_scroll_behavior(),
             block: 'start'
         });
+
+        // Reveal targets inside a folded card before trying to scroll to them
+        const collapsed_parent = target.closest('.collapse, .collapsing');
+
+        if (collapsed_parent && !collapsed_parent.classList.contains('show')) {
+            collapsed_parent.addEventListener('shown.bs.collapse', scroll_to_target, { once: true });
+
+            const collapse = bootstrap.Collapse.getInstance(collapsed_parent)
+                ?? new bootstrap.Collapse(collapsed_parent, { toggle: false });
+
+            collapse.show();
+            return;
+        }
+
+        scroll_to_target();
     });
 }
 
@@ -67,12 +97,15 @@ function set_section_shortcuts() {
  */
 function set_active_section() {
     const scroll_container = document.querySelector('.background');
+    const links = [...document.querySelectorAll('.section-shortcut[href^="#"]')];
 
-    // Pair each navigation link with its target section
-    const entries = [...document.querySelectorAll('#navbar-vertical a[href^="#"]')]
-        .map(link => ({ link, section: document.querySelector(link.hash) }));
+    // Keep one ordered entry per section even when desktop and mobile links coexist
+    const entries = [...new Map(links.map(link => [
+        link.hash,
+        { hash: link.hash, section: document.querySelector(link.hash) }
+    ])).values()];
 
-    if (!scroll_container) {
+    if (!scroll_container || entries.length === 0) {
         return;
     }
 
@@ -94,8 +127,8 @@ function set_active_section() {
         }
 
         // Update both the visual state and its accessible equivalent
-        for (const { link } of entries) {
-            const is_active = link === current.link;
+        for (const link of links) {
+            const is_active = link.hash === current.hash;
             link.classList.toggle('active', is_active);
 
             if (is_active) {
@@ -144,10 +177,12 @@ function set_common_content(site) {
     $('#current-rol-header').text(site.role);
     $('img[id="profile-image"]').attr('alt', site.profileImageAlt);
     $('#loading-text').text(site.loading);
-    $('#offcanvas-button').attr('aria-label', site.openNavigation);
-    $('.btn-close').attr('aria-label', site.closeNavigation);
+    $('#mobile-nav-button').attr('aria-label', site.openNavigation);
+    $('#mobile-section-nav-title').text(site.navigationTitle);
+    $('#mobile-section-nav .btn-close').attr('aria-label', site.closeNavigation);
+    $('#mobile-section-nav nav').attr('aria-label', site.navigationLabel);
     $('.home-section').text(site.homeLabel);
-    $('a.bi-envelope-fill').attr('title', site.mailLabel);
+    $('a.bi-envelope-fill').attr({ title: site.mailLabel, 'aria-label': site.mailLabel });
 }
 
 /**
@@ -156,14 +191,32 @@ function set_common_content(site) {
  * @param {object} home
  */
 function set_home_content(home) {
-    $('.home-link').attr('title', home.homeTooltip);
-    $('.about-me-link').attr('title', home.aboutTooltip);
-    $('.experience-studies-link').attr('title', home.experienceStudiesTooltip);
-    $('.skills-link').attr('title', home.skillsTooltip);
-    $('.projects-link').attr('title', home.projectsTooltip);
-    $('.courses-certificates-link').attr('title', home.coursesTooltip);
+    $('.home-link').attr({ title: home.homeTooltip, 'aria-label': home.homeTooltip });
+    $('.about-me-link').attr({ title: home.aboutTooltip, 'aria-label': home.aboutTooltip });
+    $('.featured-link-nav').attr({ title: home.featuredTooltip, 'aria-label': home.featuredTooltip });
+    $('.experience-link').attr({ title: home.experienceTooltip, 'aria-label': home.experienceTooltip });
+    $('.studies-link').attr({ title: home.studiesTooltip, 'aria-label': home.studiesTooltip });
+    $('.skills-link').attr({ title: home.skillsTooltip, 'aria-label': home.skillsTooltip });
+    $('.projects-link').attr({ title: home.projectsTooltip, 'aria-label': home.projectsTooltip });
+    $('.courses-certificates-link').attr({ title: home.coursesTooltip, 'aria-label': home.coursesTooltip });
+
+    const mobile_labels = {
+        '#home': home.homeTooltip,
+        '#about-me': home.aboutTooltip,
+        '#featured': home.featuredTooltip,
+        '#jobs-studies': home.experienceTooltip,
+        '#studies': home.studiesTooltip,
+        '#skills': home.skillsTooltip,
+        '#projects': home.projectsTooltip,
+        '#courses': home.coursesTooltip
+    };
+
+    for (const [target, label] of Object.entries(mobile_labels)) {
+        $(`#mobile-section-nav a[href="${target}"] span`).text(label);
+    }
 
     $('.about-me-header').text(home.aboutTitle);
+    $('.featured-header').text(home.featuredTitle);
     $('.introduction-title').text(home.introductionTitle);
 
     // Rebuild the introduction so every localized paragraph remains separate

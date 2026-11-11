@@ -7,6 +7,7 @@ import { minify as minify_html } from 'html-minifier-terser';
 
 import {
     render_courses,
+    render_featured,
     render_jobs,
     render_projects,
     render_skills,
@@ -143,9 +144,10 @@ function render_list_markers(html, locale) {
  */
 function render_content_markers(html, locale) {
     const content = {
+        featured: render_featured(locale),
         jobs: render_jobs(locale.jobs, locale.site.skillsLabel),
         studies: render_studies(locale.studies),
-        skills: render_skills(locale.skills, '../'),
+        skills: render_skills(locale.skills, locale.home.skillLevels, '../'),
         projects: render_projects(locale.projects, locale.site.skillsLabel, '../'),
         courses: render_courses(locale.courses)
     };

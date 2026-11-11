@@ -10,8 +10,10 @@
     "role": "Ingeniero Informático",
     "profileImageAlt": "Imagen de perfil",
     "loading": "Cargando...",
-    "openNavigation": "Activar navegación vertical",
-    "closeNavigation": "Cerrar",
+    "navigationTitle": "Porfolio",
+    "navigationLabel": "Navegación del porfolio",
+    "openNavigation": "Abrir navegación",
+    "closeNavigation": "Cerrar navegación",
     "homeLabel": "Inicio",
     "mailLabel": "Correo",
     "skillsLabel": "Aptitudes"
@@ -23,11 +25,20 @@
   "home": {
     "homeTooltip": "Inicio",
     "aboutTooltip": "Sobre mí",
-    "experienceStudiesTooltip": "Experiencia y Estudios",
+    "featuredTooltip": "Destacados",
+    "experienceTooltip": "Experiencia laboral",
+    "studiesTooltip": "Estudios",
     "skillsTooltip": "Habilidades",
     "projectsTooltip": "Proyectos",
     "coursesTooltip": "Cursos y Certificados",
     "aboutTitle": "Sobre mí 💻🎮",
+    "featuredTitle": "Destacados 📌",
+    "featuredView": "Ver detalle",
+    "skillLevels": {
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "familiar": "Familiaridad"
+    },
     "introductionTitle": "¡Hola, mundo! 👋",
     "introduction": [
       "Me llamo David, y una de mis grandes pasiones es la programación. En el año 2022 terminé mi Grado de Ingeniería Informática en la Universidad de Las Palmas de Gran Canaria y en 2025 completé mis estudios de Máster en la Universidad de Limerick.",
@@ -58,7 +69,7 @@
     {
       "job": "Técnico Superior de Informática",
       "company": "Cabildo de Gran Canaria",
-      "type": "Contrato de práticas",
+      "type": "Contrato de prácticas",
       "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
       "location": "Las Palmas de Gran Canaria, Canarias, España",
       "skills": "Git, Java, Python, Teamwork, Communication, Bash",
@@ -135,6 +146,7 @@
           "tooltip": "Java",
           "src": "assets/images/languages/java.png",
           "href": "https://www.java.com/es/",
+          "level": "advanced",
           "value": 50
         },
 
@@ -145,6 +157,7 @@
           "tooltip": "C#",
           "src": "assets/images/languages/c-sharp.png",
           "href": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+          "level": "advanced",
           "value": 50
         },
 
@@ -155,6 +168,7 @@
           "tooltip": "Bash",
           "src": "assets/images/languages/bash.png",
           "href": "https://www.gnu.org/software/bash/",
+          "level": "advanced",
           "value": 50
         },
 
@@ -165,6 +179,7 @@
           "tooltip": "Python",
           "src": "assets/images/languages/python.png",
           "href": "https://www.python.org/",
+          "level": "advanced",
           "value": 45
         },
 
@@ -175,6 +190,7 @@
           "tooltip": "PHP",
           "src": "assets/images/languages/php.png",
           "href": "https://www.php.net/",
+          "level": "intermediate",
           "value": 35
         },
 
@@ -185,6 +201,7 @@
           "tooltip": "JavaScript",
           "src": "assets/images/languages/javascript.png",
           "href": "https://www.javascript.com/",
+          "level": "intermediate",
           "value": 40
         }
       ]
@@ -198,6 +215,7 @@
           "alt": "MySQL logo",
           "tooltip": "MySQL",
           "src": "assets/images/database/mysql.png",
+          "level": "advanced",
           "value": 45
         },
 
@@ -207,6 +225,7 @@
           "alt": "SQLite logo",
           "tooltip": "SQLite",
           "src": "assets/images/database/sqlite.png",
+          "level": "intermediate",
           "value": 40
         },
 
@@ -216,6 +235,7 @@
           "alt": "Microsoft Access logo",
           "tooltip": "Microsoft Access",
           "src": "assets/images/database/microsoft-access.png",
+          "level": "intermediate",
           "value": 35
         }
       ]
@@ -229,6 +249,7 @@
           "alt": "ASP.NET MVC logo",
           "tooltip": "ASP.NET MVC",
           "src": "assets/images/frameworks/asp-net-mvc.png",
+          "level": "advanced",
           "value": 45
         },
 
@@ -238,6 +259,7 @@
           "alt": "React logo",
           "tooltip": "React",
           "src": "assets/images/frameworks/react.png",
+          "level": "intermediate",
           "value": 35
         },
 
@@ -247,6 +269,7 @@
           "alt": "Spring Boot logo",
           "tooltip": "Spring Boot",
           "src": "assets/images/frameworks/spring-boot.png",
+          "level": "familiar",
           "value": 30
         }
       ]
@@ -257,10 +280,16 @@
     // Argivo - Framework Declarativo de Línea de Comandos para Bash
     // #############################################################
     {
+      "id": "argivo",
       "name": "Argivo - Framework Declarativo de Línea de Comandos para Bash",
       "date": "may. 2026 - actualidad",
       "skills": "Bash, GNU/Linux, CLI, Argument Parsing, Shell Scripting",
       "description": "Argivo es un framework declarativo de línea de comandos que convierte funciones de Bash en comandos documentados mediante una sencilla sintaxis basada en anotaciones. Proporciona comandos basados en funciones, metadatos declarativos, una biblioteca estándar integrada y generación automática de ayuda sin necesidad de código adicional para procesar argumentos.\n",
+      "featured": {
+        "order": 1,
+        "title": "Argivo",
+        "summary": "Framework declarativo que convierte funciones de Bash en comandos documentados."
+      },
       "urls": [
         {
           "name": "Código fuente",
@@ -272,6 +301,7 @@
     // Canarias Flavor Pack
     // ######################################
     {
+      "id": "canarias-flavor-pack",
       "name": "Canarias Flavor Pack",
       "date": "dic. 2025 - actualidad",
       "skills": "CK3, YAML",
@@ -292,10 +322,16 @@
     // Migrating and Refactoring a Network Visualisation Application
     // #######################################################################
     {
+      "id": "netviz-web",
       "name": "Migración y Refactorización de una Aplicación de Visualización de Redes",
       "date": "feb. 2025 - ago. 2025 (6 meses)",
       "skills": "React, TypeScript, Three.js, WebGL, Graph Algorithms, Network Visualisation, Software Refactoring",
       "description": "El objetivo principal de este proyecto es mejorar la calidad de NetvizGL mediante dos enfoques complementarios. Por un lado, el proyecto tiene como objetivo migrar la aplicación de una arquitectura de escritorio a una plataforma web. Por otro lado, pretende aplicar técnicas sistemáticas de refactorización al nuevo código fuente para mejorar su mantenibilidad, extensibilidad y usabilidad generales.\n",
+      "featured": {
+        "order": 2,
+        "title": "Netviz Web",
+        "summary": "Migración web y refactorización de una aplicación de visualización de redes con React, TypeScript y Three.js."
+      },
       "urls": [
         {
           "name": "Página web",
@@ -316,6 +352,7 @@
     // Expedia - Expedient Manager
     // ######################################
     {
+      "id": "expedia",
       "name": "Expedia - Gestor de Expedientes",
       "date": "ene. 2023 - ene. 2024 (1 año y 1 mes)",
       "skills": "Teamwork, Git, Test-Driven Development (TDD), Gherkin, Behavior-Driven Development (BDD), Communication, Maven, Bash, Java",
@@ -325,10 +362,16 @@
     // Design and Implementation of a Generic Lexical Analysis Engine of source code for VPL
     // #################################################################################################
     {
+      "id": "vpl-lexical-engine",
       "name": "Diseño e Implementación de un Motor de Análisis Léxico Genérico de código fuente para VPL",
       "date": "jun. 2022 - dic. 2022 (8 meses)",
       "skills": "PHP, Moodle, GNU/Linux, Behat, PHPUnit, Docker, Git, Visual Studio Code, Sphinx",
       "description": "Motor de análisis léxico para VPL que pretende mejorar el procesamiento léxico realizado en dicho módulo mediante la definición léxica de los lenguajes de programación a partir de ficheros JSON externos llamados ficheros de reglas. Este proyecto de fin de grado facilita enormemente la incorporación de lenguajes de programación para el análisis léxico realizado en las primeras fases de la búsqueda de similitud de VPL, y es una adaptación al actual tokenizador del editor de código fuente Ace.\n",
+      "featured": {
+        "order": 3,
+        "title": "Motor léxico para VPL",
+        "summary": "Motor léxico configurable mediante reglas JSON, desarrollado como proyecto de fin de grado."
+      },
       "urls": [
         {
           "name": "Código fuente",
@@ -344,7 +387,7 @@
         }
       ],
       "image": {
-                    "src": "assets/images/projects/vpl-tokenizer.png",
+        "src": "assets/images/projects/vpl-tokenizer.png",
         "alt": "VPL Lexical Analysis Engine",
         "href": "https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++"
       }
@@ -353,10 +396,11 @@
     // Personal Portfolio
     // ######################################
     {
+      "id": "personal-portfolio",
       "name": "Portfolio personal",
       "date": "ene. 2023 - actualidad",
       "skills": "HTML, CSS, JavaScript, Bootstrap, jQuery",
-      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática. El desarrollo de la página web se ha hecho codificando en bruto y usando Bootstrap.\n",
+      "description": "Portfolio personal en el que muestro un resumen de mi trayectoria profesional en el ámbito de la Ingeniería Informática.\n",
       "urls": [
         {
           "name": "Página web",
@@ -372,6 +416,7 @@
     // DotFiles Configuration for GNU/Linux Systems
     // ##################################################
     {
+      "id": "bash-dotfiles",
       "name": "Configuración DotFiles para Sistemas GNU/Linux",
       "date": "oct. 2020 - ene. 2023 (2 años y 3 meses)",
       "skills": "GNU/Linux, Bash, ZSH, Shell Scripting, Automation, Package Management, Visual Studio Code",
