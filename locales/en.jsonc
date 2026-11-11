@@ -233,7 +233,7 @@
         // ######################################
         {
           "alt": "Microsoft Access logo",
-          "tooltip": "Microsoft Access",
+          "tooltip": "Access",
           "src": "assets/images/database/microsoft-access.png",
           "level": "intermediate",
           "value": 35

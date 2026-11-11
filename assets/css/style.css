@@ -291,6 +291,15 @@ header #person-header {
         text-align: left;
     }
 
+    #jobs-studies .section-toggle {
+        gap: 0.5rem;
+    }
+
+    .experience-header {
+        font-size: clamp(1.25rem, 6.25vw, 1.5rem);
+        white-space: nowrap;
+    }
+
     .courses-certificates-header {
         font-size: clamp(1.25rem, 6.25vw, 1.5rem);
         white-space: nowrap;
