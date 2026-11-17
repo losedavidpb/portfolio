@@ -205,6 +205,7 @@ function render_page(template, language, locale) {
 
     // Adjust asset paths for nested language directories and prerender portfolio content
     html = html.replaceAll('./assets/', '../assets/');
+    html = html.replaceAll('./favicon.ico', '../favicon.ico');
     html = render_content_markers(html, locale);
 
     // Generate absolute SEO links for the current and alternative languages
@@ -260,6 +261,7 @@ function render_root_page(locales) {
     <title>${escape_html(locale.site.title)}</title>
     <meta name="description" content="${escape_html(locale.site.description)}">
     <meta http-equiv="refresh" content="0; url=./${default_language}/">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="canonical" href="${default_url}">
     <link rel="alternate" hreflang="en" href="${new URL('en/', site_url)}">
     <link rel="alternate" hreflang="es" href="${new URL('es/', site_url)}">
@@ -270,24 +272,6 @@ function render_root_page(locales) {
     <p><a href="./${default_language}/">Continue</a></p>
 </body>
 </html>
-`;
-}
-
-/**
- * Generate the production sitemap
- *
- * @returns {string}
- */
-function render_sitemap() {
-    const urls = languages.map(language => `
-  <url>
-    <loc>${new URL(`${language}/`, site_url)}</loc>
-  </url>`).join('\n');
-
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
 `;
 }
 
@@ -518,18 +502,17 @@ async function write_localized_files(locales) {
 }
 
 /**
- * Write the root redirect, sitemap, and deployment files
+ * Write the root redirect and deployment files
  *
  * @param {Map<string, object>} locales
  * @returns {Promise<void>}
  */
 async function render_root_redirect(locales) {
-    // Write the root language redirect and the public URL index
+    // Write the root language redirect
     await writeFile(path.join(dist_dir, 'index.html'), render_root_page(locales));
-    await writeFile(path.join(dist_dir, 'sitemap.xml'), render_sitemap());
 
-    // Add files required by crawlers and GitHub Pages deployment
-    await cp(path.join(project_dir, 'robots.txt'), path.join(dist_dir, 'robots.txt'));
+    // Add files required by GitHub Pages deployment
+    await cp(path.join(project_dir, 'favicon.ico'), path.join(dist_dir, 'favicon.ico'));
     await writeFile(path.join(dist_dir, '.nojekyll'), '');
 }
 
